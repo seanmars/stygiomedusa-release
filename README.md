@@ -1,5 +1,15 @@
 # Stygiomedusa
 
+## [0.6.1] - 2026-10-06
+
+### 新增
+
+- Popup 每張配額卡右上方新增更新鈕, 只更新該卡的來源. 同一來源 30 秒內 (或 429 退避期間) 按鈕停用.
+
+### 變更
+
+- 按下更新鈕時, 若 access token 已過期或被拒, 會以 refresh token 換新並寫回 CLI 的 `.credentials.json` / `auth.json` (只改 token 欄位, 其他欄位保留; CLI 在期間已自行更新時以 CLI 為準), 不必重新開啟 CLI 就能從 "過期" 恢復. 定時更新與開啟 popup 時的更新仍維持只讀, 不會 refresh token.
+
 ## [0.6.0] - 2026-10-03
 
 ### 新增
@@ -140,6 +150,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.6.1]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.6.1
 [0.6.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.6.0
 [0.5.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.5.0
 [0.4.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.4.0
