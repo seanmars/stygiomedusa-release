@@ -1,5 +1,18 @@
 # Stygiomedusa
 
+## [0.7.0] - 2026-10-06
+
+### 新增
+
+- 設定頁的 "工作列 widget" 分組新增 "顯示工作列 widget" 開關, 預設開啟. 關閉時所有螢幕的 widget 移除, 其他 widget 設定保持顯示但無法修改, 值保留; 關閉期間螢幕插拔或 Explorer 重新啟動也不會讓 widget 重新出現.
+- 設定頁新增 "Popup" 分組, 可以設定 popup 配額 bar 的顯示模式 (已用或剩餘), 不受 widget 開關影響.
+- 實驗分頁的 "史萊姆" 分組新增要顯示的 agent, Claude profile (單一 profile 或 "全部 (並列)") 與顯示模式. 史萊姆的 callout 也依它自己的顯示模式.
+
+### 變更
+
+- Popup, 工作列 widget 與史萊姆的顯示模式各自獨立; 史萊姆要顯示的來源不再跟著 widget. 顏色門檻仍由三者共用.
+- 升級時 popup 與史萊姆沿用原本 widget 的顯示模式, 史萊姆沿用 widget 的 agent 與 Claude profile, 升級後畫面與升級前相同.
+
 ## [0.6.1] - 2026-10-06
 
 ### 新增
@@ -150,6 +163,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.7.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.7.0
 [0.6.1]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.6.1
 [0.6.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.6.0
 [0.5.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.5.0
