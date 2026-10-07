@@ -1,5 +1,25 @@
 # Stygiomedusa
 
+## [0.7.1] - 2026-10-07
+
+### 新增
+
+- 史萊姆的 callout 顯示期間會不定時出現特效: 上緣冒泡破掉濺出水珠, 小果凍在上緣越彈越高, 水珠沿側邊流下並接成下緣的滴落. 彈出時從外框濺出水珠, 箭頭兩側有連到史萊姆的下垂細絲, 收回時斷成水珠落下. 特效會避開珠子與齒輪, 也不會在視窗邊緣被切掉.
+
+### 變更
+
+- 史萊姆的 callout 彈出時, 文字與 bar 直接等比放大到定位就固定, 不必等果凍晃動結束才能閱讀.
+- 史萊姆的 callout 外框更像史萊姆: 圓角加大, 邊緣持續不規則地蠕動; 彈出與收回改為像液體從箭頭流出與流回, 各部分各自回彈.
+- 史萊姆 callout 下緣的滴落會先拉出長絲, 絲越拉越細, 斷開後才落下.
+
+### 修正
+
+- 從史萊姆本體移向 callout 時, 經過兩者之間的空隙就會收回 callout. 現在空隙算在史萊姆上, callout 顯示中游標離開約 0.25 秒內回來也會維持顯示.
+
+### 內部調整
+
+- 升級 Tauri 到 2.12, motion 到 14 與前端開發工具.
+
 ## [0.7.0] - 2026-10-06
 
 ### 新增
@@ -163,6 +183,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.7.1]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.7.1
 [0.7.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.7.0
 [0.6.1]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.6.1
 [0.6.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.6.0
