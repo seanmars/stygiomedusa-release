@@ -1,5 +1,16 @@
 # Stygiomedusa
 
+## [0.8.0] - 2026-10-14
+
+### 變更
+
+- 史萊姆不再是實驗功能: 移除 "實驗" 分頁, 史萊姆的開關與設定改放在設定之前的 "史萊姆" 分頁, 開關改名為 "顯示史萊姆". 升級後史萊姆的開關與所有設定維持原狀.
+- 史萊姆關閉時, 史萊姆分頁的其他設定保持顯示但無法修改, 值保留, 與 "顯示工作列 widget" 相同.
+
+### 修正
+
+- 在 popup 中開啟史萊姆時, 史萊姆出現的同時 popup 會關閉. 現在史萊姆出現時不會取得焦點, popup 維持開啟.
+
 ## [0.7.1] - 2026-10-07
 
 ### 新增
@@ -183,6 +194,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.8.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.8.0
 [0.7.1]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.7.1
 [0.7.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.7.0
 [0.6.1]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.6.1
