@@ -60,7 +60,7 @@ function tooltip(reading: AgentReading) {
       </span>
       <div class="flex flex-col" :class="vertical ? 'w-[35px] gap-[5px]' : 'w-10 gap-[10px]'">
         <span v-for="w in [reading.fiveHour, reading.sevenDay]" :key="w === reading.fiveHour ? '5h' : '7d'" class="block h-[7px] overflow-hidden rounded-full bg-white/20">
-          <span class="block h-full rounded-full transition-[width] duration-300 ease-out" :class="FILL[w.tone]" :style="{ width: `${value(w)}%` }" />
+          <span class="block h-full rounded-full transition-transform duration-300 ease-out" :class="FILL[w.tone]" :style="{ transform: `translateX(${value(w) - 100}%)` }" />
         </span>
       </div>
       <div v-if="!vertical" class="flex w-[35px] flex-col gap-[1px] text-right font-win text-[13.5px] leading-[17px] text-white/90">

@@ -243,6 +243,10 @@ function onKey(event: KeyboardEvent) {
 
 let observer: ResizeObserver | undefined
 
+// 隆起的呼吸動在 SVG 的 goo filter 裡, 瀏覽器每一幀都要重畫; 不在畫面上時暫停.
+const onScreen = ref(true)
+let visibility: IntersectionObserver | undefined
+
 onMounted(() => {
   const el = screen.value
   if (!el) return
@@ -252,12 +256,17 @@ onMounted(() => {
     observer = new ResizeObserver(measure)
     observer.observe(el)
   }
+  if (typeof IntersectionObserver === 'function') {
+    visibility = new IntersectionObserver(([entry]) => (onScreen.value = entry?.isIntersecting ?? true))
+    visibility.observe(el)
+  }
 })
 
 onBeforeUnmount(() => {
   clearTimeout(showTimer)
   clearTimeout(hideTimer)
   observer?.disconnect()
+  visibility?.disconnect()
 })
 
 const summary = computed(() =>
@@ -266,7 +275,7 @@ const summary = computed(() =>
 </script>
 
 <template>
-  <div ref="screen" class="pointer-events-none absolute inset-0 z-20">
+  <div ref="screen" class="pointer-events-none absolute inset-0 z-20" :class="{ resting: !onScreen }">
     <div
       class="slime-box pointer-events-auto absolute touch-none outline-none select-none"
       :class="dragging ? 'cursor-grabbing' : 'cursor-grab'"
@@ -378,7 +387,7 @@ const summary = computed(() =>
           <div class="flex h-3 items-center gap-2">
             <span class="w-[18px]" :style="{ color: palette.muted }">{{ w.key }}</span>
             <span class="h-1.5 flex-1 overflow-hidden rounded-full" :style="{ background: palette.track }">
-              <span class="block h-full rounded-full transition-[width] duration-300" :style="{ width: `${w.r.remaining}%`, background: palette.tone[w.r.tone] }" />
+              <span class="block h-full rounded-full transition-transform duration-300" :style="{ transform: `translateX(${w.r.remaining - 100}%)`, background: palette.tone[w.r.tone] }" />
             </span>
           </div>
           <div class="flex h-3.5 items-center gap-1.5 pl-[26px] tabular-nums" :style="{ color: palette.muted }">
@@ -408,6 +417,9 @@ const summary = computed(() =>
   transform-box: fill-box;
   transform-origin: center;
   animation: breathe 5.5s ease-in-out infinite alternate;
+}
+.resting .lobe {
+  animation-play-state: paused;
 }
 
 @keyframes breathe {

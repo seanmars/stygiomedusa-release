@@ -85,7 +85,7 @@ function pad(w: WindowReading, field: 'used' | 'remaining') {
         </span>
       </div>
       <span class="block h-2 overflow-hidden rounded-full bg-white/15" :data-anchor="row.key === '5h' ? 'bar' : undefined">
-        <span class="block h-full rounded-full transition-[width] duration-300" :class="TONE_BG[row.w.tone]" :style="{ width: `${row.w.remaining}%` }" />
+        <span class="block h-full rounded-full transition-transform duration-300" :class="TONE_BG[row.w.tone]" :style="{ transform: `translateX(${row.w.remaining - 100}%)` }" />
       </span>
       <svg
         v-if="row.curve"

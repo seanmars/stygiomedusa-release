@@ -39,35 +39,27 @@ export const useTideStore = defineStore('tide', () => {
     holds.value = Math.max(0, holds.value - 1)
   }
 
-  let frame = 0
-  let last = 0
-  let exact = STILL_AT
+  // 用計時器每次前進一分鐘, 不用 requestAnimationFrame: 讀數一秒只變 9 次,
+  // 每一幀都排程會讓瀏覽器每一幀都重算樣式, 排版與繪製.
+  let timer = 0
 
-  function tick(time: number) {
-    const dt = last ? Math.min(0.1, (time - last) / 1000) : 0
-    last = time
-    if (holds.value === 0 && !document.hidden) {
-      exact += dt * MINUTES_PER_SECOND
-      if (exact > LOOP_TO) exact = LOOP_FROM
-      if (Math.round(exact) !== now.value) setNow(exact)
-    }
-    frame = requestAnimationFrame(tick)
+  function tick() {
+    if (holds.value > 0 || document.hidden) return
+    setNow(now.value >= LOOP_TO ? LOOP_FROM : now.value + 1)
   }
 
   /** 開始自動播放. 使用者要求減少動態時不播放, 停在固定時間點. */
   function startAutoplay() {
-    if (playing.value || typeof requestAnimationFrame !== 'function') return
+    if (playing.value) return
     const reduce = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (reduce) return
     playing.value = true
-    exact = LOOP_FROM
-    setNow(exact)
-    last = 0
-    frame = requestAnimationFrame(tick)
+    setNow(LOOP_FROM)
+    timer = window.setInterval(tick, 1000 / MINUTES_PER_SECOND)
   }
 
   function stopAutoplay() {
-    cancelAnimationFrame(frame)
+    window.clearInterval(timer)
     playing.value = false
   }
 
