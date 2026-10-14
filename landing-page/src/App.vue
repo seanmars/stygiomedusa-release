@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BackToTop from '@/components/BackToTop.vue'
 import HeroSection from '@/components/HeroSection.vue'
 import InstallSection from '@/components/InstallSection.vue'
 import PaceSection from '@/components/PaceSection.vue'
@@ -27,5 +28,6 @@ import WidgetSection from '@/components/WidgetSection.vue'
       <InstallSection />
     </main>
     <SiteFooter />
+    <BackToTop />
   </div>
 </template>
