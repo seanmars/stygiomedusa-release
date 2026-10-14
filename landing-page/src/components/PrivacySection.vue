@@ -6,7 +6,7 @@ import SectionHead from '@/components/SectionHead.vue'
   <section class="border-y border-grid bg-harbor-deep">
     <div class="page-x py-24 lg:py-32">
       <SectionHead id="privacy" title="資料只留在本機">
-        <p>Stygiomedusa 沒有自己的伺服器. 下面列出它讀取, 連線與寫入的全部內容, 包括唯一會改寫憑證檔的情況.</p>
+        <p>Stygiomedusa 沒有自己的伺服器. 下面列出它讀取, 連線與寫入的全部項目, 包括唯一會改寫憑證檔的情況.</p>
       </SectionHead>
 
       <dl class="mt-4">
@@ -31,7 +31,7 @@ import SectionHead from '@/components/SectionHead.vue'
         <div class="grid gap-x-12 gap-y-2 py-7 md:grid-cols-[10rem_1fr]">
           <dt class="font-display text-xl text-white">例外</dt>
           <dd class="max-w-[68ch] text-ink">
-            只有在你按下配額卡的更新鈕, 而且 access token 已過期或被拒時, 才會用 refresh token 換新, 並寫回憑證檔. 只改 token 欄位, 其他欄位保留. 定時更新與開啟 popup 時只讀, 不會這樣做.
+            只有在你按下配額卡的更新鈕, 而且 access token 已過期或被拒時, 才會用 refresh token 換新, 並寫回憑證檔. 只改 token 欄位, 其他欄位保留. 定時更新與開啟 popup 時只讀不寫.
           </dd>
         </div>
       </dl>

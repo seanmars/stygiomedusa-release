@@ -9,7 +9,7 @@ const BANDS = ['大幅超前均速', '超前均速', '略超前均速', '符合�
 
 const MODES = [
   { name: 'Historical', note: '預設', body: '依你自己的歷史用量曲線預測. 資料不足時暫時改用 Linear.' },
-  { name: 'Linear', note: '', body: '假設整個週期平均使用, 和平均速度相比.' },
+  { name: 'Linear', note: '', body: '假設整個週期平均使用.' },
   { name: 'Off', note: '', body: '不顯示 pace.' },
 ]
 </script>
@@ -18,7 +18,7 @@ const MODES = [
   <section class="border-y border-grid bg-harbor-deep">
     <div class="page-x py-24 lg:py-32">
       <SectionHead id="pace" title="照目前速度, 會不會提早用完">
-        <p>Pace 比較你的用量和平均速度. 如果照目前速度會在重置前用完, popup, widget tooltip 與 callout 會顯示預估耗盡時間.</p>
+        <p>Pace 比較你的用量和此時的預期用量. 如果照目前速度會在重置前用完, popup, widget tooltip 與 callout 會顯示預估耗盡時間.</p>
       </SectionHead>
 
       <div class="mt-14 grid grid-cols-[minmax(0,1fr)] gap-16 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)]">
@@ -43,7 +43,7 @@ const MODES = [
         </div>
 
         <div>
-          <h3 class="font-display text-2xl text-white">三種預測模式</h3>
+          <h3 class="font-display text-2xl text-white">預測模式</h3>
           <dl class="mt-6">
             <div v-for="mode in MODES" :key="mode.name" class="grid grid-cols-[9rem_1fr] gap-6 border-t border-grid py-5">
               <dt class="font-mono text-ink">

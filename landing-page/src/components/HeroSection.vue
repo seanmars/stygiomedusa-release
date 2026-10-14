@@ -42,7 +42,7 @@ const TONE_TEXT = {
 
       <DesktopStage />
 
-      <p class="mt-3 hidden text-sm text-mist md:block">點系統匣圖示或史萊姆開關 popup. 史萊姆可以拖到任一邊, 游標停留時長出 callout.</p>
+      <p class="mt-3 hidden text-sm text-mist md:block">點系統匣圖示或史萊姆, 開關 popup. 史萊姆可以拖到任一邊, 游標停留時長出 callout.</p>
       <!-- 窄螢幕的 popup 只顯示上半部, 連到完整內容 -->
       <p class="mt-3 text-sm text-mist md:hidden">
         Popup 只顯示上半部.

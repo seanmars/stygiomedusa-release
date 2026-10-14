@@ -11,7 +11,7 @@ const tide = useTideStore()
 const mode = ref<'remaining' | 'used'>('remaining')
 
 const FACTS = [
-  { label: '顯示模式', body: 'bar 與百分比代表已用或剩餘, 與 popup, 史萊姆分開設定.' },
+  { label: '顯示模式', body: 'bar 與百分比顯示已用或剩餘, 與 popup, 史萊姆分開設定.' },
   { label: '多螢幕', body: '可以勾選多個螢幕, 每條工作列各顯示一個, 並依該螢幕的縮放排版. 勾選的螢幕都未連接時, 改顯示在主螢幕.' },
   { label: '直式工作列', body: '例如 ExplorerPatcher. 改為縱向排列, 不顯示百分比.' },
   { label: '位置', body: '工作列的左, 中, 右, 也可以手動偏移.' },

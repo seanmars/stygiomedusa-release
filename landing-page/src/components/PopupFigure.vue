@@ -20,7 +20,7 @@ const NOTES: Note[] = [
   { id: 'bar', side: 'left', title: '門檻色', body: '剩餘 25% 以下警告, 10% 以下危險. 門檻可在設定頁調整.' },
   { id: 'curve', side: 'left', title: '用量曲線', body: '目前週期的已用 %, 跨過門檻的那段換色.' },
   { id: 'pace', side: 'left', title: 'Pace', body: '照目前速度會在重置前用完時, 顯示預估耗盡時間.' },
-  { id: 'refresh', side: 'right', title: '更新鈕', body: '只更新這張卡. 同一來源 30 秒內停用.' },
+  { id: 'refresh', side: 'right', title: '更新鈕', body: '只更新這張卡. 同一來源 30 秒內只能更新一次.' },
   { id: 'numbers', side: 'right', title: '已用與剩餘', body: '兩個數字同時顯示, 欄寬固定.' },
   { id: 'reset', side: 'right', title: '重置倒數', body: '數字與單位分欄對齊, 寫成 "x 小時 y 分".' },
 ]
