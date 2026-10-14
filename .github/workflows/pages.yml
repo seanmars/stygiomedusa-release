@@ -1,0 +1,55 @@
+# 介紹頁 (landing-page/) 部署到 GitHub Pages.
+# 頁面不讀取版本資訊 (下載連到 releases/latest, 更新紀錄連到 README), 發布新版不需要重新部署.
+name: Deploy landing page
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - landing-page/**
+      - .github/workflows/pages.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: landing-page
+    steps:
+      - uses: actions/checkout@v4
+      # 與本機產生 lockfile 的 pnpm 主版本相同.
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: landing-page/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm type-check
+      - run: pnpm vitest run
+      - run: pnpm build-only
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: landing-page/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
