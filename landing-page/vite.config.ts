@@ -7,8 +7,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // GitHub Pages 以 repo 名稱作為路徑前綴.
-  base: '/stygiomedusa-release/',
+  // 使用自訂網域 stygiomedusa.seanmars.dev, 網站位於根路徑.
+  base: '/',
   plugins: [
     vue(),
     vueDevTools(),

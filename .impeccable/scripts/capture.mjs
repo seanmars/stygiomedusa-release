@@ -9,7 +9,7 @@ const root = path.resolve(import.meta.dirname, '..', '..')
 const require = createRequire(path.join(root, 'landing-page', 'package.json'))
 const { chromium } = require('@playwright/test')
 
-const url = process.argv[2] ?? 'http://localhost:4173/stygiomedusa-release/'
+const url = process.argv[2] ?? 'http://localhost:4173/'
 const out = path.join(root, '.impeccable', 'review')
 mkdirSync(out, { recursive: true })
 

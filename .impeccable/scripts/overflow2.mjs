@@ -5,7 +5,7 @@ const require = createRequire(path.join(root, 'landing-page', 'package.json'))
 const { chromium } = require('@playwright/test')
 const browser = await chromium.launch()
 const page = await browser.newPage({ viewport: { width: 390, height: 844 } })
-await page.goto('http://localhost:4173/stygiomedusa-release/', { waitUntil: 'networkidle' })
+await page.goto('http://localhost:4173/', { waitUntil: 'networkidle' })
 await page.waitForTimeout(2800)
 const result = await page.evaluate(() => {
   const html = document.documentElement

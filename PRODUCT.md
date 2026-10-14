@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Vite + Vue 3 + TypeScript, 部署到 GitHub Pages (由本 repo 的 GitHub Actions build 後發布, 網址預期為 `seanmars.github.io/stygiomedusa-release`). 與 app repo (`stygiomedusa`) 的前端技術一致. 本 repo 目前尚未建立 scaffold.
+Vite + Vue 3 + TypeScript, 部署到 GitHub Pages (由本 repo 的 GitHub Actions build 後發布, 網址為 `https://stygiomedusa.seanmars.dev` (自訂網域)). 與 app repo (`stygiomedusa`) 的前端技術一致. 本 repo 目前尚未建立 scaffold.
 
 ## Users
 
