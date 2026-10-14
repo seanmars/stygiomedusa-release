@@ -664,18 +664,13 @@
         "purpose": "光塔光柱滑到新的等級."
       },
       {
-        "name": "shader-fade-in",
-        "value": "1400ms ease-out opacity",
-        "purpose": "shader 準備好後淡入."
-      },
-      {
         "name": "status-pulse",
         "value": "2.4s ease-in-out infinite",
         "purpose": "時間播放時首屏狀態點的呼吸."
       },
       {
         "name": "reduced-motion",
-        "value": "animation 與 transition 0.01ms; 不自動播放; shader 停在靜止畫面",
+        "value": "animation 與 transition 0.01ms; 不自動播放; 深淵停在靜止畫面",
         "purpose": "prefers-reduced-motion: reduce."
       }
     ],
@@ -802,7 +797,7 @@
       "光環金只標示被選取的東西.",
       "所有示範共用一個自動快轉的示意時間; 游標進入任何物件時, 時間停住, 深淵的光繼續漂移.",
       "狀態以文字寫出 (正常, 警告, 危險), 顏色只是第二層.",
-      "WebGPU shader 只畫在四個地方: 首屏, 史萊姆螢幕, pace 光塔, 頁尾極光. 沒有 WebGPU 時以 CSS 漸層代替."
+      "深淵的光只畫在四個地方: 首屏, 史萊姆螢幕, pace 光塔, 頁尾極光. 全部是 CSS 漸層與靜態 SVG 圖塊, 動畫只動 transform 與 opacity."
     ],
     "rules": [
       {
@@ -867,7 +862,7 @@
       },
       {
         "name": "The Drifting Abyss Rule",
-        "body": "游標停在示範上時只停住示意時間, 讓讀數穩定可讀. 深淵的光 (霧, 觸手, 海雪) 持續漂移, 不接 `tide.held`; 整片停住會被讀成畫面卡住. 只有減少動態時, shader 才停在一個靜止畫面.",
+        "body": "游標停在示範上時只停住示意時間, 讓讀數穩定可讀. 深淵的光 (霧, 觸手, 海雪) 持續漂移, 不接 `tide.held`; 整片停住會被讀成畫面卡住. 只有減少動態時, 深淵才停在一個靜止畫面.",
         "section": "components"
       }
     ],
@@ -880,9 +875,9 @@
       "Do 把外層的數字放在固定欄位: 右對齊, tabular-nums, 等寬字.",
       "Do 把狀態寫成文字, 放在對應的數字旁, 再加上 tone 色.",
       "Do 在每個重現的讀數旁標示 \"示意\".",
-      "Do 文字疊在 shader 光上時, 用 void 漸層壓暗文字後方, 或改用較亮的 lumen 文字.",
-      "Do 只在有 WebGPU 時載入 shader, 並在同位置提供 CSS 漸層後備畫面; 保持 `disable-telemetry`.",
-      "Do 遵守 prefers-reduced-motion: 不自動播放, shader 停在靜止畫面, 所有動畫與轉場縮到 0.01ms."
+      "Do 文字疊在深淵的光上時, 用 void 漸層壓暗文字後方, 或改用較亮的 lumen 文字.",
+      "Do 讓持續播放的動畫只動 transform 與 opacity, 由合成器執行. 會重畫的動畫 (史萊姆隆起的呼吸) 在離開畫面時暫停; 隨示意時間變動的比例條用 translateX, 不用 width.",
+      "Do 遵守 prefers-reduced-motion: 不自動播放, 深淵停在靜止畫面, 所有動畫與轉場縮到 0.01ms."
     ],
     "donts": [
       "Don't 把金色用在標題, 文案, 裝飾或未被選取的元素上.",
