@@ -1,0 +1,130 @@
+{
+  "title": "選擇新的視覺世界",
+  "question": "擲骰指派了 \"鈷藍玫瑰窗\". 保留它, 改選其他方向, 或重擲. 所有方向都照你選的 \"深底 + 螢光發亮\" 與 app 圖示色票, 並在首屏, 頁尾與少數段落使用 shaders.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "鈷藍玫瑰窗",
+      "kicker": "THE ROLL",
+      "lineage": "沙特爾大教堂的鈷藍彩繪玻璃與玫瑰窗",
+      "thesis": "一扇不必打開的窗: 配額像光一樣穿過鈷藍玻璃, 落在桌面上.",
+      "palette": ["#070b3a", "#1b1fa8", "#a78bfa", "#e9e4ff", "#ffc94d"],
+      "materials": ["透光鈷藍玻璃", "粗黑鉛條", "WebGPU 光束與玻璃格 (Godrays, Voronoi)"],
+      "viewport": "H1 與下載鈕在上, 整幅桌面示範被鉛條框成一扇窗; shader 光從窗後穿過玻璃格照進來, 讀數變化時對應的玻璃格亮起.",
+      "risk": "教堂的聯想可能蓋過開發工具; 鉛條與玻璃格太密時會干擾讀數.",
+      "raised": [
+        { "from": "challenger-riso", "raise": "玻璃只有四色 (鈷藍, 紫, 螢光白, 光環金), 沒有中間色; 兩道光重疊時以加色混合出第五色." },
+        { "from": "challenger-multiplane", "raise": "文字永遠在最前一層的實心底上, 光與玻璃只在文字後方." },
+        { "from": "challenger-seed-packet", "raise": "每段先給完整尺寸的即時讀數, 再接規則清單." },
+        { "from": "challenger-cloud-quarry", "raise": "一次只有一條金色光邊, 只標示目前 hover 或選取的元件." }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "藍眼淚夜海",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "馬祖藍眼淚 (夜光藻) 的夜間海岸與出現預報",
+      "thesis": "配額就是今晚的藍眼淚: 預報它何時亮起, 何時退去.",
+      "palette": ["#04071f", "#1b1fa8", "#3fd0ff", "#a78bfa", "#e9e4ff", "#ffc94d"],
+      "materials": ["浪緣的夜光藻螢光", "黑色礁岩", "預報表的等寬數字", "WebGPU 波光與光點 (Ripples, FloatingParticles)"],
+      "viewport": "首屏是夜海: 浪緣依配額剩餘量發光, 桌面示範浮在海面上方; 右上是 \"今晚預報\" 式的 pace 預測與下載鈕.",
+      "risk": "台灣訪客立刻有感, 但與舊版 \"潮汐預報表\" 同屬海岸/預報家族, 可能被看成換色; 也是這類頁面最常落點的熟悉方向."
+    },
+    {
+      "id": "challenger-console-void",
+      "label": "深淵系統選單",
+      "verdict": "wins",
+      "lineage": "第六代遊戲主機的系統選單: 黑藍虛空, 內部發光的半透明物件, 漂浮光塵",
+      "thesis": "每個功能是一顆在鈷藍深淵裡自己發光的物件; 被選中的那顆浮上前來.",
+      "palette": ["#03051a", "#1b1fa8", "#e9e4ff", "#a78bfa", "#ffc94d"],
+      "materials": ["內部發光的乳白半透明體", "漂浮光塵 (海雪)", "WebGPU 霧與粒子"],
+      "viewport": "首屏是深淵: 桌面示範像一塊發光螢幕浮在霧中, 工作列 widget, 史萊姆, popup 三個物件環繞; H1 細字在左上, 下載鈕是唯一的金色物件.",
+      "case": "融合後幾乎就是你選的 \"深底 + 螢光\": 虛空 = 深海, 發光物件 = 水母, 光塵 = 海雪. 開發者認得主機選單, 功能物件化讓三個示範更清楚; 兩個軸都勝過指派方向.",
+      "risk": "最接近 \"深色底 + 霓虹光暈\" 的常見 AI 樣式; 物件漂浮太多時讀數會變成裝飾.",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-console-dashboard-atmosphere-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/digital-design-canon-console-dashboard-atmosphere.webp"
+    },
+    {
+      "id": "challenger-phosphor-terminal",
+      "label": "紫色磷光終端機",
+      "verdict": "competitive",
+      "lineage": "深夜機房的磷光終端機, 磷光改為 app 的紫色",
+      "thesis": "Claude Code 與 Codex 本來就住在終端機裡; 配額在旁邊的磷光裡亮著.",
+      "palette": ["#05061a", "#a78bfa", "#e9e4ff", "#ffc94d"],
+      "materials": ["紫色磷光", "掃描線與餘暉", "單一等寬點陣字"],
+      "viewport": "首屏是一段持續捲動的終端機紀錄, 中間 \"印出\" Windows 桌面示範; 下載是一行可以按的指令.",
+      "case": "使用者每天開著 CLI, 認同感勝過指派方向; 但 app 的重點是不用看終端機, 產品清楚度輸了.",
+      "risk": "看起來像又一個 CLI 工具頁, 與 app 的 Windows 原生質感相反.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-phosphor-terminal-midnight-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-phosphor-terminal-midnight.webp"
+    },
+    {
+      "id": "challenger-riso",
+      "label": "Riso 螢光套印",
+      "verdict": "declined",
+      "lineage": "Risograph 螢光特色油墨套印",
+      "thesis": "兩三支螢光油墨在紙上微微錯位, 重疊處混出第三色.",
+      "palette": ["#f3ead8", "#ff48b0", "#0078bf", "#ffe800"],
+      "materials": ["暖紙底", "螢光特色油墨", "半色調顆粒"],
+      "viewport": "錯位套印的色塊與粗黑體標題.",
+      "case": "暖紙底與你要的深底衝突, 開發者也不認同印刷品; 兩軸都輸.",
+      "kept": "只用固定的少數色, 重疊處混出新色.",
+      "risk": "在深底上失去油墨的本質.",
+      "hero": "https://impeccable.style/worlds/cards/risograph-web-system-hero.webp"
+    },
+    {
+      "id": "challenger-seed-packet",
+      "label": "種子包陳列架",
+      "verdict": "declined",
+      "lineage": "五金行春季種子包陳列架",
+      "thesis": "正面畫著收成的承諾, 背面印著播種的紀律.",
+      "palette": ["#9aa0a6", "#d93a2b", "#5a8f2e", "#efe2c4"],
+      "materials": ["水粉畫", "小字年曆表"],
+      "viewport": "一排可以翻面的種子包.",
+      "case": "與開發者和配額都無關; 兩軸都輸.",
+      "kept": "每項先給承諾 (讀數), 再翻到說明 (規則).",
+      "risk": "變成懷舊插畫頁.",
+      "hero": "https://impeccable.style/worlds/cards/vernacular-ephemera-seed-packet-rack-hero.webp"
+    },
+    {
+      "id": "challenger-multiplane",
+      "label": "多層賽璐珞晨景",
+      "verdict": "declined",
+      "lineage": "多平面賽璐珞動畫攝影台",
+      "thesis": "幾層手繪平面以不同速度滑動, 鏡頭穿過晨霧.",
+      "palette": ["#3b2a1e", "#4f6b3a", "#9fb0b8", "#f2b134"],
+      "materials": ["水粉森林平面", "視差捲動"],
+      "viewport": "層層森林與一盞亮燈的小屋.",
+      "case": "森林晨景與 app 無關; 兩軸都輸.",
+      "kept": "文字永遠放在最前一層, 景深只在文字後方.",
+      "risk": "變成動畫電影的開場.",
+      "hero": "https://impeccable.style/worlds/cards/cinema-cinematography-editing-multiplane-cel-dawn-hero.webp"
+    },
+    {
+      "id": "challenger-cloud-quarry",
+      "label": "雲朵採石場",
+      "verdict": "declined",
+      "lineage": "超現實的雲朵採石場",
+      "thesis": "工人切開積雲, 把天氣組成會下雨的臨時建築.",
+      "palette": ["#f4f6f8", "#5aa9e6", "#6b7280", "#c0c6cc"],
+      "materials": ["積雲方塊", "銀色鋸線"],
+      "viewport": "白色雲塊之間露出藍色空隙.",
+      "case": "白底與深底衝突, 隱喻與配額無關; 兩軸都輸.",
+      "kept": "一次只有一條作用中的光邊.",
+      "risk": "變成概念藝術.",
+      "hero": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-cloud-quarry-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code" },
+  "canon": true,
+  "canonCard": {
+    "label": "開發工具標準頁",
+    "thesis": "這個類別一定會做的頁面, 做到最好.",
+    "palette": ["#08080f", "#ffffff", "#7c3aed", "#3b82f6"],
+    "materials": ["全幅 MeshGradient 背景", "玻璃卡片", "產品截圖"],
+    "viewport": "置中大標題與下載鈕, 下方是 shader 漸層上的產品畫面, 再接一排功能卡.",
+    "risk": "設計上就與其他開發工具頁無法區分."
+  },
+  "steer": true
+}

@@ -7,7 +7,7 @@ related_targets: []
 
 ## Scope
 
-Stygiomedusa 介紹與下載頁 (`landing-page/`, Vite + Vue + TypeScript + Tailwind v4, GitHub Pages). Mode: Persuade.
+Stygiomedusa 介紹與下載頁 (`landing-page/`, Vite + Vue + TypeScript + Tailwind v4, GitHub Pages). Mode: Persuade. 2026-10-14 重新設計: 使用者要求配色貼近 app 圖示, 更絢麗明亮, 並使用 shaders (shaders.com, WebGPU); 允許重排版面.
 
 ## Audience and action
 
@@ -17,18 +17,19 @@ Stygiomedusa 介紹與下載頁 (`landing-page/`, Vite + Vue + TypeScript + Tail
 - 證據: 以程式重現的工作列 widget, 史萊姆, popup (讀數標示為示意). 使用者之後會提供截圖, 放在次要段落.
 - 避免: 一般 SaaS 行銷頁, 裝飾蓋過資訊, 誇大語氣, 與 app 實際功能無關的示意圖.
 - 不顯示版本號與更新紀錄; 更新紀錄連到 GitHub repo 的 README. 發布新版不需要重新 build 網站.
+- 使用者指定: 深底 + 螢光發亮 (app 圖示的鈷藍, 螢光白紫, 光環金); shaders 用在首屏, 頁尾與少數重點段落.
 
 ## Direction contract
 
-THESIS: 這一頁就是一張 Windows 桌面: 配額在工作列, 螢幕邊緣與 popup 上被看見, 不必開任何視窗. 拒絕 "標題 + 截圖 + 一排同尺寸功能卡" 的開發工具排法, 也拒絕 app 沒有的示意圖.
+THESIS: 這一頁是一片鈷藍深淵, 每個功能是一個自己發光的物件; 配額在工作列, 螢幕邊緣與 popup 上被看見, 不必開任何視窗. 拒絕 "深色底 + 霓虹漸層 + 一排玻璃功能卡" 的開發工具頁, 也拒絕用截圖代替示範.
 
-OWN-WORLD: 深港灣藍鋪滿全頁, 海圖白是墨色, 灰藍是次要文字與格線, 海圖洋紅只用在被點亮的引線. 緊密的表格數字欄, 白色標題底線, 沒有卡片陰影. 明體標題, 黑體內文, 等寬讀數. 狀態色只出現在重現的讀數裡, 各狀態另有線型或標記. 重現的 Windows 介面使用它自己的中性色.
+OWN-WORLD: 黑藍虛空 (#03051a) 由下方鈷藍 (#1b1fa8) 照亮, 霧, 水母觸手光與海雪光塵以 WebGPU 漂移. 示範是內部發光的半透明物件: 1px 光邊, 由內往外的鈷藍光, 腳下光池. 光環金 (#ffc94d) 只標示被選取的東西: 主要動作, 目前段落, 選取的切換, 游標所在的物件. 細黑體標題 (Noto Sans TC 200 到 300), 寬字距 Lexend Exa 字標, Azeret Mono 讀數. 沒有分隔線與面板, 以留白與景深分組. 狀態色與 Windows 重現介面照 app 原樣.
 
-STORY: 訪客先在首屏的桌面上同時看到工作列 widget, 史萊姆與 popup 隨時間變化, 明白不用開視窗. 往下三段各示範一個位置: 工作列 widget, 史萊姆, popup. 接著是 pace, 用量分析, 多個 Claude 資料夾, 本機隱私, 安裝, 最後下載.
+STORY: 首屏看到發光的桌面浮在深淵裡, 三處讀數隨時間漲退, 明白不用開視窗. 往下每段是一個房間: 工作列 widget, 史萊姆, popup, pace 光塔, 用量, 多帳號, 隱私, 安裝; 最後在極光下下載.
 
-FIRST VIEWPORT: 上方標題列, 左側明體 H1 與一行說明, 右側 "下載最新版" (連到 GitHub 最新 release 頁面), 下方白色底線. 其下是一張填滿剩餘高度的桌面: 底部全寬 Windows 工作列, 左側是配額 widget, 系統匣有 app 圖示; popup 預設打開, 貼在系統匣上方; 史萊姆貼在桌面的上緣. 簽名互動: 示意時間自動快轉, 三處讀數同步漲退並換狀態色; 游標進入桌面時暫停. 史萊姆可以拖到任一邊, 點系統匣圖示或史萊姆開關 popup.
+FIRST VIEWPORT: 頁首: 圖示與寬字距字標, 段落連結 (目前段落下方金點), GitHub. 標題區: 左側細體 H1 "不開視窗, 也看得到配額." 與一行說明, 右側唯一的金色物件 "下載最新版". 其下是填滿剩餘高度的示範桌面, 一塊半透明發光螢幕: 深淵的霧, 觸手光與光塵透過螢幕玻璃可見; 底部工作列與 widget, popup 預設打開, 史萊姆貼上緣. 桌面下方一行讀數狀態列. 簽名互動: 游標進入任何示範物件時, 物件浮起並亮出金邊, 示意時間停住讓讀數可讀; 深淵的光持續漂移 (2026-10-14 使用者回報整片停住像卡住).
 
-FORM: 潮汐預報表 (中央氣象署潮汐預報表與港口潮位看板) 的視覺系統, 首屏依使用者指示改為桌面示範. 排序第 5, seed key 5ee986a0 (re-roll 1). Raises: 數字放在嚴格欄位 (Ikeda), 狀態不只靠顏色 (accretion), 功能說明用引線釘在元件上 (tensegrity), hover 時只有該引線亮起 (Kraftwerk), 主要 % 數字在手機上不縮小 (TDR).
+FORM: 第六代遊戲主機系統選單 (黑藍虛空, 內部發光物件, 漂浮光塵). 使用者在決策輪選定挑戰者 digital-design-canon-console-dashboard-atmosphere (兩軸勝出); 指派方向是清單第 7 名 "鈷藍玫瑰窗". seed key aeaa65ad. Code-led (沒有圖片生成).
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 
@@ -36,3 +37,4 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 - 使用者截圖尚未提供; 次要段落保留位置.
 - GitHub Pages 尚未在 repo 設定中啟用 (Source: GitHub Actions).
+- 不支援 WebGPU 的瀏覽器只看到 CSS 漸層的深淵, 沒有動態光.
