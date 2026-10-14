@@ -65,6 +65,8 @@
     color-scheme: dark;
     scrollbar-color: var(--color-grid) var(--color-harbor-deep);
     scroll-behavior: smooth;
+    /* sticky header 高 4rem, 錨點標題要留在 header 下方 */
+    scroll-padding-top: 5rem;
     -webkit-text-size-adjust: 100%;
   }
 
