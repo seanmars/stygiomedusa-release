@@ -1,6 +1,6 @@
 // 擷取介紹頁的審查截圖. 用法: node .impeccable/scripts/capture.mjs [baseUrl]
-// 首屏與整頁在 "減少動態" 下擷取 (時間固定, shader 停在靜止畫面); 另擷取自動播放到警告狀態的首屏與各種互動狀態.
-// shader 需要 WebGPU: 預設用 Edge (PW_CHANNEL 可改), 並另擷取一張沒有 WebGPU 的後備首屏.
+// 首屏與整頁在 "減少動態" 下擷取 (時間固定, 深淵停在靜止畫面); 另擷取自動播放到警告狀態的首屏與各種互動狀態.
+// 預設用 Edge (PW_CHANNEL 可改).
 import { createRequire } from 'node:module'
 import { mkdirSync } from 'node:fs'
 import path from 'node:path'
@@ -13,17 +13,15 @@ const url = process.argv[2] ?? 'http://localhost:4173/'
 const out = path.join(root, '.impeccable', 'review')
 mkdirSync(out, { recursive: true })
 
-const browser = await chromium.launch({ channel: process.env.PW_CHANNEL ?? 'msedge', args: ['--enable-unsafe-webgpu'] })
+const browser = await chromium.launch({ channel: process.env.PW_CHANNEL ?? 'msedge' })
 const shot = (page, name, options = {}) => page.screenshot({ path: path.join(out, name), ...options })
 
-async function open(viewport, reducedMotion = 'reduce', { webgpu = true } = {}) {
+async function open(viewport, reducedMotion = 'reduce') {
   const context = await browser.newContext({ viewport, deviceScaleFactor: 1, reducedMotion })
-  if (!webgpu) await context.addInitScript(() => delete Navigator.prototype.gpu)
   const page = await context.newPage()
   await page.goto(url, { waitUntil: 'networkidle' })
   await page.evaluate(() => document.fonts.ready)
-  // shader 準備好後淡入 1.4 秒
-  await page.waitForTimeout(2600)
+  await page.waitForTimeout(800)
   return page
 }
 
@@ -65,19 +63,15 @@ await playing.mouse.move(5, 5)
 await playing.waitForTimeout(24000)
 await shot(playing, 'desktop-autoplay.png')
 
-// 沒有 WebGPU 時的後備首屏.
-const fallback = await open({ width: 1440, height: 900 }, 'reduce', { webgpu: false })
-await shot(fallback, 'desktop-fold-no-webgpu.png')
-
-// Pace 光塔: 捲到畫面內, shader 才會初始化.
+// Pace 光塔.
 await desktop.locator('section:has(#pace)').scrollIntoViewIfNeeded()
 await desktop.locator('.tower').scrollIntoViewIfNeeded()
-await desktop.waitForTimeout(2600)
+await desktop.waitForTimeout(500)
 await shot(desktop, 'desktop-pace.png')
 
 // 頁尾的極光.
 await desktop.locator('footer').scrollIntoViewIfNeeded()
-await desktop.waitForTimeout(2600)
+await desktop.waitForTimeout(500)
 await shot(desktop, 'desktop-footer.png')
 
 // 手機.
