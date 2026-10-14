@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><title>月台資訊看板</title>
+<style>
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:#141518;font-family:"Microsoft JhengHei UI","Segoe UI",sans-serif;color:#EDEDED;position:relative}
+.band{position:absolute;left:0;right:0;top:0;height:110px;background:#1F3A5F;display:flex;align-items:center;padding:0 64px;gap:24px}
+.band h1{font-size:52px;font-weight:700}
+.band small{margin-left:auto;font-size:26px}
+.board{position:absolute;left:64px;right:64px;top:160px;height:560px;background:#0B0B0C;border:14px solid #2a2a2e;border-radius:10px;
+background-image:radial-gradient(#1a1a1c 30%,transparent 31%);background-size:8px 8px;padding:30px 40px}
+.row{display:grid;grid-template-columns:260px 160px 1fr 320px;align-items:center;height:110px;border-bottom:2px dashed #2a2a2e;font-family:Consolas,monospace;font-size:56px;letter-spacing:.06em}
+.row .ag{font-size:48px}
+.row .w{color:#9aa}
+.row .p{color:#4CC2FF}
+.row.d .p{color:#FF5F5F}
+.row.next{border:0;color:#EDEDED}
+.row.next .p{color:#EDEDED}
+.cta{position:absolute;left:64px;top:760px;height:88px;padding:0 48px;background:#EDEDED;color:#0B0B0C;font-size:36px;font-weight:700;display:flex;align-items:center;border-radius:6px}
+.note{position:absolute;left:520px;top:780px;font-size:24px;opacity:.7}
+</style></head><body>
+<div class="band"><h1>配額, 像下一班車一樣抬頭就看到</h1><small>Stygiomedusa</small></div>
+<div class="board">
+  <div class="row"><span class="ag">CLAUDE</span><span class="w">5h</span><span class="p">剩 62%</span><span>2:14 重置</span></div>
+  <div class="row"><span class="ag">CLAUDE</span><span class="w">7d</span><span class="p">剩 81%</span><span>3 天 4 時</span></div>
+  <div class="row d"><span class="ag">CODEX</span><span class="w">5h</span><span class="p">剩 9%</span><span>0:41 重置</span></div>
+  <div class="row next"><span class="ag">下一班</span><span class="w">v0.8.0</span><span class="p">Windows 11</span><span>下載 →</span></div>
+</div>
+<div class="cta">下載安裝檔 v0.8.0</div>
+<div class="note">讀數為示意 · MIT 授權</div>
+</body></html>

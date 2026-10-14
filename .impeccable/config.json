@@ -1,0 +1,104 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-terminal.html"
+        ],
+        "createdAt": "2026-10-14T07:16:13.409Z",
+        "reason": "agent decided: phosphor bloom is the dealt challenger's literal material in a decision sketch, not shipped UI"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/model-pick.html"
+        ],
+        "createdAt": "2026-10-14T07:17:33.356Z",
+        "reason": "agent decided: unchosen decision-round sketch, spent and never shipped"
+      },
+      {
+        "rule": "bounce-easing",
+        "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "createdAt": "2026-10-14T07:42:47.600Z",
+        "reason": "agent decided: --ease-jelly reproduces the app slime's underdamped spring (motion stiffness 170, damping 9 in BubbleWindow.vue); used only on slime/callout"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/r1-sixpack.html"
+        ],
+        "createdAt": "2026-10-14T07:48:56.105Z",
+        "reason": "agent decided: unchosen decision-round sketch, spent and never shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-10-14T08:05:58.518Z",
+        "reason": "agent decided: decision-round sketch written before DESIGN.md existed; spent, never shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-10-14T08:05:58.645Z",
+        "reason": "agent decided: decision-round sketch written before DESIGN.md existed; spent, never shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-terminal.html"
+        ],
+        "createdAt": "2026-10-14T08:05:58.786Z",
+        "reason": "agent decided: decision-round sketch written before DESIGN.md existed; spent, never shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/model-pick.html"
+        ],
+        "createdAt": "2026-10-14T08:05:58.929Z",
+        "reason": "agent decided: decision-round sketch written before DESIGN.md existed; spent, never shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/r1-assigned.html"
+        ],
+        "createdAt": "2026-10-14T08:05:59.061Z",
+        "reason": "agent decided: decision-round sketch written before DESIGN.md existed; spent, never shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/r1-model-pick.html"
+        ],
+        "createdAt": "2026-10-14T08:05:59.201Z",
+        "reason": "agent decided: decision-round sketch written before DESIGN.md existed; spent, never shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/r1-sixpack.html"
+        ],
+        "createdAt": "2026-10-14T08:05:59.347Z",
+        "reason": "agent decided: decision-round sketch written before DESIGN.md existed; spent, never shipped"
+      }
+    ]
+  }
+}

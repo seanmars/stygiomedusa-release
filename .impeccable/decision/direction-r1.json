@@ -1,0 +1,235 @@
+{
+  "title": "選擇介紹頁的視覺世界 (重抽 1)",
+  "question": "這一輪分配的方向是「潮汐預報表」. 保留它, 改選其他方向, 或再重抽.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "潮汐預報表",
+      "kicker": "THE ROLL",
+      "lineage": "中央氣象署潮汐預報表與港口潮位看板",
+      "thesis": "配額像潮汐一樣週期漲退; 這一頁是你的潮位表, 工作列就是水線.",
+      "palette": [
+        "#0A1A33",
+        "#13355C",
+        "#DCEAF4",
+        "#8FC1E0",
+        "#C2367E"
+      ],
+      "materials": [
+        "深港灣藍底",
+        "海圖白與淺水藍色塊",
+        "髮絲潮位曲線",
+        "緊密的表格數字"
+      ],
+      "viewport": "上方是今天的潮位表: 5h 週期的剩餘曲線, 下次重置時刻與剩餘 %; 視窗底部是 Windows 工作列水線, widget 可 hover; 史萊姆貼在右緣; 下載鈕在潮位表的標題列.",
+      "risk": "潮汐是比喻; 若曲線看起來像天氣資料而不是配額, 訪客會讀不懂. 工作列必須在首屏內.",
+      "raised": [
+        {
+          "from": "challenger-ikeda",
+          "raise": "所有數字放在嚴格的表格欄位裡, 密度本身就是材質; 不用卡片包裝數字."
+        },
+        {
+          "from": "challenger-accretion",
+          "raise": "正常, 警告, 危險, 過期四種狀態除了顏色, 還有各自的線型或標記, 不只靠顏色區分."
+        },
+        {
+          "from": "challenger-tensegrity",
+          "raise": "功能說明以引線釘在重現元件的實際部位上, 取代一排功能卡."
+        },
+        {
+          "from": "challenger-kraftwerk",
+          "raise": "hover 一個功能時, 只有它的引線亮起, 像電流抵達燈泡."
+        },
+        {
+          "from": "challenger-tdr",
+          "raise": "主要的剩餘 % 數字在手機上也不縮小, 其他層級依序讓位."
+        }
+      ],
+      "html": ".impeccable/mocks/decision/r1-assigned.html"
+    },
+    {
+      "id": "model-pick",
+      "label": "深海發光水母",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "app 圖示的深海水母與 Haeckel 水母圖版",
+      "thesis": "頁面就是圖示裡的那片深海, 配額是水母身上發光的弧.",
+      "palette": [
+        "#0A1250",
+        "#1B2FA8",
+        "#EAF0FF",
+        "#B9C6FF",
+        "#F2B84B"
+      ],
+      "materials": [
+        "深鈷藍海水",
+        "半透明白色線描",
+        "金色光環弧線",
+        "標本圖版標籤"
+      ],
+      "viewport": "深鈷藍全幅, 中央一隻線描水母, 傘緣的兩條弧就是 5h/7d 剩餘; 底部工作列與 widget, 下載鈕在標本標籤上.",
+      "risk": "最直接的名稱聯想, 也是這類頁面最常落點的方向; 容易滑向發光深色模板.",
+      "html": ".impeccable/mocks/decision/r1-model-pick.html"
+    },
+    {
+      "id": "challenger-sixpack",
+      "label": "夜航六儀表",
+      "verdict": "competitive",
+      "lineage": "小飛機夜航的六個基本儀表",
+      "thesis": "一眼掃過六個儀表, 每個都同時顯示數值與趨勢.",
+      "palette": [
+        "#0A0A0A",
+        "#161616",
+        "#F2F2F2",
+        "#7CFFB2",
+        "#FFB900"
+      ],
+      "materials": [
+        "霧黑面板",
+        "白色刻度",
+        "阻尼指針"
+      ],
+      "viewport": "兩排三個儀表: 每個來源的 5h/7d 剩餘與 pace 趨勢, 下方工作列; 指針有阻尼.",
+      "case": "產品清晰度高 (數值加趨勢就是 pace), 但開發者不認同飛行員的世界.",
+      "risk": "儀表的琥珀與紅色燈會和狀態色混淆; 容易變成儀表板模板.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-night-flight-six-pack-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-night-flight-six-pack.webp",
+      "html": ".impeccable/mocks/decision/r1-sixpack.html"
+    },
+    {
+      "id": "challenger-ikeda",
+      "label": "池田亮司 datamatics",
+      "verdict": "declined",
+      "lineage": "資料崇高的黑白條碼場",
+      "thesis": "只有黑與白, 資料密度就是畫面.",
+      "palette": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "materials": [
+        "髮絲條碼",
+        "等寬數字"
+      ],
+      "viewport": "全幅條碼場與正弦格線.",
+      "case": "看起來酷, 但說明不了配額, 也不能用狀態色.",
+      "kept": "數字放在嚴格欄位, 密度即材質.",
+      "risk": "閃爍與純黑白排斥狀態色.",
+      "hero": "https://impeccable.style/worlds/cards/ikeda-datamatics-hero.webp"
+    },
+    {
+      "id": "challenger-accretion",
+      "label": "黑洞吸積盤",
+      "verdict": "declined",
+      "lineage": "黑洞事件視界",
+      "thesis": "物質跨過不可逆的門檻.",
+      "palette": [
+        "#000000",
+        "#BFD8FF",
+        "#C2412D",
+        "#E8B84B"
+      ],
+      "materials": [
+        "虛空黑",
+        "光子環"
+      ],
+      "viewport": "一個彎曲的發光盤.",
+      "case": "與產品無關, 宇宙題材是常見的深色模板.",
+      "kept": "每個狀態都有自己的形, 不只靠顏色.",
+      "risk": "裝飾蓋過資訊.",
+      "hero": "https://impeccable.style/worlds/cards/galaxies-nebulae-deep-time-accretion-disk-threshold-hero.webp"
+    },
+    {
+      "id": "challenger-tensegrity",
+      "label": "張拉整體柱",
+      "verdict": "declined",
+      "lineage": "碳桿與紅繩的動態雕塑",
+      "thesis": "相反的力讓剛體看起來在呼吸.",
+      "palette": [
+        "#D8D6D0",
+        "#111111",
+        "#C62828"
+      ],
+      "materials": [
+        "碳桿",
+        "紅繩",
+        "混凝土"
+      ],
+      "viewport": "一根呼吸的張拉柱.",
+      "case": "訪客認同度低, 與配額無關.",
+      "kept": "標註以引線釘在結構節點上, 版面服從結構.",
+      "risk": "像藝術裝置頁.",
+      "hero": "https://impeccable.style/worlds/cards/kinetic-sculpture-automata-tensegrity-breathing-column-hero.webp"
+    },
+    {
+      "id": "challenger-tdr",
+      "label": "Designers Republic 唱片封套",
+      "verdict": "declined",
+      "lineage": "資訊噪音式唱片設計",
+      "thesis": "一個巨大的字穿過噪音大喊.",
+      "palette": [
+        "#000000",
+        "#FF2BA6",
+        "#FF7A00",
+        "#FFFFFF"
+      ],
+      "materials": [
+        "平印色塊",
+        "套準記號"
+      ],
+      "viewport": "洋紅格線鎖在黑底上.",
+      "case": "語氣與使用者要避免的誇大相反方向衝突.",
+      "kept": "那個主要的字在任何寬度都不縮小.",
+      "risk": "噪音蓋過資訊.",
+      "hero": "https://impeccable.style/worlds/cards/tdr-info-noise-sleeve-hero.webp"
+    },
+    {
+      "id": "challenger-kraftwerk",
+      "label": "Kraftwerk 人機",
+      "verdict": "declined",
+      "lineage": "Kraftwerk 專輯識別",
+      "thesis": "所有元素都是格線上的霓虹線圖.",
+      "palette": [
+        "#0A0A0A",
+        "#E10600",
+        "#FFC400",
+        "#F4F1EA"
+      ],
+      "materials": [
+        "琺瑯平塗",
+        "霓虹線"
+      ],
+      "viewport": "紅黃線在格線上連接四個人形.",
+      "case": "紅黃綠交通色與狀態色直接衝突.",
+      "kept": "節點啟動時, 只有它的連線亮起.",
+      "risk": "狀態色語意被破壞.",
+      "hero": "https://impeccable.style/worlds/cards/kraftwerk-man-machine-hero.webp"
+    }
+  ],
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "buildPath": {
+    "value": "code"
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "類別標準做法",
+    "thesis": "開發者工具介紹頁的標準排法, 做到最好.",
+    "palette": [
+      "#202020",
+      "#2B2B2B",
+      "#F5F5F5",
+      "#4CC2FF"
+    ],
+    "materials": [
+      "Windows 11 深色中性色",
+      "重現的 app 元件"
+    ],
+    "viewport": "標題, 下載鈕, 重現的工作列 widget 與史萊姆, 下方功能區塊與更新紀錄.",
+    "risk": "設計上就與其他工具頁無從區分.",
+    "html": ".impeccable/mocks/decision/canon.html"
+  },
+  "steer": true
+}

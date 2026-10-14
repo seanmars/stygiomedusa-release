@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><title>閘門餘額</title>
+<style>
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;font-family:"Microsoft JhengHei UI","Segoe UI",sans-serif;
+background:#D9DCE0 repeating-linear-gradient(90deg,rgba(255,255,255,.18) 0 1px,transparent 1px 3px);color:#1a1c1f;position:relative}
+.sign{position:absolute;left:0;right:0;top:0;height:132px;background:#2A2D31;color:#F2F6FA;display:flex;align-items:center;padding:0 72px;gap:28px}
+.sign .no{width:64px;height:64px;border-radius:50%;background:#F2F6FA;color:#2A2D31;display:grid;place-items:center;font-weight:700;font-size:28px}
+.sign h1{font-size:58px;font-weight:700;letter-spacing:.02em}
+.sign small{margin-left:auto;font-size:24px;opacity:.8}
+.seam{position:absolute;left:0;right:0;top:132px;height:6px;background:#b8bcc2}
+.reader{position:absolute;left:72px;top:190px;width:900px;height:520px;background:#0B1220;border-radius:28px;
+box-shadow:inset 0 0 0 10px #2A2D31;padding:48px 52px;color:#F2F6FA}
+.reader .lbl{font-size:24px;opacity:.7;letter-spacing:.2em}
+.reader .big{font-family:Consolas,monospace;font-size:120px;line-height:1;margin-top:24px;color:#F2F6FA}
+.reader .big b{color:#4CC2FF}
+.task{position:absolute;left:52px;right:52px;bottom:48px;height:72px;background:#202020;border-radius:8px;display:flex;align-items:center;padding:0 24px;gap:22px}
+.ic{width:34px;height:34px;border-radius:6px;background:#3a3a3a}
+.wid{margin-left:auto;display:flex;gap:18px}
+.bar{width:120px}
+.bar i{display:block;height:8px;border-radius:4px;background:#3a3a3a;margin:6px 0}
+.bar i u{display:block;height:100%;border-radius:4px;background:#4CC2FF}
+.tap{position:absolute;left:1030px;top:250px;width:300px;height:300px;border-radius:50%;background:#F2F6FA;
+box-shadow:0 0 0 18px #2A2D31,0 0 0 26px #FCE100;display:grid;place-items:center;text-align:center}
+.tap span{font-size:44px;font-weight:700;display:block}
+.tap em{font-style:normal;font-size:26px;opacity:.7}
+.cap{position:absolute;left:1000px;top:610px;width:360px;font-size:24px;line-height:1.5;text-align:center}
+.slime{position:absolute;right:-30px;top:420px;width:120px;height:250px;border-radius:60px 0 0 60px;background:#0b0b0b}
+.slime::before,.slime::after{content:"";position:absolute;left:22px;width:66px;height:66px;border-radius:50%;border:6px solid #4CC2FF;border-right-color:#FCE100}
+.slime::before{top:34px}.slime::after{top:140px}
+.lamp{position:absolute;left:72px;top:750px;display:flex;gap:16px;align-items:center;font-size:24px}
+.lamp i{width:26px;height:26px;border-radius:50%;background:#4CC2FF;border:3px solid #2A2D31}
+</style></head><body>
+<div class="sign"><div class="no">S</div><h1>不開視窗, 也看得到配額.</h1><small>Claude Code · Codex · Windows 11</small></div>
+<div class="seam"></div>
+<div class="reader">
+  <div class="lbl">CLAUDE · 5h 剩餘</div>
+  <div class="big"><b>62</b>% · 2:14</div>
+  <div class="task"><div class="ic"></div><div class="ic"></div><div class="ic"></div><div class="ic"></div>
+    <div class="wid"><div class="bar"><i><u style="width:62%"></u></i><i><u style="width:81%"></u></i></div><div class="bar"><i><u style="width:40%;background:#FCE100"></u></i><i><u style="width:70%"></u></i></div></div></div>
+</div>
+<div class="tap"><div><span>下載</span><em>v0.8.0 · 安裝檔</em></div></div>
+<div class="cap">感應這裡下載. Windows 11, MIT 授權.</div>
+<div class="lamp"><i></i>正常 · 讀數為示意</div>
+<div class="slime"></div>
+</body></html>

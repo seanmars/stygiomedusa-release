@@ -1,0 +1,228 @@
+{
+  "title": "選擇介紹頁的視覺世界",
+  "question": "這一輪分配的方向是「閘門餘額」. 保留它, 改選其他方向, 或重抽.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "閘門餘額",
+      "kicker": "THE ROLL",
+      "lineage": "台北捷運閘門讀卡機的餘額顯示",
+      "thesis": "過閘門時瞄一眼就知道餘額; Stygiomedusa 讓配額也這樣被看見.",
+      "palette": [
+        "#D9DCE0",
+        "#2A2D31",
+        "#0B1220",
+        "#F2F6FA",
+        "#4CC2FF",
+        "#FCE100"
+      ],
+      "materials": [
+        "髮絲紋不鏽鋼閘門面板",
+        "深色玻璃後的背光段碼讀數",
+        "感應區圓形標靶",
+        "狀態指示燈"
+      ],
+      "viewport": "整個首屏是一座閘門的上蓋: 讀卡機玻璃窗內是可 hover 的 Windows 工作列與配額 widget, 右緣貼著史萊姆, 感應標靶就是下載鈕.",
+      "risk": "比喻若壓過產品, 訪客會以為這是交通卡工具; 工作列必須比閘門更醒目.",
+      "raised": [
+        {
+          "from": "challenger-ebru",
+          "raise": "首屏是一片連續的閘門面板, 不放浮動卡片; 史萊姆是頁面上唯一的液體, 只在訪客靠近時動."
+        },
+        {
+          "from": "challenger-sneaker",
+          "raise": "全頁每個讀數 (讀卡機, widget, callout, 配額卡) 共用同一套標籤格: 來源 / 5h·7d / 剩餘 / 重置."
+        },
+        {
+          "from": "challenger-film",
+          "raise": "狀態色只點亮正在讀取的那一筆, 其餘一律是鋼面與墨色."
+        },
+        {
+          "from": "challenger-civic",
+          "raise": "只用一套台北黑體的兩個字重, 加一套段碼數字; 不出現第三種字體聲音."
+        }
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html"
+    },
+    {
+      "id": "model-pick",
+      "label": "月台資訊看板",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "捷運/台鐵月台的點矩陣到站看板",
+      "thesis": "配額像下一班車: 不用問, 抬頭就看得到還有多久重置.",
+      "palette": [
+        "#0B0B0C",
+        "#EDEDED",
+        "#1F3A5F",
+        "#4CC2FF",
+        "#FF5F5F"
+      ],
+      "materials": [
+        "白色點矩陣 LED",
+        "黑色看板外框",
+        "路線色帶",
+        "中英雙語列"
+      ],
+      "viewport": "一面全寬到站看板, 每列是一個來源的 5h/7d 剩餘與重置倒數, 最下列是 \"下一班: v0.8.0 下載\".",
+      "risk": "點矩陣看板是常見的網頁題材, 也是這類頁面最容易落入的方向; 看板顏色必須避開狀態色.",
+      "html": ".impeccable/mocks/decision/model-pick.html"
+    },
+    {
+      "id": "challenger-terminal",
+      "label": "深夜綠磷終端機",
+      "verdict": "competitive",
+      "lineage": "綠磷 CRT 終端機",
+      "thesis": "在 Claude Code 使用者整天面對的終端機裡, 配額自己印出來.",
+      "palette": [
+        "#050805",
+        "#33FF66",
+        "#0E3B18",
+        "#4CC2FF"
+      ],
+      "materials": [
+        "綠磷光暈",
+        "掃描線",
+        "游標殘影"
+      ],
+      "viewport": "一份持續捲動的 transcript, 配額讀數像系統訊息一行行印出, 指令列輸入 install 即下載.",
+      "case": "訪客認同度高 (他們住在終端機裡), 但產品是工作列與螢幕邊緣的 GUI, 終端機外衣會讓產品更難懂.",
+      "risk": "把 GUI 工具包裝成 CLI, 首屏證明不了 \"不開視窗就看到配額\".",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-phosphor-terminal-midnight-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-phosphor-terminal-midnight.webp",
+      "html": ".impeccable/mocks/decision/challenger-terminal.html"
+    },
+    {
+      "id": "challenger-ebru",
+      "label": "土耳其浮水染",
+      "verdict": "declined",
+      "lineage": "ebru 浮水染",
+      "thesis": "顏料浮在水面, 每一滴都推開前一滴.",
+      "palette": [
+        "#1B3A5C",
+        "#E8D9B5",
+        "#B23A2E"
+      ],
+      "materials": [
+        "浮在稠水上的顏料",
+        "一次轉印的紙"
+      ],
+      "viewport": "整個畫面是一盆可被梳動的顏料.",
+      "case": "與開發者的世界無關, 也無法說明配額.",
+      "kept": "一片連續表面, 只由一種介質移動.",
+      "risk": "訪客看不出產品是什麼.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-ebru-floated-pigment-hero.webp"
+    },
+    {
+      "id": "challenger-sneaker",
+      "label": "球鞋盒牆",
+      "verdict": "declined",
+      "lineage": "球鞋收藏盒牆",
+      "thesis": "每個盒子的端面標籤就是索引.",
+      "palette": [
+        "#C8622A",
+        "#111111",
+        "#F4F1EA"
+      ],
+      "materials": [
+        "紙盒板",
+        "薄紙"
+      ],
+      "viewport": "一面疊高的鞋盒牆.",
+      "case": "訪客認同度低, 盒子比喻與配額無關.",
+      "kept": "一套嚴格的標籤格統治每一張卡.",
+      "risk": "變成收藏題材, 失去工具感.",
+      "hero": "https://impeccable.style/worlds/cards/textiles-weave-drape-fashion-sneaker-box-stacks-hero.webp"
+    },
+    {
+      "id": "challenger-film",
+      "label": "手沖 16mm 底片",
+      "verdict": "declined",
+      "lineage": "手工沖洗底片",
+      "thesis": "乳劑本身成為事件的一部分.",
+      "palette": [
+        "#141414",
+        "#A9A9A4",
+        "#E86A1C"
+      ],
+      "materials": [
+        "乳劑刮痕",
+        "漏光"
+      ],
+      "viewport": "一條逐格排列的底片.",
+      "case": "與產品和訪客都無關.",
+      "kept": "強調色只留給正在作用的那一格.",
+      "risk": "裝飾蓋過資訊.",
+      "hero": "https://impeccable.style/worlds/cards/cinema-cinematography-editing-hand-processed-film-bloom-hero.webp"
+    },
+    {
+      "id": "challenger-quiz",
+      "label": "90 年代少女雜誌測驗",
+      "verdict": "declined",
+      "lineage": "雜誌心理測驗跨頁",
+      "thesis": "勾完每一題才翻開結果.",
+      "palette": [
+        "#FF4FA3",
+        "#C6FF3D",
+        "#FFFFFF"
+      ],
+      "materials": [
+        "半色調照片",
+        "凝膠筆"
+      ],
+      "viewport": "拼貼的測驗跨頁.",
+      "case": "語氣與訪客, 產品都不合.",
+      "kept": "結果只在狀態達成時才打開.",
+      "risk": "語氣輕浮.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-teen-magazine-quiz-hero.webp"
+    },
+    {
+      "id": "challenger-civic",
+      "label": "晚期現代機構簡介",
+      "verdict": "declined",
+      "lineage": "企業機構簡介冊",
+      "thesis": "全部顏色花在一條光帶上.",
+      "palette": [
+        "#F7F7FA",
+        "#1B1547",
+        "#6B5CE7"
+      ],
+      "materials": [
+        "骨白紙面",
+        "絲帶光"
+      ],
+      "viewport": "白底, 右側一條彩色光帶.",
+      "case": "正是使用者不要的 SaaS 行銷頁.",
+      "kept": "一套字體的兩個字重就撐起全部論述.",
+      "risk": "像一般 SaaS 行銷頁.",
+      "hero": "https://impeccable.style/worlds/cards/civic-bureau-prospectus-late-modern-hero.webp"
+    }
+  ],
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "buildPath": {
+    "value": "code"
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "類別標準做法",
+    "thesis": "開發者工具介紹頁的標準排法, 做到最好.",
+    "palette": [
+      "#202020",
+      "#2B2B2B",
+      "#F5F5F5",
+      "#4CC2FF"
+    ],
+    "materials": [
+      "Windows 11 深色中性色",
+      "重現的 app 元件"
+    ],
+    "viewport": "標題, 下載鈕, 重現的工作列 widget 與史萊姆, 下方功能區塊與更新紀錄.",
+    "risk": "設計上就與其他工具頁無從區分.",
+    "html": ".impeccable/mocks/decision/canon.html"
+  },
+  "steer": true
+}
