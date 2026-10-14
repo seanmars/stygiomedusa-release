@@ -1,0 +1,127 @@
+@import 'tailwindcss';
+
+@import '@fontsource/cactus-classical-serif/400.css';
+@import '@fontsource-variable/noto-sans-tc/index.css';
+@import '@fontsource-variable/azeret-mono/index.css';
+
+/*
+ * 潮汐預報表: 深港灣藍鋪滿全頁, 海圖白是墨色, 灰藍是次要文字與格線.
+ * 海圖洋紅只用在被點亮的引線. 狀態色 (tone) 與 app 相同, 只用在重現的讀數裡.
+ */
+@theme {
+  --color-harbor: #0a1a33;
+  --color-harbor-deep: #071327;
+  --color-chart: #13355c;
+  --color-grid: #2a4a70;
+  --color-ink: #dceaf4;
+  --color-mist: #9db6cc;
+  --color-note: #e0559b;
+
+  --color-tone-normal: #4cc2ff;
+  --color-tone-warning: #fce100;
+  --color-tone-danger: #ff5f5f;
+  --color-tone-stale: #ffb900;
+  /* 淺色底 (例如白色史萊姆) 上的狀態色, 與 app 淺色主題相同 */
+  --color-tone-normal-on-light: #0078d4;
+  --color-tone-warning-on-light: #a37a00;
+  --color-tone-danger-on-light: #c42b1c;
+  --color-tone-stale-on-light: #b86e00;
+  --color-agent-claude: #e0896a;
+  --color-agent-codex: #3dd6b5;
+
+  /* 重現的 Windows 11 深色介面 */
+  --color-win-bg: #202020;
+  --color-win-card: #2b2b2b;
+  --color-win-line: #3a3a3a;
+  --color-win-text: #f5f5f5;
+  /* Windows 11 深色主題的強調色: 開始鈕與執行中指示線 */
+  --color-win-accent: #4cc2ff;
+
+  --font-display: 'Cactus Classical Serif', 'Noto Sans TC Variable', serif;
+  --font-sans: 'Noto Sans TC Variable', 'Segoe UI Variable Text', 'Microsoft JhengHei UI', sans-serif;
+  --font-mono: 'Azeret Mono Variable', ui-monospace, monospace;
+  --font-win: 'Segoe UI Variable Text', 'Segoe UI', 'Noto Sans TC Variable', sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-jelly: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 頁面內容的水平範圍. */
+@utility page-x {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+
+  @media (min-width: 48rem) {
+    padding-inline: 2.5rem;
+  }
+}
+
+@layer base {
+  html {
+    background: var(--color-harbor);
+    color: var(--color-ink);
+    color-scheme: dark;
+    scrollbar-color: var(--color-grid) var(--color-harbor-deep);
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.7;
+    min-height: 100svh;
+  }
+
+  ::selection {
+    background: var(--color-note);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  a {
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: 1px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    padding: 0.05em 0.35em;
+    border-radius: 3px;
+    background: var(--color-chart);
+    color: var(--color-ink);
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
