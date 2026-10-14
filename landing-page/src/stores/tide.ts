@@ -24,6 +24,9 @@ export const useTideStore = defineStore('tide', () => {
     now.value = Math.min(DOMAIN, Math.max(0, Math.round(minutes)))
   }
 
+  /** 游標停在某個示範上: 示意時間停住 (首屏狀態點停止呼吸). */
+  const held = computed(() => holds.value > 0)
+
   const claude = computed(() => readAgent('claude', now.value))
   const codex = computed(() => readAgent('codex', now.value))
   const agents = computed(() => [claude.value, codex.value])
@@ -68,5 +71,5 @@ export const useTideStore = defineStore('tide', () => {
     playing.value = false
   }
 
-  return { now, setNow, claude, codex, agents, hold, release, playing, startAutoplay, stopAutoplay }
+  return { now, setNow, claude, codex, agents, held, hold, release, playing, startAutoplay, stopAutoplay }
 })

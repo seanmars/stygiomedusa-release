@@ -27,7 +27,7 @@ onBeforeUnmount(() => window.removeEventListener('scroll', update))
       href="#top"
       aria-label="回到頂端"
       title="回到頂端"
-      class="fixed right-5 bottom-5 z-50 grid size-11 place-items-center rounded-full border border-grid bg-chart text-ink no-underline shadow-[0_6px_18px_rgb(0_0_0/0.45)] transition-colors hover:border-mist hover:text-white md:right-8 md:bottom-8"
+      class="fixed right-5 bottom-5 z-50 grid size-11 place-items-center rounded-full border border-edge bg-depth/80 text-core no-underline shadow-[0_10px_30px_-8px_rgb(27_31_168/0.9)] backdrop-blur-md transition-colors hover:border-halo/60 hover:text-halo-soft md:right-8 md:bottom-8"
     >
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M12 19V5M5 12l7-7 7 7" />

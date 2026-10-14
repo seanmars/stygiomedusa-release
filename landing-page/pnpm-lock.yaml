@@ -11,15 +11,18 @@ importers:
       '@fontsource-variable/azeret-mono':
         specifier: ^5.3.0
         version: 5.3.0
+      '@fontsource-variable/lexend-exa':
+        specifier: ^5.3.0
+        version: 5.3.0
       '@fontsource-variable/noto-sans-tc':
-        specifier: ^5.3.1
-        version: 5.3.1
-      '@fontsource/cactus-classical-serif':
         specifier: ^5.3.1
         version: 5.3.1
       pinia:
         specifier: ^4.0.3
         version: 4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.43(typescript@6.0.3))
+      shaders:
+        specifier: ^4.0.4
+        version: 4.0.4(vue@3.5.43(typescript@6.0.3))
       vue:
         specifier: ^3.5.42
         version: 3.5.43(typescript@6.0.3)
@@ -370,11 +373,11 @@ packages:
   '@fontsource-variable/azeret-mono@5.3.0':
     resolution: {integrity: sha512-nX76TwGHW53SoMMJoqb415uFqEQ3qnthL/bEeOOI2DjC7MntyIUVItQ45sVLe5+wG4gT0H5B7auAMa77p8Qc3Q==}
 
+  '@fontsource-variable/lexend-exa@5.3.0':
+    resolution: {integrity: sha512-DdjlS/elb14Q/B2xUQfcCtMfiOUF2HJHtJZ3gKF1SwlvQfuEOmNwCxVd2Mcbs383ZvFkUHIXhtKGTmza8KP+Qw==}
+
   '@fontsource-variable/noto-sans-tc@5.3.1':
     resolution: {integrity: sha512-gueh+AySNkihE+HvizXLHltxt5/xVFSvw6ISnKTlpb/lG5QQm6u/KwuempTJ/jDYMST3xwiERYTTyseoJ/Kxew==}
-
-  '@fontsource/cactus-classical-serif@5.3.1':
-    resolution: {integrity: sha512-NQ5PU3v+DpOMaK51CMGHvo/XNgR0xzhSwIP6AE4A2JI/ISZMZ4D7kSnqPNRGpDB5GHvzIRkrYQ90l8n03Qyx7A==}
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -1033,11 +1036,6 @@ packages:
 
   '@volar/typescript@2.4.28':
     resolution: {integrity: sha512-Ja6yvWrbis2QtN4ClAKreeUZPVYMARDYZl9LMEv1iQ1QdepB6wn0jTRxA9MftYmYa4DQ4k/DaSZpFPUfxl8giw==}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   '@vue-macros/common@3.1.4':
     resolution: {integrity: sha512-/5Fv+6DgIcM9ajY05ZmKBv+LMX1M9A0X+IUwDRVdt67ciw8OV9bvG2r34p3RiEadlsQybjhKPRKNXDC8Bp23cw==}
@@ -2069,6 +2067,27 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  shaders@4.0.4:
+    resolution: {integrity: sha512-NB+/RiK0oydteeeKdPqsLpR3iSoDTvt8bsdgw2wPb697QVCY/yadZV8gitCyCQx5t/kb4nJicIR+cbG9Q6JFfQ==}
+    hasBin: true
+    peerDependencies:
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+      solid-js: ^1.8.0
+      svelte: ^5
+      vue: ^3.5.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+      solid-js:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
     engines: {node: '>=8'}
@@ -2107,6 +2126,10 @@ packages:
 
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
+
+  tinyest@0.3.4:
+    resolution: {integrity: sha512-81EcMHTCQ2IPweOGk9SpMgjbenR9ZJRsAE84btEv0DhvVKwhe7qBy28hWgatoXa9ppWzmtpHiJ+e86SiaAtY6w==}
+    engines: {node: '>=12.20.0'}
 
   tinyexec@1.3.1:
     resolution: {integrity: sha512-GCvB3aoys96IuDFBMcTB46JOR6mdMtAToqwiW8JlWhsoh1mhHi/xn9ss/Dg7N555GiJyEt2qzoG/NHCwM6h1EA==}
@@ -2153,9 +2176,20 @@ packages:
     peerDependencies:
       typescript: '>=4.8.4'
 
+  tsover-runtime@0.0.7:
+    resolution: {integrity: sha512-FHHwMJzZbnP23+fU1PxXljy7j0RRRosL2r1/CRUNTqfW+l7m35JsUkM615x/cAzw4GqRdXPIl3axKMj9qzpZtQ==}
+
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
+
+  typed-binary@4.3.3:
+    resolution: {integrity: sha512-W2hLsSzt3k/tg38gDE4Fn/QiwcoqGuUHBc2cb3mXuH7KcYxe/GM57vzW14s2/bawB4R5knGgGq8Xb57vsaJ4Sg==}
+
+  typegpu@0.12.3:
+    resolution: {integrity: sha512-zYwQEhnPPwhq5vQKmollXRK1LCVjStOnL+2B0PiebqvAzYPr25rPNR4r3olLoow5sKKjyj3kzHKEcpD5SyDzGQ==}
+    engines: {node: '>=12.20.0'}
+    hasBin: true
 
   typescript-eslint@8.71.2:
     resolution: {integrity: sha512-Rz4effbMy2g9wnvOJZG6SbVavX313Lap1vNEbk1RUochzickvzP8P4HB+bkNg5e50eVz1hQGjh9K1omI1xB4Bw==}
@@ -2259,7 +2293,6 @@ packages:
     engines: {node: '>=v14.21.3'}
     peerDependencies:
       vite: ^6.0.0 || ^7.0.0 || ^8.0.0
-      vue: '*'
 
   vite-plugin-vue-inspector@6.0.0:
     resolution: {integrity: sha512-OpyITJLgZNibxlrik1EmRtvXHDjLRxNPsWkGFTERZs2LgMEdG4W0WoFt5GIgp3a3jRou+eJR8U1zOBk/XQgEbw==}
@@ -2745,9 +2778,9 @@ snapshots:
 
   '@fontsource-variable/azeret-mono@5.3.0': {}
 
-  '@fontsource-variable/noto-sans-tc@5.3.1': {}
+  '@fontsource-variable/lexend-exa@5.3.0': {}
 
-  '@fontsource/cactus-classical-serif@5.3.1': {}
+  '@fontsource-variable/noto-sans-tc@5.3.1': {}
 
   '@humanfs/core@0.19.2':
     dependencies:
@@ -3229,13 +3262,11 @@ snapshots:
 
   '@volar/source-map@2.4.28': {}
 
-  '@volar/typescript@2.4.28(typescript@6.0.3)':
+  '@volar/typescript@2.4.28':
     dependencies:
       '@volar/language-core': 2.4.28
       path-browserify: 1.0.1
       vscode-uri: 3.2.0
-    optionalDependencies:
-      typescript: 6.0.3
 
   '@vue-macros/common@3.1.4(vue@3.5.43(typescript@6.0.3))':
     dependencies:
@@ -4239,6 +4270,12 @@ snapshots:
 
   semver@7.8.5: {}
 
+  shaders@4.0.4(vue@3.5.43(typescript@6.0.3)):
+    dependencies:
+      typegpu: 0.12.3
+    optionalDependencies:
+      vue: 3.5.43(typescript@6.0.3)
+
   shebang-command@2.0.0:
     dependencies:
       shebang-regex: 3.0.0
@@ -4266,6 +4303,8 @@ snapshots:
   tapable@2.3.3: {}
 
   tinybench@2.9.0: {}
+
+  tinyest@0.3.4: {}
 
   tinyexec@1.3.1: {}
 
@@ -4302,9 +4341,19 @@ snapshots:
     dependencies:
       typescript: 6.0.3
 
+  tsover-runtime@0.0.7: {}
+
   type-check@0.4.0:
     dependencies:
       prelude-ls: 1.2.1
+
+  typed-binary@4.3.3: {}
+
+  typegpu@0.12.3:
+    dependencies:
+      tinyest: 0.3.4
+      tsover-runtime: 0.0.7
+      typed-binary: 4.3.3
 
   typescript-eslint@8.71.2(eslint@10.12.0(jiti@2.7.0))(typescript@6.0.3):
     dependencies:
@@ -4385,10 +4434,10 @@ snapshots:
       vite: 8.3.4(@types/node@24.19.2)(jiti@2.7.0)
       vite-plugin-inspect: 11.4.1(vite@8.3.4(@types/node@24.19.2)(jiti@2.7.0))
       vite-plugin-vue-inspector: 6.0.0(vite@8.3.4(@types/node@24.19.2)(jiti@2.7.0))
-      vue: 3.5.43(typescript@6.0.3)
     transitivePeerDependencies:
       - '@nuxt/kit'
       - supports-color
+      - vue
 
   vite-plugin-vue-inspector@6.0.0(vite@8.3.4(@types/node@24.19.2)(jiti@2.7.0)):
     dependencies:
@@ -4497,7 +4546,7 @@ snapshots:
 
   vue-tsc@3.3.13(typescript@6.0.3):
     dependencies:
-      '@volar/typescript': 2.4.28(typescript@6.0.3)
+      '@volar/typescript': 2.4.28
       '@vue/language-core': 3.3.13
       typescript: 6.0.3
 

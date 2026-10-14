@@ -1,21 +1,28 @@
 @import 'tailwindcss';
 
-@import '@fontsource/cactus-classical-serif/400.css';
 @import '@fontsource-variable/noto-sans-tc/index.css';
+@import '@fontsource-variable/lexend-exa/index.css';
 @import '@fontsource-variable/azeret-mono/index.css';
 
 /*
- * 潮汐預報表: 深港灣藍鋪滿全頁, 海圖白是墨色, 灰藍是次要文字與格線.
- * 海圖洋紅只用在被點亮的引線. 狀態色 (tone) 與 app 相同, 只用在重現的讀數裡.
+ * 深淵系統選單: 黑藍虛空由下方鈷藍照亮, 霧與光塵在其中漂移 (WebGPU, 見 AbyssShader).
+ * 示範是內部發光的半透明物件; 光環金只標示被選取的東西. 狀態色 (tone) 與 app 相同, 只用在重現的讀數裡.
  */
 @theme {
-  --color-harbor: #0a1a33;
-  --color-harbor-deep: #071327;
-  --color-chart: #13355c;
-  --color-grid: #2a4a70;
-  --color-ink: #dceaf4;
-  --color-mist: #9db6cc;
-  --color-note: #e0559b;
+  --color-void: #03051a;
+  --color-abyss: #070a29;
+  --color-depth: #10165a;
+  --color-cobalt: #1b1fa8;
+  --color-cobalt-bright: #4650ff;
+  --color-violet: #a78bfa;
+  --color-core: #eeeaff;
+  --color-lumen: #c9cbef;
+  --color-haze: #9ba1d6;
+  --color-edge: rgb(233 228 255 / 0.14);
+  /* 資料表的列縫: 只為了掃讀, 比物件光邊更淡 */
+  --color-seam: rgb(233 228 255 / 0.07);
+  --color-halo: #ffc94d;
+  --color-halo-soft: #ffd978;
 
   --color-tone-normal: #4cc2ff;
   --color-tone-warning: #fce100;
@@ -37,8 +44,15 @@
   /* Windows 11 深色主題的強調色: 開始鈕與執行中指示線 */
   --color-win-accent: #4cc2ff;
 
-  --font-display: 'Cactus Classical Serif', 'Noto Sans TC Variable', serif;
+  /* 熱力圖: 與 app 深色主題相同的紫色階 */
+  --color-heat-1: #8b5cf6;
+  --color-heat-2: #a78bfa;
+  --color-heat-3: #c4b5fd;
+  --color-heat-4: #ddd6fe;
+  --color-heat-5: #f5f3ff;
+
   --font-sans: 'Noto Sans TC Variable', 'Segoe UI Variable Text', 'Microsoft JhengHei UI', sans-serif;
+  --font-wide: 'Lexend Exa Variable', 'Noto Sans TC Variable', sans-serif;
   --font-mono: 'Azeret Mono Variable', ui-monospace, monospace;
   --font-win: 'Segoe UI Variable Text', 'Segoe UI', 'Noto Sans TC Variable', sans-serif;
 
@@ -49,7 +63,7 @@
 /* 頁面內容的水平範圍. */
 @utility page-x {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1240px;
   margin-inline: auto;
   padding-inline: 1.5rem;
 
@@ -58,12 +72,110 @@
   }
 }
 
+/* 細體標題: 字重輕, 字距略寬, 像浮在虛空裡的標示. */
+@utility display-thin {
+  font-weight: 220;
+  letter-spacing: 0.04em;
+  color: var(--color-core);
+}
+
+/* 交替的房間: 比虛空亮一階的深淵, 上下以遮罩淡入, 不畫分隔線也不留硬邊. */
+@utility room-deep {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(70% 50% at 50% 16%, rgb(27 31 168 / 0.24), transparent 72%),
+      radial-gradient(45% 40% at 88% 84%, rgb(167 139 250 / 0.08), transparent 70%),
+      var(--color-abyss);
+    mask-image: linear-gradient(to bottom, transparent, #000 10rem, #000 calc(100% - 10rem), transparent);
+  }
+}
+
+@layer components {
+  /*
+   * 內部發光的物件: 半透明的乳白體, 中心有光, 只用漸層, 不畫光點; 1px 光邊, 腳下有鈷藍光池.
+   * 房間的光透得進來. 游標進入或鍵盤焦點落在裡面時, 物件浮起, 金光從內部亮起 (被選取).
+   */
+  .object {
+    position: relative;
+    border: 1px solid var(--color-edge);
+    border-radius: 12px;
+    background:
+      radial-gradient(80% 70% at 50% 38%, rgb(233 228 255 / 0.12), transparent 72%),
+      linear-gradient(180deg, rgb(233 228 255 / 0.07), rgb(233 228 255 / 0.015) 40%, rgb(70 80 255 / 0.12)),
+      rgb(6 9 40 / 0.38);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.09),
+      inset 0 -48px 90px -48px rgb(70 80 255 / 0.35),
+      0 34px 80px -34px rgb(27 31 168 / 0.95);
+    transition:
+      translate 480ms var(--ease-out-expo),
+      border-color 260ms ease-out,
+      box-shadow 480ms var(--ease-out-expo);
+  }
+
+  .object:hover,
+  .object:focus-within {
+    translate: 0 -4px;
+    border-color: rgb(255 201 77 / 0.55);
+    box-shadow:
+      inset 0 1px 0 rgb(255 232 170 / 0.3),
+      inset 0 0 70px -20px rgb(255 201 77 / 0.16),
+      inset 0 -48px 90px -48px rgb(70 80 255 / 0.4),
+      0 40px 90px -34px rgb(27 31 168 / 1),
+      0 16px 48px -18px rgb(255 201 77 / 0.45);
+  }
+
+  /* 物件裡的透明螢幕: 深淵透過玻璃可見, 光由後方的 shader 提供 */
+  .object-glass {
+    background:
+      radial-gradient(60% 80% at 50% 110%, rgb(70 80 255 / 0.16), transparent 70%),
+      rgb(3 5 26 / 0.32);
+  }
+
+  /* 分段切換與色調選項 */
+  .toggle-option {
+    border-radius: 6px;
+    color: var(--color-haze);
+    transition:
+      color 150ms,
+      background-color 150ms,
+      box-shadow 150ms;
+  }
+  .toggle-option:hover {
+    color: var(--color-core);
+  }
+  .toggle-option[aria-pressed='true'] {
+    background: rgb(255 201 77 / 0.1);
+    color: var(--color-halo-soft);
+    box-shadow: inset 0 0 0 1px rgb(255 201 77 / 0.55);
+  }
+
+  /* 內文連結 */
+  .link {
+    color: var(--color-core);
+    text-decoration: underline;
+    text-decoration-color: rgb(255 201 77 / 0.45);
+    transition: text-decoration-color 150ms, color 150ms;
+  }
+  .link:hover {
+    color: #fff;
+    text-decoration-color: var(--color-halo);
+  }
+}
+
 @layer base {
   html {
-    background: var(--color-harbor);
-    color: var(--color-ink);
+    background: var(--color-void);
+    color: var(--color-lumen);
     color-scheme: dark;
-    scrollbar-color: var(--color-grid) var(--color-harbor-deep);
+    scrollbar-color: rgb(233 228 255 / 0.2) var(--color-void);
     scroll-behavior: smooth;
     /* sticky header 高 4rem, 錨點標題要留在 header 下方 */
     scroll-padding-top: 5rem;
@@ -75,17 +187,18 @@
     font-variant-numeric: tabular-nums;
     line-height: 1.7;
     min-height: 100svh;
+    caret-color: var(--color-halo);
   }
 
   ::selection {
-    background: var(--color-note);
-    color: #fff;
+    background: var(--color-halo);
+    color: var(--color-void);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-ink);
+    outline: 2px solid var(--color-halo);
     outline-offset: 3px;
-    border-radius: 2px;
+    border-radius: 4px;
   }
 
   a {
@@ -106,10 +219,11 @@
   code {
     font-family: var(--font-mono);
     font-size: 0.875em;
-    padding: 0.05em 0.35em;
-    border-radius: 3px;
-    background: var(--color-chart);
-    color: var(--color-ink);
+    padding: 0.05em 0.4em;
+    border-radius: 4px;
+    background: rgb(233 228 255 / 0.08);
+    box-shadow: inset 0 0 0 1px var(--color-edge);
+    color: var(--color-core);
     overflow-wrap: anywhere;
   }
 }

@@ -37,23 +37,24 @@ function level(day: number, hour: number): number {
   return Math.min(5, Math.round(base))
 }
 
-const HEAT = ['bg-ink/5', 'bg-ink/15', 'bg-ink/30', 'bg-ink/50', 'bg-ink/72', 'bg-ink']
+// 與 app 深色主題的熱力圖相同: 越常用越亮
+const HEAT = ['bg-core/6', 'bg-heat-1', 'bg-heat-2', 'bg-heat-3', 'bg-heat-4', 'bg-heat-5']
 </script>
 
 <template>
-  <section class="page-x py-24 lg:py-32">
+  <section class="page-x py-28 lg:py-36">
     <SectionHead id="usage" title="用了多少, 用在哪裡">
       <p>
         以 tokscale 解析本機的 JSONL, 逐筆存到 SQLite; 來源檔被清除後資料仍在. 可以依區間, client, Claude 資料夾, project 與 model 篩選, 看 token 與 API 等價估算金額.
       </p>
     </SectionHead>
 
-    <p class="mt-10 text-sm text-mist">以下皆為示意資料.</p>
+    <p class="mt-12 text-sm text-haze">以下皆為示意資料.</p>
 
     <div class="relative mt-4 overflow-x-auto">
       <table class="w-full border-collapse font-mono text-[0.8rem] sm:text-[0.92rem]">
         <thead>
-          <tr class="text-left font-sans text-sm text-mist">
+          <tr class="text-left font-sans text-sm text-haze">
             <th scope="col" class="py-3 pr-3 font-normal sm:pr-6">Model</th>
             <th scope="col" class="py-3 pr-3 font-normal sm:pr-6">Client</th>
             <th scope="col" class="py-3 pr-3 text-right font-normal sm:pr-6">Token</th>
@@ -62,13 +63,13 @@ const HEAT = ['bg-ink/5', 'bg-ink/15', 'bg-ink/30', 'bg-ink/50', 'bg-ink/72', 'b
           </tr>
         </thead>
         <tbody>
-          <tr v-for="row in MODELS" :key="row.model" class="border-t border-grid">
-            <td class="py-3 pr-3 text-ink sm:pr-6">{{ row.model }}</td>
+          <tr v-for="row in MODELS" :key="row.model" class="border-t border-seam">
+            <td class="py-3 pr-3 text-lumen sm:pr-6">{{ row.model }}</td>
             <td class="py-3 pr-3 font-sans sm:pr-6" :class="row.client === 'Claude' ? 'text-agent-claude' : 'text-agent-codex'">{{ row.client }}</td>
-            <td class="py-3 pr-3 text-right text-ink sm:pr-6">{{ row.tokens.toFixed(1) }}M</td>
-            <td class="py-3 text-right text-ink sm:pr-6">${{ row.cost.toFixed(2) }}</td>
+            <td class="py-3 pr-3 text-right text-lumen sm:pr-6">{{ row.tokens.toFixed(1) }}M</td>
+            <td class="py-3 text-right text-lumen sm:pr-6">${{ row.cost.toFixed(2) }}</td>
             <td class="py-3 max-sm:hidden">
-              <span class="block h-1.5 bg-mist/70" :style="{ width: `${(row.tokens / maxTokens) * 100}%` }" />
+              <span class="block h-1.5 rounded-full bg-violet/80 shadow-[0_0_10px_rgb(167_139_250/0.45)]" :style="{ width: `${(row.tokens / maxTokens) * 100}%` }" />
             </td>
           </tr>
         </tbody>
@@ -77,29 +78,29 @@ const HEAT = ['bg-ink/5', 'bg-ink/15', 'bg-ink/30', 'bg-ink/50', 'bg-ink/72', 'b
 
     <div class="mt-20 grid grid-cols-[minmax(0,1fr)] gap-16 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
       <figure>
-        <figcaption class="font-display text-2xl text-white">使用時段</figcaption>
-        <p class="mt-2 text-mist">分析視窗的熱力圖: 星期 x 小時. 本週, 本月與全部區間都有.</p>
+        <figcaption class="text-[1.6rem] font-light tracking-[0.04em] text-core">使用時段</figcaption>
+        <p class="mt-2 text-haze">分析視窗的熱力圖: 星期 x 小時. 本週, 本月與全部區間都有.</p>
         <div class="relative mt-6 overflow-x-auto">
           <div class="grid grid-cols-[1.5rem_repeat(24,minmax(0,1fr))] gap-[3px]" role="img" aria-label="示意: 平日上班時段用量最多, 晚上與週末較少">
             <template v-for="(day, d) in DAYS" :key="day">
-              <span class="text-xs leading-none text-mist">{{ day }}</span>
+              <span class="text-xs leading-none text-haze">{{ day }}</span>
               <span v-for="h in 24" :key="h" class="aspect-square rounded-[2px]" :class="HEAT[level(d, h - 1)]" />
             </template>
             <span />
-            <span v-for="h in 24" :key="`h${h}`" class="pt-1 text-center font-mono text-[0.7rem] text-mist">{{ (h - 1) % 6 === 0 ? h - 1 : '' }}</span>
+            <span v-for="h in 24" :key="`h${h}`" class="pt-1 text-center font-mono text-[0.7rem] text-haze">{{ (h - 1) % 6 === 0 ? h - 1 : '' }}</span>
           </div>
         </div>
       </figure>
 
       <div>
-        <h3 class="font-display text-2xl text-white">呼叫次數</h3>
-        <p class="mt-2 text-mist">活動分頁統計 skill, slash command, subagent, tool 與 MCP. 只記名稱, 時間, session 與 project.</p>
+        <h3 class="text-[1.6rem] font-light tracking-[0.04em] text-core">呼叫次數</h3>
+        <p class="mt-2 text-haze">活動分頁統計 skill, slash command, subagent, tool 與 MCP. 只記名稱, 時間, session 與 project.</p>
         <table class="mt-6 w-full border-collapse">
           <tbody>
-            <tr v-for="item in ACTIVITY" :key="item.name" class="border-t border-grid">
-              <td class="py-2.5 pr-4 text-sm whitespace-nowrap text-mist">{{ item.kind }}</td>
-              <td class="py-2.5 pr-4 font-mono text-[0.92rem] [overflow-wrap:anywhere] text-ink">{{ item.name }}</td>
-              <td class="py-2.5 text-right font-mono text-[0.92rem] text-ink">{{ item.count.toLocaleString('en-US') }}</td>
+            <tr v-for="item in ACTIVITY" :key="item.name" class="border-t border-seam">
+              <td class="py-2.5 pr-4 text-sm whitespace-nowrap text-haze">{{ item.kind }}</td>
+              <td class="py-2.5 pr-4 font-mono text-[0.92rem] [overflow-wrap:anywhere] text-lumen">{{ item.name }}</td>
+              <td class="py-2.5 text-right font-mono text-[0.92rem] text-lumen">{{ item.count.toLocaleString('en-US') }}</td>
             </tr>
           </tbody>
         </table>

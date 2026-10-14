@@ -6,8 +6,14 @@ import { formatClock } from '@/data/tide'
 import { useTideStore } from '@/stores/tide'
 
 // 重現 Windows 11 深色工作列: 左側是配額 widget, 中間是開始鈕與 app, 右側系統匣有 Stygiomedusa 圖示.
-// 左鍵點系統匣圖示開關 popup, 與 app 相同.
-withDefaults(defineProps<{ popupOpen?: boolean; mode?: 'remaining' | 'used'; tray?: boolean; apps?: boolean }>(), { popupOpen: false, mode: 'remaining', tray: true, apps: true })
+// 左鍵點系統匣圖示開關 popup, 與 app 相同. widget 為 false 時不顯示配額 widget (例如改用史萊姆時).
+withDefaults(defineProps<{ popupOpen?: boolean; mode?: 'remaining' | 'used'; tray?: boolean; apps?: boolean; widget?: boolean }>(), {
+  popupOpen: false,
+  mode: 'remaining',
+  tray: true,
+  apps: true,
+  widget: true,
+})
 const emit = defineEmits<{ tray: [] }>()
 
 const tide = useTideStore()
@@ -18,7 +24,7 @@ const iconUrl = `${import.meta.env.BASE_URL}icon-256.png`
 <template>
   <div class="flex h-[60px] items-center border-t border-white/10 bg-win-bg font-win text-white/90 select-none">
     <div class="flex h-full min-w-0 flex-1 items-center">
-      <TaskbarWidget :mode="mode" />
+      <TaskbarWidget v-if="widget" :mode="mode" />
     </div>
 
     <!-- 置中的開始鈕與 app -->

@@ -21,26 +21,25 @@ const FACTS = [
 </script>
 
 <template>
-  <section class="page-x py-24 lg:py-32">
+  <section class="page-x py-28 lg:py-36">
     <SectionHead id="widget" title="工作列 widget">
       <p>每個來源一組 mini bar: 上排 5h, 下排 7d, 右側是百分比. 游標停在上面時, 顯示已用, 剩餘, 重置時間與 pace.</p>
     </SectionHead>
 
-    <div class="mt-14 grid grid-cols-[minmax(0,1fr)] gap-14 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
+    <div class="mt-16 grid grid-cols-[minmax(0,1fr)] gap-14 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
       <div
-        class="flex flex-col gap-8 self-start rounded-[6px] border border-grid bg-harbor-deep p-5 sm:p-8"
+        class="object flex flex-col gap-8 self-start p-5 sm:p-8"
         @pointerenter="tide.hold()"
         @pointerleave="tide.release()"
       >
         <div class="flex flex-wrap items-center justify-between gap-4">
-          <p class="text-sm text-mist">讀數為示意 · 游標移到 widget 上看 tooltip</p>
-          <div class="flex rounded-[3px] border border-grid p-0.5 text-sm" role="group" aria-label="顯示模式">
+          <p class="text-sm text-haze">讀數為示意 · 游標移到 widget 上看 tooltip</p>
+          <div class="flex gap-1 rounded-[8px] p-0.5 text-sm shadow-[inset_0_0_0_1px_var(--color-edge)]" role="group" aria-label="顯示模式">
             <button
               v-for="option in ([['remaining', '剩餘'], ['used', '已用']] as const)"
               :key="option[0]"
               type="button"
-              class="rounded-[2px] px-3 py-1 transition-colors duration-150"
-              :class="mode === option[0] ? 'bg-chart text-ink' : 'text-mist hover:text-ink'"
+              class="toggle-option px-3 py-1"
               :aria-pressed="mode === option[0]"
               @click="mode = option[0]"
             >{{ option[1] }}</button>
@@ -55,13 +54,13 @@ const FACTS = [
             <div class="rounded-[4px] bg-win-bg">
               <TaskbarWidget :mode="mode" vertical />
             </div>
-            <figcaption class="text-sm text-mist">直式工作列</figcaption>
+            <figcaption class="text-sm text-haze">直式工作列</figcaption>
           </figure>
           <figure class="flex flex-col items-start gap-3">
             <div class="flex h-[60px] items-center rounded-[4px] bg-win-bg">
               <TaskbarWidget :mode="mode" stale="claude" />
             </div>
-            <figcaption class="text-sm text-mist">Claude 的 token 過期</figcaption>
+            <figcaption class="text-sm text-haze">Claude 的 token 過期</figcaption>
           </figure>
         </div>
       </div>

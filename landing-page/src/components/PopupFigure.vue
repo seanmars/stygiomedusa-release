@@ -137,7 +137,7 @@ function noteStyle(id: string) {
     @pointerleave="tide.release()"
   >
     <svg v-if="paths.length" class="pointer-events-none absolute inset-0 size-full overflow-visible" aria-hidden="true">
-      <g v-for="p in paths" :key="p.id" :class="lit === p.id ? 'text-note' : 'text-grid'" class="transition-colors duration-200">
+      <g v-for="p in paths" :key="p.id" :class="lit === p.id ? 'text-halo' : 'text-haze/35'" class="transition-colors duration-200">
         <path :d="p.d" fill="none" stroke="currentColor" :stroke-width="lit === p.id ? 2 : 1.25" />
         <circle :cx="p.dot[0]" :cy="p.dot[1]" r="3.5" fill="currentColor" />
       </g>
@@ -157,15 +157,15 @@ function noteStyle(id: string) {
           @pointerenter="lit = note.id"
           @pointerleave="lit = null"
         >
-          <p class="leading-6 font-medium transition-colors duration-200" :class="lit === note.id ? 'text-white' : 'text-ink'">{{ note.title }}</p>
-          <p class="mt-0.5 text-sm leading-relaxed text-mist">{{ note.body }}</p>
+          <p class="leading-6 font-medium transition-colors duration-200" :class="lit === note.id ? 'text-halo-soft' : 'text-core'">{{ note.title }}</p>
+          <p class="mt-0.5 text-sm leading-relaxed text-haze">{{ note.body }}</p>
         </li>
       </ul>
     </template>
 
     <div class="card-slot w-full max-w-[460px] justify-self-center">
       <div ref="card" class="card-zoom"><QuotaCardDemo :reading="tide.claude" plan="Max" /></div>
-      <p class="mt-3 text-sm text-mist">讀數為示意, 跟著首屏的示範變化.</p>
+      <p class="mt-3 text-sm text-haze">讀數為示意, 跟著首屏的示範變化.</p>
     </div>
   </div>
 </template>

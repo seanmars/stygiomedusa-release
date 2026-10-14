@@ -72,7 +72,7 @@ onBeforeUnmount(() => {
 <template>
   <div
     ref="stage"
-    class="relative min-h-[20rem] flex-1 overflow-hidden rounded-[6px] border border-grid bg-harbor-deep md:min-h-[24rem]"
+    class="object object-glass min-h-[20rem] flex-1 overflow-hidden max-md:shadow-[inset_0_1px_0_rgb(255_255_255/0.09),0_20px_36px_-34px_rgb(27_31_168/0.9)] md:min-h-[24rem]"
     @pointerenter="tide.hold()"
     @pointerleave="tide.release()"
   >
