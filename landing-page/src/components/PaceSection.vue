@@ -1,14 +1,11 @@
 <script setup lang="ts">
-import { computed, defineAsyncComponent, onBeforeUnmount, ref, watch } from 'vue'
+import { computed } from 'vue'
 
+import PaceTowerLight from '@/components/PaceTowerLight.vue'
 import SectionHead from '@/components/SectionHead.vue'
-import { useWebGPU } from '@/composables/useWebGPU'
 import { useTideStore } from '@/stores/tide'
 
-const PaceTowerLight = defineAsyncComponent(() => import('@/components/PaceTowerLight.vue'))
-
 const tide = useTideStore()
-const webgpu = useWebGPU()
 
 // 由上到下: 用得越快越上面. 光塔裡的光柱升到目前的等級.
 const BANDS = ['大幅超前均速', '超前均速', '略超前均速', '符合均速', '略低於均速', '低於均速', '大幅低於均速']
@@ -24,29 +21,8 @@ const current = computed(() => {
   return index < 0 ? 3 : index
 })
 
-/** 光柱頂端的位置: 0 是塔頂, 1 是塔底; 等級改變時以 ease-out 滑到新位置. */
-const target = computed(() => (current.value + 0.5) / BANDS.length)
-const level = ref(target.value)
-let frame = 0
-
-watch(target, (to) => {
-  cancelAnimationFrame(frame)
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  const from = level.value
-  if (reduce) {
-    level.value = to
-    return
-  }
-  const start = performance.now()
-  const step = (time: number) => {
-    const t = Math.min(1, (time - start) / 700)
-    level.value = from + (to - from) * (1 - Math.pow(2, -10 * t))
-    if (t < 1) frame = requestAnimationFrame(step)
-  }
-  frame = requestAnimationFrame(step)
-})
-
-onBeforeUnmount(() => cancelAnimationFrame(frame))
+/** 光柱頂端的位置: 0 是塔頂, 1 是塔底. 光柱以 CSS 轉場滑到新位置. */
+const level = computed(() => (current.value + 0.5) / BANDS.length)
 </script>
 
 <template>
@@ -62,8 +38,7 @@ onBeforeUnmount(() => cancelAnimationFrame(frame))
           <div class="mt-6 flex gap-6">
             <!-- 光塔: 用得越快, 光柱越高 -->
             <div class="tower object w-[4.5rem] shrink-0 overflow-hidden sm:w-[5.5rem]" aria-hidden="true" @pointerenter="tide.hold()" @pointerleave="tide.release()">
-              <PaceTowerLight v-if="webgpu" :level="level" class="absolute inset-0" />
-              <div v-else class="tower-fill absolute inset-x-0 bottom-0" :style="{ height: `${(1 - level) * 100}%` }" />
+              <PaceTowerLight :level="level" />
             </div>
             <ol class="flex min-w-0 flex-1 flex-col" aria-label="Pace 等級">
               <li
@@ -111,10 +86,5 @@ onBeforeUnmount(() => cancelAnimationFrame(frame))
 .tower {
   height: 21rem;
   border-radius: 14px;
-}
-
-/* 沒有 WebGPU 時的光柱 */
-.tower-fill {
-  background: linear-gradient(to top, rgb(70 80 255 / 0.55), rgb(70 80 255 / 0.12) 85%, rgb(255 217 120 / 0.35));
 }
 </style>

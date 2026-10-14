@@ -1,26 +1,29 @@
 <script setup lang="ts">
-import { Fog, RadialGradient } from 'shaders/vue'
-
-import AbyssShader from '@/components/AbyssShader.vue'
+import AbyssMist from '@/components/AbyssMist.vue'
 
 // 示範螢幕裡的深淵: 下緣的鈷藍光與緩慢的霧. 不畫海雪, 讓史萊姆是畫面裡唯一的物件.
 </script>
 
 <template>
-  <AbyssShader>
-    <RadialGradient color-a="#1d24b8" color-b="#03051a" :center="{ x: 0.5, y: 1.15 }" :radius="1" :aspect="1.6" color-space="oklch" />
-    <Fog
-      color-a="#2a26a8"
-      color-b="#03051a"
+  <div class="abyss pointer-events-none absolute inset-0" aria-hidden="true">
+    <AbyssMist
+      class="opacity-70"
       :seed="41"
-      :speed="0.25"
-      :turbulence="0.5"
-      :detail="18"
-      :blending="0.5"
-      :mouse-influence="0.3"
-      :mouse-radius="0.18"
-      :opacity="0.45"
-      blend-mode="screen"
+      :tile="560"
+      :frequency="[0.005, 0.006]"
+      :octaves="4"
+      :rgb="[0.17, 0.15, 0.66]"
+      :gain="2.4"
+      :bias="-0.9"
+      :duration="120"
     />
-  </AbyssShader>
+  </div>
 </template>
+
+<style scoped>
+.abyss {
+  background:
+    radial-gradient(100% 75% at 50% 115%, #1d24b8, rgb(29 36 184 / 0.3) 50%, transparent 85%),
+    var(--color-void);
+}
+</style>

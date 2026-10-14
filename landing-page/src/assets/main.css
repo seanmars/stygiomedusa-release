@@ -5,7 +5,7 @@
 @import '@fontsource-variable/azeret-mono/index.css';
 
 /*
- * 深淵系統選單: 黑藍虛空由下方鈷藍照亮, 霧與光塵在其中漂移 (WebGPU, 見 AbyssShader).
+ * 深淵系統選單: 黑藍虛空由下方鈷藍照亮, 霧與光塵在其中漂移 (CSS 與靜態 SVG, 見 data/abyss.ts).
  * 示範是內部發光的半透明物件; 光環金只標示被選取的東西. 狀態色 (tone) 與 app 相同, 只用在重現的讀數裡.
  */
 @theme {
@@ -132,7 +132,7 @@
       0 16px 48px -18px rgb(255 201 77 / 0.45);
   }
 
-  /* 物件裡的透明螢幕: 深淵透過玻璃可見, 光由後方的 shader 提供 */
+  /* 物件裡的透明螢幕: 深淵透過玻璃可見, 光由後方的深淵場景提供 */
   .object-glass {
     background:
       radial-gradient(60% 80% at 50% 110%, rgb(70 80 255 / 0.16), transparent 70%),

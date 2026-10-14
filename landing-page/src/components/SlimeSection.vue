@@ -1,19 +1,16 @@
 <script setup lang="ts">
-import { defineAsyncComponent, ref } from 'vue'
+import { ref } from 'vue'
 
 import FactList from '@/components/FactList.vue'
+import ScreenAbyss from '@/components/ScreenAbyss.vue'
 import SectionHead from '@/components/SectionHead.vue'
 import SlimeDemo from '@/components/SlimeDemo.vue'
 import TerminalDemo from '@/components/TerminalDemo.vue'
 import WinTaskbar from '@/components/WinTaskbar.vue'
-import { useWebGPU } from '@/composables/useWebGPU'
 import type { Tint } from '@/data/slime'
 import { useTideStore } from '@/stores/tide'
 
-const ScreenAbyss = defineAsyncComponent(() => import('@/components/ScreenAbyss.vue'))
-
 const tide = useTideStore()
-const webgpu = useWebGPU()
 const tint = ref<Tint>('black')
 
 const FACTS = [
@@ -61,9 +58,7 @@ const FACTS = [
             @pointerleave="tide.release()"
           >
             <!-- 螢幕裡的深淵, 在所有視窗後方 -->
-            <div class="absolute inset-0" aria-hidden="true">
-              <ScreenAbyss v-if="webgpu" />
-            </div>
+            <ScreenAbyss />
             <!-- 工作區: 工作列上方. 史萊姆只沿著工作區的四邊滑動, 與 app 相同 -->
             <div class="absolute inset-x-0 top-0 bottom-[60px]">
               <TerminalDemo class="absolute top-[8%] left-[5%] h-[80%] w-[80%] sm:w-[66%]" />

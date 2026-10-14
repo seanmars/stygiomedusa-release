@@ -21,7 +21,6 @@
     "@fontsource-variable/lexend-exa": "^5.3.0",
     "@fontsource-variable/noto-sans-tc": "^5.3.1",
     "pinia": "^4.0.3",
-    "shaders": "^4.0.4",
     "vue": "^3.5.42",
     "vue-router": "^5.3.1"
   },

@@ -1,19 +1,13 @@
 <script setup lang="ts">
-import { defineAsyncComponent } from 'vue'
-
 import DownloadButton from '@/components/DownloadButton.vue'
-import { useWebGPU } from '@/composables/useWebGPU'
+import FooterAurora from '@/components/FooterAurora.vue'
 import { RELEASE_REPO, changelogUrl } from '@/data/release'
-
-const FooterAurora = defineAsyncComponent(() => import('@/components/FooterAurora.vue'))
-const webgpu = useWebGPU()
 </script>
 
 <template>
-  <footer class="footer relative isolate overflow-hidden">
+  <footer class="relative isolate overflow-hidden">
     <div class="absolute inset-0 -z-10" aria-hidden="true">
-      <!-- canvas 兩側各多出 3rem: 光塵在 canvas 邊界會堆成一列, 讓那一列落在畫面外 -->
-      <FooterAurora v-if="webgpu" class="absolute inset-y-0 -inset-x-12 !w-auto" />
+      <FooterAurora />
       <!-- 上緣淡入: 從上一段的虛空接過來 -->
       <div class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-void to-transparent" />
     </div>
@@ -35,13 +29,3 @@ const webgpu = useWebGPU()
     </div>
   </footer>
 </template>
-
-<style scoped>
-/* 沒有 WebGPU 時的極光: 上方垂下的鈷藍與紫光 */
-.footer {
-  background:
-    radial-gradient(70% 45% at 50% 0%, rgb(167 139 250 / 0.22), transparent 70%),
-    radial-gradient(90% 60% at 50% 110%, rgb(22 27 160 / 0.6), transparent 72%),
-    var(--color-void);
-}
-</style>
