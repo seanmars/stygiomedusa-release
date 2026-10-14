@@ -1,127 +1,202 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-14T00:00:00Z",
+  "generatedAt": "2026-10-14T15:11:40Z",
   "title": "Design System: Stygiomedusa",
   "extensions": {
     "colorMeta": {
-      "harbor": {
+      "void": {
         "role": "neutral",
-        "displayName": "深港灣藍 Harbor",
-        "canonical": "#0a1a33",
+        "displayName": "虛空 Void",
+        "canonical": "#03051a",
         "tonalRamp": [
-          "oklch(15% 0.054 259.0)",
-          "oklch(26% 0.054 259.0)",
-          "oklch(37% 0.054 259.0)",
-          "oklch(48% 0.054 259.0)",
-          "oklch(59% 0.054 259.0)",
-          "oklch(70% 0.054 259.0)",
-          "oklch(82% 0.054 259.0)",
-          "oklch(95% 0.054 259.0)"
+          "oklch(15% 0.048 271.3)",
+          "oklch(26% 0.048 271.3)",
+          "oklch(37% 0.048 271.3)",
+          "oklch(48% 0.048 271.3)",
+          "oklch(59% 0.048 271.3)",
+          "oklch(70% 0.048 271.3)",
+          "oklch(82% 0.048 271.3)",
+          "oklch(95% 0.048 271.3)"
         ]
       },
-      "harbor-deep": {
+      "abyss": {
         "role": "neutral",
-        "displayName": "深港灣 Harbor Deep",
-        "canonical": "#071327",
+        "displayName": "深淵 Abyss",
+        "canonical": "#070a29",
         "tonalRamp": [
-          "oklch(15% 0.045 259.6)",
-          "oklch(26% 0.045 259.6)",
-          "oklch(37% 0.045 259.6)",
-          "oklch(48% 0.045 259.6)",
-          "oklch(59% 0.045 259.6)",
-          "oklch(70% 0.045 259.6)",
-          "oklch(82% 0.045 259.6)",
-          "oklch(95% 0.045 259.6)"
+          "oklch(15% 0.063 272.9)",
+          "oklch(26% 0.063 272.9)",
+          "oklch(37% 0.063 272.9)",
+          "oklch(48% 0.063 272.9)",
+          "oklch(59% 0.063 272.9)",
+          "oklch(70% 0.063 272.9)",
+          "oklch(82% 0.063 272.9)",
+          "oklch(95% 0.063 272.9)"
         ]
       },
-      "chart": {
+      "depth": {
         "role": "neutral",
-        "displayName": "海圖藍 Chart",
-        "canonical": "#13355c",
+        "displayName": "深藍 Depth",
+        "canonical": "#10165a",
         "tonalRamp": [
-          "oklch(15% 0.080 254.0)",
-          "oklch(26% 0.080 254.0)",
-          "oklch(37% 0.080 254.0)",
-          "oklch(48% 0.080 254.0)",
-          "oklch(59% 0.080 254.0)",
-          "oklch(70% 0.080 254.0)",
-          "oklch(82% 0.080 254.0)",
-          "oklch(95% 0.080 254.0)"
+          "oklch(15% 0.119 270.6)",
+          "oklch(26% 0.119 270.6)",
+          "oklch(37% 0.119 270.6)",
+          "oklch(48% 0.119 270.6)",
+          "oklch(59% 0.119 270.6)",
+          "oklch(70% 0.119 270.6)",
+          "oklch(82% 0.119 270.6)",
+          "oklch(95% 0.119 270.6)"
         ]
       },
-      "grid": {
-        "role": "neutral",
-        "displayName": "格線藍 Grid",
-        "canonical": "#2a4a70",
-        "tonalRamp": [
-          "oklch(15% 0.075 253.7)",
-          "oklch(26% 0.075 253.7)",
-          "oklch(37% 0.075 253.7)",
-          "oklch(48% 0.075 253.7)",
-          "oklch(59% 0.075 253.7)",
-          "oklch(70% 0.075 253.7)",
-          "oklch(82% 0.075 253.7)",
-          "oklch(95% 0.075 253.7)"
-        ]
-      },
-      "ink": {
-        "role": "primary",
-        "displayName": "海圖白 Chart Ink",
-        "canonical": "#dceaf4",
-        "tonalRamp": [
-          "oklch(15% 0.020 238.7)",
-          "oklch(26% 0.020 238.7)",
-          "oklch(37% 0.020 238.7)",
-          "oklch(48% 0.020 238.7)",
-          "oklch(59% 0.020 238.7)",
-          "oklch(70% 0.020 238.7)",
-          "oklch(82% 0.020 238.7)",
-          "oklch(95% 0.020 238.7)"
-        ]
-      },
-      "mist": {
-        "role": "neutral",
-        "displayName": "灰藍 Mist",
-        "canonical": "#9db6cc",
-        "tonalRamp": [
-          "oklch(15% 0.042 244.9)",
-          "oklch(26% 0.042 244.9)",
-          "oklch(37% 0.042 244.9)",
-          "oklch(48% 0.042 244.9)",
-          "oklch(59% 0.042 244.9)",
-          "oklch(70% 0.042 244.9)",
-          "oklch(82% 0.042 244.9)",
-          "oklch(95% 0.042 244.9)"
-        ]
-      },
-      "heading-white": {
-        "role": "primary",
-        "displayName": "標題白 Heading White",
-        "canonical": "#ffffff",
-        "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(26% 0 0)",
-          "oklch(37% 0 0)",
-          "oklch(48% 0 0)",
-          "oklch(59% 0 0)",
-          "oklch(70% 0 0)",
-          "oklch(82% 0 0)",
-          "oklch(95% 0 0)"
-        ]
-      },
-      "note": {
+      "cobalt": {
         "role": "secondary",
-        "displayName": "海圖洋紅 Chart Magenta",
-        "canonical": "#e0559b",
+        "displayName": "鈷藍 Cobalt",
+        "canonical": "#1b1fa8",
         "tonalRamp": [
-          "oklch(15% 0.120 352.3)",
-          "oklch(26% 0.120 352.3)",
-          "oklch(37% 0.120 352.3)",
-          "oklch(48% 0.120 352.3)",
-          "oklch(59% 0.120 352.3)",
-          "oklch(70% 0.120 352.3)",
-          "oklch(82% 0.120 352.3)",
-          "oklch(95% 0.120 352.3)"
+          "oklch(15% 0.207 269.0)",
+          "oklch(26% 0.207 269.0)",
+          "oklch(37% 0.207 269.0)",
+          "oklch(48% 0.207 269.0)",
+          "oklch(59% 0.207 269.0)",
+          "oklch(70% 0.207 269.0)",
+          "oklch(82% 0.207 269.0)",
+          "oklch(95% 0.207 269.0)"
+        ]
+      },
+      "cobalt-bright": {
+        "role": "secondary",
+        "displayName": "亮鈷藍 Cobalt Bright",
+        "canonical": "#4650ff",
+        "tonalRamp": [
+          "oklch(15% 0.250 271.9)",
+          "oklch(26% 0.250 271.9)",
+          "oklch(37% 0.250 271.9)",
+          "oklch(48% 0.250 271.9)",
+          "oklch(59% 0.250 271.9)",
+          "oklch(70% 0.250 271.9)",
+          "oklch(82% 0.250 271.9)",
+          "oklch(95% 0.250 271.9)"
+        ]
+      },
+      "violet": {
+        "role": "secondary",
+        "displayName": "紫光 Violet",
+        "canonical": "#a78bfa",
+        "tonalRamp": [
+          "oklch(15% 0.159 293.5)",
+          "oklch(26% 0.159 293.5)",
+          "oklch(37% 0.159 293.5)",
+          "oklch(48% 0.159 293.5)",
+          "oklch(59% 0.159 293.5)",
+          "oklch(70% 0.159 293.5)",
+          "oklch(82% 0.159 293.5)",
+          "oklch(95% 0.159 293.5)"
+        ]
+      },
+      "core": {
+        "role": "neutral",
+        "displayName": "核心白 Core",
+        "canonical": "#eeeaff",
+        "tonalRamp": [
+          "oklch(15% 0.028 294.6)",
+          "oklch(26% 0.028 294.6)",
+          "oklch(37% 0.028 294.6)",
+          "oklch(48% 0.028 294.6)",
+          "oklch(59% 0.028 294.6)",
+          "oklch(70% 0.028 294.6)",
+          "oklch(82% 0.028 294.6)",
+          "oklch(95% 0.028 294.6)"
+        ]
+      },
+      "lumen": {
+        "role": "neutral",
+        "displayName": "流明 Lumen",
+        "canonical": "#c9cbef",
+        "tonalRamp": [
+          "oklch(15% 0.050 282.8)",
+          "oklch(26% 0.050 282.8)",
+          "oklch(37% 0.050 282.8)",
+          "oklch(48% 0.050 282.8)",
+          "oklch(59% 0.050 282.8)",
+          "oklch(70% 0.050 282.8)",
+          "oklch(82% 0.050 282.8)",
+          "oklch(95% 0.050 282.8)"
+        ]
+      },
+      "haze": {
+        "role": "neutral",
+        "displayName": "薄霧 Haze",
+        "canonical": "#9ba1d6",
+        "tonalRamp": [
+          "oklch(15% 0.077 279.3)",
+          "oklch(26% 0.077 279.3)",
+          "oklch(37% 0.077 279.3)",
+          "oklch(48% 0.077 279.3)",
+          "oklch(59% 0.077 279.3)",
+          "oklch(70% 0.077 279.3)",
+          "oklch(82% 0.077 279.3)",
+          "oklch(95% 0.077 279.3)"
+        ]
+      },
+      "edge": {
+        "role": "neutral",
+        "displayName": "光邊 Edge",
+        "canonical": "rgb(233 228 255 / 0.14)",
+        "tonalRamp": [
+          "oklch(15% 0.037 294.2)",
+          "oklch(26% 0.037 294.2)",
+          "oklch(37% 0.037 294.2)",
+          "oklch(48% 0.037 294.2)",
+          "oklch(59% 0.037 294.2)",
+          "oklch(70% 0.037 294.2)",
+          "oklch(82% 0.037 294.2)",
+          "oklch(95% 0.037 294.2)"
+        ]
+      },
+      "seam": {
+        "role": "neutral",
+        "displayName": "列縫 Seam",
+        "canonical": "rgb(233 228 255 / 0.07)",
+        "tonalRamp": [
+          "oklch(15% 0.037 294.2)",
+          "oklch(26% 0.037 294.2)",
+          "oklch(37% 0.037 294.2)",
+          "oklch(48% 0.037 294.2)",
+          "oklch(59% 0.037 294.2)",
+          "oklch(70% 0.037 294.2)",
+          "oklch(82% 0.037 294.2)",
+          "oklch(95% 0.037 294.2)"
+        ]
+      },
+      "halo": {
+        "role": "primary",
+        "displayName": "光環金 Halo",
+        "canonical": "#ffc94d",
+        "tonalRamp": [
+          "oklch(15% 0.149 84.7)",
+          "oklch(26% 0.149 84.7)",
+          "oklch(37% 0.149 84.7)",
+          "oklch(48% 0.149 84.7)",
+          "oklch(59% 0.149 84.7)",
+          "oklch(70% 0.149 84.7)",
+          "oklch(82% 0.149 84.7)",
+          "oklch(95% 0.149 84.7)"
+        ]
+      },
+      "halo-soft": {
+        "role": "primary",
+        "displayName": "淡光環金 Halo Soft",
+        "canonical": "#ffd978",
+        "tonalRamp": [
+          "oklch(15% 0.124 88.4)",
+          "oklch(26% 0.124 88.4)",
+          "oklch(37% 0.124 88.4)",
+          "oklch(48% 0.124 88.4)",
+          "oklch(59% 0.124 88.4)",
+          "oklch(70% 0.124 88.4)",
+          "oklch(82% 0.124 88.4)",
+          "oklch(95% 0.124 88.4)"
         ]
       },
       "tone-normal": {
@@ -129,14 +204,14 @@
         "displayName": "正常藍 Tone Normal",
         "canonical": "#4cc2ff",
         "tonalRamp": [
-          "oklch(15% 0.120 235.1)",
-          "oklch(26% 0.120 235.1)",
-          "oklch(37% 0.120 235.1)",
-          "oklch(48% 0.120 235.1)",
-          "oklch(59% 0.120 235.1)",
-          "oklch(70% 0.120 235.1)",
-          "oklch(82% 0.120 235.1)",
-          "oklch(95% 0.120 235.1)"
+          "oklch(15% 0.136 235.1)",
+          "oklch(26% 0.136 235.1)",
+          "oklch(37% 0.136 235.1)",
+          "oklch(48% 0.136 235.1)",
+          "oklch(59% 0.136 235.1)",
+          "oklch(70% 0.136 235.1)",
+          "oklch(82% 0.136 235.1)",
+          "oklch(95% 0.136 235.1)"
         ]
       },
       "tone-warning": {
@@ -144,14 +219,14 @@
         "displayName": "警告黃 Tone Warning",
         "canonical": "#fce100",
         "tonalRamp": [
-          "oklch(15% 0.120 100.5)",
-          "oklch(26% 0.120 100.5)",
-          "oklch(37% 0.120 100.5)",
-          "oklch(48% 0.120 100.5)",
-          "oklch(59% 0.120 100.5)",
-          "oklch(70% 0.120 100.5)",
-          "oklch(82% 0.120 100.5)",
-          "oklch(95% 0.120 100.5)"
+          "oklch(15% 0.188 100.5)",
+          "oklch(26% 0.188 100.5)",
+          "oklch(37% 0.188 100.5)",
+          "oklch(48% 0.188 100.5)",
+          "oklch(59% 0.188 100.5)",
+          "oklch(70% 0.188 100.5)",
+          "oklch(82% 0.188 100.5)",
+          "oklch(95% 0.188 100.5)"
         ]
       },
       "tone-danger": {
@@ -159,14 +234,14 @@
         "displayName": "危險紅 Tone Danger",
         "canonical": "#ff5f5f",
         "tonalRamp": [
-          "oklch(15% 0.120 23.7)",
-          "oklch(26% 0.120 23.7)",
-          "oklch(37% 0.120 23.7)",
-          "oklch(48% 0.120 23.7)",
-          "oklch(59% 0.120 23.7)",
-          "oklch(70% 0.120 23.7)",
-          "oklch(82% 0.120 23.7)",
-          "oklch(95% 0.120 23.7)"
+          "oklch(15% 0.195 23.7)",
+          "oklch(26% 0.195 23.7)",
+          "oklch(37% 0.195 23.7)",
+          "oklch(48% 0.195 23.7)",
+          "oklch(59% 0.195 23.7)",
+          "oklch(70% 0.195 23.7)",
+          "oklch(82% 0.195 23.7)",
+          "oklch(95% 0.195 23.7)"
         ]
       },
       "tone-stale": {
@@ -174,14 +249,14 @@
         "displayName": "過期琥珀 Tone Stale",
         "canonical": "#ffb900",
         "tonalRamp": [
-          "oklch(15% 0.120 80.0)",
-          "oklch(26% 0.120 80.0)",
-          "oklch(37% 0.120 80.0)",
-          "oklch(48% 0.120 80.0)",
-          "oklch(59% 0.120 80.0)",
-          "oklch(70% 0.120 80.0)",
-          "oklch(82% 0.120 80.0)",
-          "oklch(95% 0.120 80.0)"
+          "oklch(15% 0.171 81.0)",
+          "oklch(26% 0.171 81.0)",
+          "oklch(37% 0.171 81.0)",
+          "oklch(48% 0.171 81.0)",
+          "oklch(59% 0.171 81.0)",
+          "oklch(70% 0.171 81.0)",
+          "oklch(82% 0.171 81.0)",
+          "oklch(95% 0.171 81.0)"
         ]
       },
       "tone-normal-on-light": {
@@ -189,14 +264,14 @@
         "displayName": "淺底正常藍",
         "canonical": "#0078d4",
         "tonalRamp": [
-          "oklch(15% 0.120 252.0)",
-          "oklch(26% 0.120 252.0)",
-          "oklch(37% 0.120 252.0)",
-          "oklch(48% 0.120 252.0)",
-          "oklch(59% 0.120 252.0)",
-          "oklch(70% 0.120 252.0)",
-          "oklch(82% 0.120 252.0)",
-          "oklch(95% 0.120 252.0)"
+          "oklch(15% 0.167 251.3)",
+          "oklch(26% 0.167 251.3)",
+          "oklch(37% 0.167 251.3)",
+          "oklch(48% 0.167 251.3)",
+          "oklch(59% 0.167 251.3)",
+          "oklch(70% 0.167 251.3)",
+          "oklch(82% 0.167 251.3)",
+          "oklch(95% 0.167 251.3)"
         ]
       },
       "tone-warning-on-light": {
@@ -204,14 +279,14 @@
         "displayName": "淺底警告黃",
         "canonical": "#a37a00",
         "tonalRamp": [
-          "oklch(15% 0.110 85.0)",
-          "oklch(26% 0.110 85.0)",
-          "oklch(37% 0.110 85.0)",
-          "oklch(48% 0.110 85.0)",
-          "oklch(59% 0.110 85.0)",
-          "oklch(70% 0.110 85.0)",
-          "oklch(82% 0.110 85.0)",
-          "oklch(95% 0.110 85.0)"
+          "oklch(15% 0.124 84.9)",
+          "oklch(26% 0.124 84.9)",
+          "oklch(37% 0.124 84.9)",
+          "oklch(48% 0.124 84.9)",
+          "oklch(59% 0.124 84.9)",
+          "oklch(70% 0.124 84.9)",
+          "oklch(82% 0.124 84.9)",
+          "oklch(95% 0.124 84.9)"
         ]
       },
       "tone-danger-on-light": {
@@ -219,14 +294,14 @@
         "displayName": "淺底危險紅",
         "canonical": "#c42b1c",
         "tonalRamp": [
-          "oklch(15% 0.120 30.0)",
-          "oklch(26% 0.120 30.0)",
-          "oklch(37% 0.120 30.0)",
-          "oklch(48% 0.120 30.0)",
-          "oklch(59% 0.120 30.0)",
-          "oklch(70% 0.120 30.0)",
-          "oklch(82% 0.120 30.0)",
-          "oklch(95% 0.120 30.0)"
+          "oklch(15% 0.191 30.1)",
+          "oklch(26% 0.191 30.1)",
+          "oklch(37% 0.191 30.1)",
+          "oklch(48% 0.191 30.1)",
+          "oklch(59% 0.191 30.1)",
+          "oklch(70% 0.191 30.1)",
+          "oklch(82% 0.191 30.1)",
+          "oklch(95% 0.191 30.1)"
         ]
       },
       "tone-stale-on-light": {
@@ -234,14 +309,14 @@
         "displayName": "淺底過期琥珀",
         "canonical": "#b86e00",
         "tonalRamp": [
-          "oklch(15% 0.120 66.0)",
-          "oklch(26% 0.120 66.0)",
-          "oklch(37% 0.120 66.0)",
-          "oklch(48% 0.120 66.0)",
-          "oklch(59% 0.120 66.0)",
-          "oklch(70% 0.120 66.0)",
-          "oklch(82% 0.120 66.0)",
-          "oklch(95% 0.120 66.0)"
+          "oklch(15% 0.136 65.3)",
+          "oklch(26% 0.136 65.3)",
+          "oklch(37% 0.136 65.3)",
+          "oklch(48% 0.136 65.3)",
+          "oklch(59% 0.136 65.3)",
+          "oklch(70% 0.136 65.3)",
+          "oklch(82% 0.136 65.3)",
+          "oklch(95% 0.136 65.3)"
         ]
       },
       "agent-claude": {
@@ -264,151 +339,283 @@
         "displayName": "Codex 青綠 Agent Codex",
         "canonical": "#3dd6b5",
         "tonalRamp": [
-          "oklch(15% 0.120 174.8)",
-          "oklch(26% 0.120 174.8)",
-          "oklch(37% 0.120 174.8)",
-          "oklch(48% 0.120 174.8)",
-          "oklch(59% 0.120 174.8)",
-          "oklch(70% 0.120 174.8)",
-          "oklch(82% 0.120 174.8)",
-          "oklch(95% 0.120 174.8)"
+          "oklch(15% 0.134 174.8)",
+          "oklch(26% 0.134 174.8)",
+          "oklch(37% 0.134 174.8)",
+          "oklch(48% 0.134 174.8)",
+          "oklch(59% 0.134 174.8)",
+          "oklch(70% 0.134 174.8)",
+          "oklch(82% 0.134 174.8)",
+          "oklch(95% 0.134 174.8)"
         ]
       },
       "win-bg": {
         "role": "neutral",
-        "displayName": "Windows 底 Win Bg",
+        "displayName": "Windows 底色",
         "canonical": "#202020",
         "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(26% 0 0)",
-          "oklch(37% 0 0)",
-          "oklch(48% 0 0)",
-          "oklch(59% 0 0)",
-          "oklch(70% 0 0)",
-          "oklch(82% 0 0)",
-          "oklch(95% 0 0)"
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(37% 0.000 89.9)",
+          "oklch(48% 0.000 89.9)",
+          "oklch(59% 0.000 89.9)",
+          "oklch(70% 0.000 89.9)",
+          "oklch(82% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
         ]
       },
       "win-card": {
         "role": "neutral",
-        "displayName": "Windows 卡片 Win Card",
+        "displayName": "Windows 卡片",
         "canonical": "#2b2b2b",
         "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(26% 0 0)",
-          "oklch(37% 0 0)",
-          "oklch(48% 0 0)",
-          "oklch(59% 0 0)",
-          "oklch(70% 0 0)",
-          "oklch(82% 0 0)",
-          "oklch(95% 0 0)"
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(37% 0.000 89.9)",
+          "oklch(48% 0.000 89.9)",
+          "oklch(59% 0.000 89.9)",
+          "oklch(70% 0.000 89.9)",
+          "oklch(82% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
         ]
       },
       "win-line": {
         "role": "neutral",
-        "displayName": "Windows 邊線 Win Line",
+        "displayName": "Windows 線",
         "canonical": "#3a3a3a",
         "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(26% 0 0)",
-          "oklch(37% 0 0)",
-          "oklch(48% 0 0)",
-          "oklch(59% 0 0)",
-          "oklch(70% 0 0)",
-          "oklch(82% 0 0)",
-          "oklch(95% 0 0)"
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(37% 0.000 89.9)",
+          "oklch(48% 0.000 89.9)",
+          "oklch(59% 0.000 89.9)",
+          "oklch(70% 0.000 89.9)",
+          "oklch(82% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
         ]
       },
       "win-text": {
         "role": "neutral",
-        "displayName": "Windows 文字 Win Text",
+        "displayName": "Windows 文字",
         "canonical": "#f5f5f5",
         "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(26% 0 0)",
-          "oklch(37% 0 0)",
-          "oklch(48% 0 0)",
-          "oklch(59% 0 0)",
-          "oklch(70% 0 0)",
-          "oklch(82% 0 0)",
-          "oklch(95% 0 0)"
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(37% 0.000 89.9)",
+          "oklch(48% 0.000 89.9)",
+          "oklch(59% 0.000 89.9)",
+          "oklch(70% 0.000 89.9)",
+          "oklch(82% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "win-accent": {
+        "role": "tertiary",
+        "displayName": "Windows 強調色",
+        "canonical": "#4cc2ff",
+        "tonalRamp": [
+          "oklch(15% 0.136 235.1)",
+          "oklch(26% 0.136 235.1)",
+          "oklch(37% 0.136 235.1)",
+          "oklch(48% 0.136 235.1)",
+          "oklch(59% 0.136 235.1)",
+          "oklch(70% 0.136 235.1)",
+          "oklch(82% 0.136 235.1)",
+          "oklch(95% 0.136 235.1)"
         ]
       },
       "slime-black": {
         "role": "neutral",
-        "displayName": "黑色史萊姆 Slime Black",
+        "displayName": "史萊姆黑",
         "canonical": "#000000",
         "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(26% 0 0)",
-          "oklch(37% 0 0)",
-          "oklch(48% 0 0)",
-          "oklch(59% 0 0)",
-          "oklch(70% 0 0)",
-          "oklch(82% 0 0)",
-          "oklch(95% 0 0)"
+          "oklch(15% 0.000 0.0)",
+          "oklch(26% 0.000 0.0)",
+          "oklch(37% 0.000 0.0)",
+          "oklch(48% 0.000 0.0)",
+          "oklch(59% 0.000 0.0)",
+          "oklch(70% 0.000 0.0)",
+          "oklch(82% 0.000 0.0)",
+          "oklch(95% 0.000 0.0)"
         ]
       },
       "slime-white": {
         "role": "neutral",
-        "displayName": "白色史萊姆 Slime White",
+        "displayName": "史萊姆白",
         "canonical": "#f3f3f3",
         "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(26% 0 0)",
-          "oklch(37% 0 0)",
-          "oklch(48% 0 0)",
-          "oklch(59% 0 0)",
-          "oklch(70% 0 0)",
-          "oklch(82% 0 0)",
-          "oklch(95% 0 0)"
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(37% 0.000 89.9)",
+          "oklch(48% 0.000 89.9)",
+          "oklch(59% 0.000 89.9)",
+          "oklch(70% 0.000 89.9)",
+          "oklch(82% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
         ]
       },
-      "win-accent": {
-        "role": "accent",
-        "displayName": "Windows 強調色 Win Accent",
-        "canonical": "#4cc2ff"
+      "heat-1": {
+        "role": "tertiary",
+        "displayName": "熱力紫 1",
+        "canonical": "#8b5cf6",
+        "tonalRamp": [
+          "oklch(15% 0.02 293)",
+          "#8b5cf6",
+          "#a78bfa",
+          "#c4b5fd",
+          "#ddd6fe",
+          "#ede9fe",
+          "#f5f3ff",
+          "oklch(98% 0.01 293)"
+        ]
+      },
+      "heat-2": {
+        "role": "tertiary",
+        "displayName": "熱力紫 2",
+        "canonical": "#a78bfa",
+        "tonalRamp": [
+          "oklch(15% 0.02 293)",
+          "#8b5cf6",
+          "#a78bfa",
+          "#c4b5fd",
+          "#ddd6fe",
+          "#ede9fe",
+          "#f5f3ff",
+          "oklch(98% 0.01 293)"
+        ]
+      },
+      "heat-3": {
+        "role": "tertiary",
+        "displayName": "熱力紫 3",
+        "canonical": "#c4b5fd",
+        "tonalRamp": [
+          "oklch(15% 0.02 293)",
+          "#8b5cf6",
+          "#a78bfa",
+          "#c4b5fd",
+          "#ddd6fe",
+          "#ede9fe",
+          "#f5f3ff",
+          "oklch(98% 0.01 293)"
+        ]
+      },
+      "heat-4": {
+        "role": "tertiary",
+        "displayName": "熱力紫 4",
+        "canonical": "#ddd6fe",
+        "tonalRamp": [
+          "oklch(15% 0.02 293)",
+          "#8b5cf6",
+          "#a78bfa",
+          "#c4b5fd",
+          "#ddd6fe",
+          "#ede9fe",
+          "#f5f3ff",
+          "oklch(98% 0.01 293)"
+        ]
+      },
+      "heat-5": {
+        "role": "tertiary",
+        "displayName": "熱力紫 5",
+        "canonical": "#f5f3ff",
+        "tonalRamp": [
+          "oklch(15% 0.02 293)",
+          "#8b5cf6",
+          "#a78bfa",
+          "#c4b5fd",
+          "#ddd6fe",
+          "#ede9fe",
+          "#f5f3ff",
+          "oklch(98% 0.01 293)"
+        ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "只有首屏 H1. 明體, 只在逗號後換行."
+        "purpose": "首屏 H1 與頁尾結語. 細字重 220, core 色."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "段落 H2, 放在 Section Head 內, 下方 2px ink 底線."
+        "purpose": "段落 H2, 放在 Section Head 內."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "段落內小標 (h3, figcaption) 與 pace 尺上目前的等級."
+        "purpose": "段落內的小標 (h3, figcaption)."
       },
       "title-sm": {
         "displayName": "Title Small",
-        "purpose": "隱私定義清單的 dt, 頁首品牌字."
+        "purpose": "隱私定義清單的 dt."
       },
       "lede": {
         "displayName": "Lede",
-        "purpose": "標題旁與 H1 下方的說明段, mist 色, 最大 62ch."
+        "purpose": "標題旁與 H1 下方的說明段, haze 色."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "內文, 全頁 tabular-nums, 52 到 68ch."
+        "purpose": "內文, 全頁 tabular-nums, 預設 lumen 色."
+      },
+      "nav": {
+        "displayName": "Nav",
+        "purpose": "頁首連結."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "表頭, 圖說, 狀態列, 示意註記, 下載註記. 不大寫, 不加大字距."
+        "purpose": "表頭, 圖說, 狀態列, 示意註記. 不大寫, 不加字距."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "頁首 Lexend Exa 寬字距大寫字標."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "安裝步驟編號."
       },
       "readout": {
         "displayName": "Readout",
-        "purpose": "外層的數量, 金額, model 與 tool 名稱, 路徑, 步驟編號, 狀態列 %, 時鐘, code."
+        "purpose": "數量, 金額, model 與 tool 名稱, 路徑, 行內 code."
       },
       "win-ui": {
         "displayName": "Windows UI",
-        "purpose": "只用在重現的 Windows 介面與史萊姆 (工作列, widget, tooltip, popup, 配額卡, callout)."
+        "purpose": "只用在重現的 Windows 介面與史萊姆."
       }
     },
     "shadows": [
+      {
+        "name": "object-pool",
+        "value": "inset 0 1px 0 rgb(255 255 255 / 0.09), inset 0 -48px 90px -48px rgb(70 80 255 / 0.35), 0 34px 80px -34px rgb(27 31 168 / 0.95)",
+        "purpose": "示範物件的靜止狀態: 內部高光, 下緣鈷藍光, 腳下光池."
+      },
+      {
+        "name": "object-selected",
+        "value": "inset 0 1px 0 rgb(255 232 170 / 0.3), inset 0 0 70px -20px rgb(255 201 77 / 0.16), inset 0 -48px 90px -48px rgb(70 80 255 / 0.4), 0 40px 90px -34px rgb(27 31 168 / 1), 0 16px 48px -18px rgb(255 201 77 / 0.45)",
+        "purpose": "物件 hover 或 focus-within, 搭配 4px 上浮與金色光邊."
+      },
+      {
+        "name": "download-lit",
+        "value": "inset 0 0 0 1px rgb(255 201 77 / 0.85), inset 0 1px 0 rgb(255 240 200 / 0.55), inset 0 -14px 28px rgb(255 170 40 / 0.2), 0 14px 40px -10px rgb(255 190 60 / 0.6), 0 4px 14px -4px rgb(255 201 77 / 0.45)",
+        "purpose": "下載鈕的金色內光與琥珀外光."
+      },
+      {
+        "name": "floating-control",
+        "value": "0 24px 60px -20px rgb(27 31 168 / 0.95)",
+        "purpose": "段落選單."
+      },
+      {
+        "name": "floating-control-sm",
+        "value": "0 10px 30px -8px rgb(27 31 168 / 0.9)",
+        "purpose": "回到頂端鈕."
+      },
+      {
+        "name": "screenshot",
+        "value": "0 30px 70px -30px rgb(27 31 168 / 0.9)",
+        "purpose": "實際畫面截圖."
+      },
+      {
+        "name": "halo-dot",
+        "value": "0 0 8px rgb(255 201 77 / 0.9)",
+        "purpose": "目前段落的金點與 pace 目前等級的刻度."
+      },
       {
         "name": "win-tooltip",
         "value": "0 6px 18px rgb(0 0 0 / 0.45)",
@@ -417,39 +624,59 @@
       {
         "name": "win-popup",
         "value": "0 16px 40px rgb(0 0 0 / 0.5)",
-        "purpose": "只用在重現的 popup 外框. 外層沒有陰影."
+        "purpose": "只用在重現的 popup 外框."
       }
     ],
     "motion": [
       {
         "name": "ease-out-expo",
         "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "popup 開啟 (320ms) 與關閉 (220ms) 的 transform, 史萊姆 callout 收回 (260ms)."
+        "purpose": "物件上浮, popup 開關, 回到頂端鈕, 下載鈕光. 預設的狀態轉場曲線."
       },
       {
         "name": "ease-jelly",
         "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
-        "purpose": "只用在史萊姆: 珠子放大 (520ms), 齒輪長出 (600ms 到 900ms), callout 彈出 (560ms)."
+        "purpose": "只用在史萊姆的 callout 與珠子."
       },
       {
-        "name": "state-color",
-        "value": "150ms to 200ms ease",
-        "purpose": "連結, 切換鈕, 下載鈕, 系統匣按鈕與引線的顏色轉場."
+        "name": "object-lift",
+        "value": "480ms ease-out-expo (translate, box-shadow); 260ms ease-out (border-color)",
+        "purpose": "物件 hover 與 focus-within."
       },
       {
-        "name": "readout-width",
-        "value": "300ms ease-out",
-        "purpose": "widget, 配額卡與 callout bar 的寬度變化, pace 等級的切換."
+        "name": "popup-open",
+        "value": "320ms ease-out-expo; 關閉 220ms",
+        "purpose": "首屏 popup 的開關."
       },
       {
-        "name": "lobe-breathe",
-        "value": "5.5s ease-in-out infinite alternate",
-        "purpose": "史萊姆隆起的呼吸 (scale 0.9 到 1.08)."
+        "name": "toggle",
+        "value": "150ms",
+        "purpose": "切換選項與內文連結的顏色."
       },
       {
-        "name": "simulated-time",
-        "value": "9 simulated minutes per second, requestAnimationFrame",
-        "purpose": "共用示意時間的自動快轉. 游標停在示範上或分頁在背景時暫停; 減少動態時不播放."
+        "name": "nav-dot",
+        "value": "300ms opacity",
+        "purpose": "目前段落金點."
+      },
+      {
+        "name": "pace-level",
+        "value": "700ms exponential ease-out",
+        "purpose": "光塔光柱滑到新的等級."
+      },
+      {
+        "name": "shader-fade-in",
+        "value": "1400ms ease-out opacity",
+        "purpose": "shader 準備好後淡入."
+      },
+      {
+        "name": "status-pulse",
+        "value": "2.4s ease-in-out infinite",
+        "purpose": "時間播放時首屏狀態點的呼吸."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation 與 transition 0.01ms; 不自動播放; shader 停在靜止畫面",
+        "purpose": "prefers-reduced-motion: reduce."
       }
     ],
     "breakpoints": [
@@ -466,106 +693,123 @@
         "value": "64rem"
       },
       {
-        "name": "leaders",
-        "value": "1100px"
+        "name": "xl",
+        "value": "80rem"
       },
       {
         "name": "stage-narrow",
-        "value": "560px (容器寬度)"
+        "value": "560px (示範桌面寬度)"
       },
       {
-        "name": "popup-wide",
-        "value": "720px (容器寬度)"
+        "name": "leader-figure",
+        "value": "1100px"
+      },
+      {
+        "name": "page-max",
+        "value": "1240px"
       }
     ]
   },
   "components": [
     {
-      "name": "Download Button",
+      "name": "Download Button (lit gold object)",
       "kind": "button",
       "refersTo": "button-download",
-      "description": "唯一的主要動作: ink 底 harbor 字的近直角色塊, 連到最新 release, 下方一行註記, 不顯示版本號.",
-      "html": "<div class=\"ds-dl\"><a class=\"ds-dl-btn\" href=\"#\"><svg viewBox=\"0 0 20 20\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M10 3v10M5.5 8.5 10 13l4.5-4.5M4 17h12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>下載最新版</a><p class=\"ds-dl-meta\">Windows 11 x64 · MIT 授權 · <a href=\"#\">所有版本</a></p></div>",
-      "css": ".ds-dl { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 16px; background: var(--color-harbor, #0a1a33); font-family: var(--font-sans, 'Noto Sans TC Variable', sans-serif); } .ds-dl-btn { display: inline-flex; align-items: center; gap: 12px; height: 52px; padding: 0 24px; border-radius: 3px; background: var(--color-ink, #dceaf4); color: var(--color-harbor, #0a1a33); font-size: 1.125rem; font-weight: 600; text-decoration: none; transition: background-color 200ms; } .ds-dl-btn:hover { background: #fff; } .ds-dl-btn:active { transform: translateY(1px); } .ds-dl-btn:focus-visible { outline: 2px solid var(--color-ink, #dceaf4); outline-offset: 3px; } .ds-dl-meta { margin: 0; font-size: 0.875rem; line-height: 1.375; color: var(--color-mist, #9db6cc); } .ds-dl-meta a { color: var(--color-ink, #dceaf4); text-decoration: underline; text-underline-offset: 0.25em; text-decoration-thickness: 1px; } .ds-dl-meta a:hover { color: #fff; }"
+      "description": "頁面上唯一常駐的金色物件; 預設被選取的主要動作.",
+      "html": "<a class=\"ds-btn-download\" href=\"#\"><svg viewBox=\"0 0 20 20\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" aria-hidden=\"true\"><path d=\"M10 3v10M5.5 8.5 10 13l4.5-4.5M4 17h12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>下載最新版</a>",
+      "css": ".ds-btn-download { display: inline-flex; align-items: center; gap: 12px; height: 52px; padding: 0 24px; border-radius: 8px; font-family: var(--font-sans); font-size: 1.125rem; font-weight: 500; letter-spacing: 0.06em; text-decoration: none; color: #fff4d6; background: radial-gradient(120% 150% at 50% 0%, rgb(255 214 120 / 0.42), rgb(255 190 60 / 0.16) 58%, rgb(214 140 30 / 0.14)), rgb(30 22 20); box-shadow: inset 0 0 0 1px rgb(255 201 77 / 0.85), inset 0 1px 0 rgb(255 240 200 / 0.55), inset 0 -14px 28px rgb(255 170 40 / 0.2), 0 14px 40px -10px rgb(255 190 60 / 0.6), 0 4px 14px -4px rgb(255 201 77 / 0.45); text-shadow: 0 1px 0 rgb(60 35 0 / 0.5); transition: background 200ms ease-out, color 200ms ease-out, box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1), translate 120ms ease-out; } .ds-btn-download:hover { background: radial-gradient(120% 150% at 50% 0%, #ffe2a0, #ffc94d 60%, #f0b23a); color: #03051a; text-shadow: none; box-shadow: inset 0 0 0 1px #ffc94d, inset 0 1px 0 rgb(255 250 230 / 0.8), 0 18px 50px -10px rgb(255 190 60 / 0.85), 0 4px 16px -4px rgb(255 201 77 / 0.6); } .ds-btn-download:focus-visible { outline: 2px solid #ffc94d; outline-offset: 3px; } .ds-btn-download:active { translate: 0 1px; }"
+    },
+    {
+      "name": "Demo Object",
+      "kind": "card",
+      "refersTo": "object",
+      "description": "內部發光的半透明物件; hover 或 focus-within 時上浮 4px 並亮出金邊.",
+      "html": "<div class=\"ds-object\" tabindex=\"0\"><p class=\"ds-object-note\">讀數為示意</p></div>",
+      "css": ".ds-object { position: relative; width: 320px; height: 180px; padding: 20px; border: 1px solid rgb(233 228 255 / 0.14); border-radius: 12px; background: radial-gradient(80% 70% at 50% 38%, rgb(233 228 255 / 0.12), transparent 72%), linear-gradient(180deg, rgb(233 228 255 / 0.07), rgb(233 228 255 / 0.015) 40%, rgb(70 80 255 / 0.12)), rgb(6 9 40 / 0.38); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.09), inset 0 -48px 90px -48px rgb(70 80 255 / 0.35), 0 34px 80px -34px rgb(27 31 168 / 0.95); transition: translate 480ms cubic-bezier(0.16, 1, 0.3, 1), border-color 260ms ease-out, box-shadow 480ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-object:hover, .ds-object:focus-within, .ds-object:focus-visible { outline: none; translate: 0 -4px; border-color: rgb(255 201 77 / 0.55); box-shadow: inset 0 1px 0 rgb(255 232 170 / 0.3), inset 0 0 70px -20px rgb(255 201 77 / 0.16), inset 0 -48px 90px -48px rgb(70 80 255 / 0.4), 0 40px 90px -34px rgb(27 31 168 / 1), 0 16px 48px -18px rgb(255 201 77 / 0.45); } .ds-object-note { margin: 0; font-family: var(--font-sans); font-size: 0.875rem; color: #9ba1d6; }"
     },
     {
       "name": "Segmented Toggle",
       "kind": "chip",
-      "refersTo": "segmented-toggle",
-      "description": "widget 顯示模式切換: 1px grid 外框, 選取項為 chart 底.",
-      "html": "<div class=\"ds-seg\" role=\"group\" aria-label=\"顯示模式\"><button class=\"ds-seg-opt\" aria-pressed=\"true\">剩餘</button><button class=\"ds-seg-opt\" aria-pressed=\"false\">已用</button></div>",
-      "css": ".ds-seg { display: inline-flex; padding: 2px; border: 1px solid var(--color-grid, #2a4a70); border-radius: 3px; background: var(--color-harbor-deep, #071327); font-family: var(--font-sans, 'Noto Sans TC Variable', sans-serif); } .ds-seg-opt { padding: 4px 12px; border: 0; border-radius: 2px; background: transparent; color: var(--color-mist, #9db6cc); font: inherit; font-size: 0.875rem; cursor: pointer; transition: color 150ms, background-color 150ms; } .ds-seg-opt:hover { color: var(--color-ink, #dceaf4); } .ds-seg-opt[aria-pressed=\"true\"] { background: var(--color-chart, #13355c); color: var(--color-ink, #dceaf4); } .ds-seg-opt:focus-visible { outline: 2px solid var(--color-ink, #dceaf4); outline-offset: 3px; }"
+      "refersTo": "toggle-option",
+      "description": "分段切換; 按下的選項以金色內框與 halo-soft 文字標示.",
+      "html": "<div class=\"ds-toggle\" role=\"group\" aria-label=\"顯示模式\"><button class=\"ds-toggle-option\" aria-pressed=\"true\">剩餘</button><button class=\"ds-toggle-option\" aria-pressed=\"false\">已用</button></div>",
+      "css": ".ds-toggle { display: inline-flex; gap: 4px; padding: 2px; border-radius: 8px; box-shadow: inset 0 0 0 1px rgb(233 228 255 / 0.14); font-family: var(--font-sans); font-size: 0.875rem; } .ds-toggle-option { padding: 4px 12px; border: 0; border-radius: 6px; background: transparent; color: #9ba1d6; font: inherit; cursor: pointer; transition: color 150ms, background-color 150ms, box-shadow 150ms; } .ds-toggle-option:hover { color: #eeeaff; } .ds-toggle-option[aria-pressed='true'] { background: rgb(255 201 77 / 0.1); color: #ffd978; box-shadow: inset 0 0 0 1px rgb(255 201 77 / 0.55); } .ds-toggle-option:focus-visible { outline: 2px solid #ffc94d; outline-offset: 3px; }"
     },
     {
-      "name": "Site Navigation",
+      "name": "Navigation",
       "kind": "nav",
       "refersTo": "nav-link",
-      "description": "64px 頁首: app 圖示加明體品牌字, 右側 mist 連結, hover 變 ink.",
-      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-brand\" href=\"#\"><span class=\"ds-nav-icon\"></span>Stygiomedusa</a><nav class=\"ds-nav-links\"><a href=\"#\">工作列</a><a href=\"#\">史萊姆</a><a href=\"#\">Popup</a><a href=\"#\">隱私</a><a href=\"#\">安裝</a><a href=\"#\">更新紀錄</a><a href=\"#\">GitHub</a></nav></header>",
-      "css": ".ds-nav { display: flex; align-items: center; gap: 32px; height: 64px; padding: 0 40px; background: var(--color-harbor, #0a1a33); font-family: var(--font-sans, 'Noto Sans TC Variable', sans-serif); } .ds-nav-brand { display: flex; align-items: center; gap: 12px; font-family: var(--font-display, 'Cactus Classical Serif', serif); font-size: 1.25rem; letter-spacing: 0.02em; color: var(--color-ink, #dceaf4); text-decoration: none; } .ds-nav-icon { width: 30px; height: 30px; border-radius: 7px; background: var(--color-chart, #13355c); } .ds-nav-links { margin-left: auto; display: flex; gap: 24px; font-size: 0.95rem; } .ds-nav-links a { color: var(--color-mist, #9db6cc); text-decoration: none; transition: color 150ms; } .ds-nav-links a:hover { color: var(--color-ink, #dceaf4); } .ds-nav-links a:focus-visible { outline: 2px solid var(--color-ink, #dceaf4); outline-offset: 3px; border-radius: 2px; }"
+      "description": "Sticky 頁首; 目前段落的連結變 core, 下方亮起金點.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"主要\"><span class=\"ds-nav-mark\">STYGIOMEDUSA</span><a class=\"ds-nav-link\" href=\"#\">工作列</a><a class=\"ds-nav-link\" href=\"#\" aria-current=\"location\">史萊姆</a><a class=\"ds-nav-link\" href=\"#\">GitHub</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 24px; height: 64px; padding: 0 24px; background: rgb(3 5 26 / 0.75); backdrop-filter: blur(12px); font-family: var(--font-sans); font-size: 0.92rem; letter-spacing: 0.04em; } .ds-nav-mark { margin-right: auto; font-family: var(--font-wide); font-size: 0.85rem; font-weight: 300; letter-spacing: 0.32em; color: #eeeaff; } .ds-nav-link { position: relative; color: #9ba1d6; text-decoration: none; transition: color 200ms; } .ds-nav-link:hover, .ds-nav-link[aria-current='location'] { color: #eeeaff; } .ds-nav-link::after { content: ''; position: absolute; left: 50%; bottom: -8px; width: 4px; height: 4px; translate: -50% 0; border-radius: 9999px; background: #ffc94d; box-shadow: 0 0 8px rgb(255 201 77 / 0.9); opacity: 0; transition: opacity 300ms; } .ds-nav-link[aria-current='location']::after { opacity: 1; } .ds-nav-link:focus-visible { outline: 2px solid #ffc94d; outline-offset: 3px; border-radius: 4px; }"
+    },
+    {
+      "name": "Inline Link",
+      "kind": "custom",
+      "refersTo": "link",
+      "description": "內文連結; 底線是 45% 的光環金, hover 時全亮.",
+      "html": "<p class=\"ds-link-p\">每個版本的變更寫在 <a class=\"ds-link\" href=\"#\">GitHub 上的更新紀錄</a>.</p>",
+      "css": ".ds-link-p { font-family: var(--font-sans); color: #9ba1d6; line-height: 1.7; } .ds-link { color: #eeeaff; text-decoration: underline; text-decoration-color: rgb(255 201 77 / 0.45); text-decoration-thickness: 1px; text-underline-offset: 0.25em; transition: text-decoration-color 150ms, color 150ms; } .ds-link:hover { color: #fff; text-decoration-color: #ffc94d; } .ds-link:focus-visible { outline: 2px solid #ffc94d; outline-offset: 3px; border-radius: 4px; }"
     },
     {
       "name": "Section Head",
       "kind": "custom",
-      "refersTo": "section-head",
-      "description": "每個主要段落的開頭: 明體 H2 與 mist 說明並排, 下方 2px ink 底線.",
-      "html": "<header class=\"ds-sh\"><h2 class=\"ds-sh-title\">資料只留在本機</h2><p class=\"ds-sh-lede\">Stygiomedusa 沒有自己的伺服器. 下面列出它讀取, 連線與寫入的全部內容.</p></header>",
-      "css": ".ds-sh { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); align-items: end; gap: 16px 48px; padding: 16px 16px 24px; border-bottom: 2px solid var(--color-ink, #dceaf4); background: var(--color-harbor, #0a1a33); font-family: var(--font-sans, 'Noto Sans TC Variable', sans-serif); } .ds-sh-title { margin: 0; font-family: var(--font-display, 'Cactus Classical Serif', serif); font-weight: 400; font-size: clamp(2rem, 3.4vw, 3.1rem); line-height: 1.15; letter-spacing: 0.01em; color: #fff; text-wrap: balance; } .ds-sh-lede { margin: 0; max-width: 62ch; font-size: 1.05rem; line-height: 1.7; color: var(--color-mist, #9db6cc); }"
+      "refersTo": "headline",
+      "description": "房間的入口: 細體 H2 與 lede 並排, 底部對齊, 不畫底線.",
+      "html": "<header class=\"ds-head\"><h2 class=\"ds-head-title\"><span>照目前速度,&nbsp;</span><span>會不會提早用完</span></h2><p class=\"ds-head-lede\">Pace 比較你的用量和此時的預期用量.</p></header>",
+      "css": ".ds-head { display: grid; grid-template-columns: 6fr 5fr; align-items: end; column-gap: 64px; font-family: var(--font-sans); } .ds-head-title { margin: 0; font-size: clamp(2.1rem, 3.6vw, 3.4rem); font-weight: 220; letter-spacing: 0.04em; line-height: 1.18; color: #eeeaff; text-wrap: balance; } .ds-head-title span { display: inline-block; } .ds-head-lede { margin: 0; max-width: 60ch; font-size: 1.05rem; line-height: 1.7; color: #9ba1d6; }"
     },
     {
-      "name": "Fact List",
+      "name": "Data Table",
       "kind": "custom",
-      "refersTo": "fact-row",
-      "description": "示範旁的功能說明: 上方 2px ink 線, 標籤欄加說明, 每列以 1px grid 線分隔.",
-      "html": "<dl class=\"ds-fact\"><div><dt>顯示模式</dt><dd>bar 與百分比代表已用或剩餘, 與 popup, 史萊姆分開設定.</dd></div><div><dt>直式工作列</dt><dd>例如 ExplorerPatcher. 改為縱向排列, 不顯示百分比.</dd></div><div><dt>過期</dt><dd>token 過期時, 圖示右下角出現琥珀色圓點.</dd></div></dl>",
-      "css": ".ds-fact { margin: 0; padding: 0 16px; max-width: 480px; border-top: 2px solid var(--color-ink, #dceaf4); background: var(--color-harbor, #0a1a33); font-family: var(--font-sans, 'Noto Sans TC Variable', sans-serif); line-height: 1.7; } .ds-fact > div { display: grid; grid-template-columns: 5.5rem 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--color-grid, #2a4a70); } .ds-fact dt { color: #fff; } .ds-fact dd { margin: 0; color: var(--color-mist, #9db6cc); }"
+      "refersTo": "data-row",
+      "description": "用量表: readout lumen 資料, 數字右對齊, 每列上方 1px seam 列縫.",
+      "html": "<table class=\"ds-table\"><thead><tr><th>Model</th><th>Client</th><th class=\"ds-num\">Token</th></tr></thead><tbody><tr><td>claude-sonnet-4-5</td><td class=\"ds-claude\">Claude</td><td class=\"ds-num\">71.9M</td></tr><tr><td>gpt-5-codex</td><td class=\"ds-codex\">Codex</td><td class=\"ds-num\">39.4M</td></tr></tbody></table>",
+      "css": ".ds-table { width: 420px; border-collapse: collapse; font-family: var(--font-mono); font-size: 0.92rem; font-variant-numeric: tabular-nums; } .ds-table th { padding: 12px 24px 12px 0; text-align: left; font-family: var(--font-sans); font-size: 0.875rem; font-weight: 400; color: #9ba1d6; } .ds-table td { padding: 12px 24px 12px 0; border-top: 1px solid rgb(233 228 255 / 0.07); color: #c9cbef; } .ds-table .ds-num { text-align: right; } .ds-table .ds-claude { font-family: var(--font-sans); color: #e0896a; } .ds-table .ds-codex { font-family: var(--font-sans); color: #3dd6b5; }"
     },
     {
-      "name": "Live Status Line",
+      "name": "Back To Top",
+      "kind": "button",
+      "refersTo": "back-to-top",
+      "description": "捲過一個視窗高度後出現的 44px 圓形鈕; hover 時光邊變金.",
+      "html": "<a class=\"ds-top\" href=\"#\" aria-label=\"回到頂端\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 19V5M5 12l7-7 7 7\"/></svg></a>",
+      "css": ".ds-top { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid rgb(233 228 255 / 0.14); border-radius: 9999px; background: rgb(16 22 90 / 0.8); color: #eeeaff; box-shadow: 0 10px 30px -8px rgb(27 31 168 / 0.9); backdrop-filter: blur(12px); transition: color 150ms, border-color 150ms; } .ds-top:hover { border-color: rgb(255 201 77 / 0.6); color: #ffd978; } .ds-top:focus-visible { outline: 2px solid #ffc94d; outline-offset: 3px; }"
+    },
+    {
+      "name": "Inline Code",
       "kind": "custom",
-      "refersTo": "status-line",
-      "description": "首屏狀態列: 示意註記, 等寬 %, 以文字寫出的狀態再加 tone 色.",
-      "html": "<p class=\"ds-status\">示意 · Claude 5h 剩餘 <span class=\"ds-status-num\">18%</span>&nbsp;<span class=\"ds-warn\">警告</span> · Codex 5h 剩餘 <span class=\"ds-status-num\">76%</span>&nbsp;<span class=\"ds-ok\">正常</span></p>",
-      "css": ".ds-status { margin: 0; padding: 16px; background: var(--color-harbor, #0a1a33); font-family: var(--font-sans, 'Noto Sans TC Variable', sans-serif); font-size: 0.875rem; color: var(--color-mist, #9db6cc); font-variant-numeric: tabular-nums; } .ds-status-num { font-family: var(--font-mono, 'Azeret Mono Variable', monospace); color: var(--color-ink, #dceaf4); } .ds-ok { color: var(--color-tone-normal, #4cc2ff); } .ds-warn { color: var(--color-tone-warning, #fce100); }"
+      "refersTo": "code-inline",
+      "description": "行內 code: 等寬字, edge 內框, core 文字.",
+      "html": "<p class=\"ds-code-p\">下載 <code class=\"ds-code\">stygiomedusa_版本_x64-setup.exe</code>.</p>",
+      "css": ".ds-code-p { font-family: var(--font-sans); color: #9ba1d6; } .ds-code { font-family: var(--font-mono); font-size: 0.875em; padding: 0.05em 0.4em; border-radius: 4px; background: rgb(233 228 255 / 0.08); box-shadow: inset 0 0 0 1px rgb(233 228 255 / 0.14); color: #eeeaff; }"
     },
     {
-      "name": "Desktop Stage with Taskbar (reproduction)",
+      "name": "Windows Terminal (重現)",
       "kind": "custom",
-      "refersTo": "demo-screen",
-      "description": "示範螢幕: 6px 圓角, 1px grid 外框, 與段落相反的底色; 底部是重現的 60px Windows 工作列與配額 widget.",
-      "html": "<div class=\"ds-stage\"><div class=\"ds-tb\"><div class=\"ds-tb-widget\" tabindex=\"0\"><span class=\"ds-tb-icon\" style=\"background:#e0896a\"></span><span class=\"ds-tb-bars\"><span class=\"ds-tb-bar\"><span style=\"width:48%\"></span></span><span class=\"ds-tb-bar\"><span style=\"width:37%\"></span></span></span><span class=\"ds-tb-pct\"><span>48%</span><span>37%</span></span></div><button class=\"ds-tb-tray\" aria-pressed=\"true\" aria-label=\"開關 popup\"><span></span></button><span class=\"ds-tb-clock\"><span>12:00</span><span>2026/10/14</span></span></div></div>",
-      "css": ".ds-stage { position: relative; height: 220px; overflow: hidden; border: 1px solid var(--color-grid, #2a4a70); border-radius: 6px; background: var(--color-harbor-deep, #071327); } .ds-tb { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 8px; height: 60px; padding: 0 8px; border-top: 1px solid rgb(255 255 255 / 0.1); background: var(--color-win-bg, #202020); color: rgb(255 255 255 / 0.9); font-family: var(--font-win, 'Segoe UI Variable Text', 'Segoe UI', sans-serif); } .ds-tb-widget { display: flex; align-items: center; gap: 5px; height: 100%; padding: 0 4px; border-radius: 4px; outline: none; } .ds-tb-widget:hover, .ds-tb-widget:focus-visible { background: rgb(255 255 255 / 0.08); } .ds-tb-icon { width: 20px; height: 20px; border-radius: 50%; } .ds-tb-bars { display: flex; flex-direction: column; gap: 10px; width: 40px; } .ds-tb-bar { display: block; height: 7px; overflow: hidden; border-radius: 9999px; background: rgb(255 255 255 / 0.2); } .ds-tb-bar span { display: block; height: 100%; border-radius: 9999px; background: var(--color-tone-normal, #4cc2ff); transition: width 300ms ease-out; } .ds-tb-pct { display: flex; flex-direction: column; gap: 1px; width: 35px; text-align: right; font-size: 13.5px; line-height: 17px; } .ds-tb-tray { display: grid; place-items: center; width: 40px; height: 40px; margin-left: auto; border: 0; border-radius: 5px; background: transparent; cursor: pointer; transition: background-color 150ms; } .ds-tb-tray span { width: 20px; height: 20px; border-radius: 4px; background: #4a5a9a; } .ds-tb-tray:hover, .ds-tb-tray[aria-pressed=\"true\"] { background: rgb(255 255 255 / 0.1); } .ds-tb-tray:focus-visible { outline: 2px solid var(--color-ink, #dceaf4); outline-offset: 3px; } .ds-tb-clock { display: flex; flex-direction: column; align-items: flex-end; padding: 0 8px; font-size: 13px; line-height: 1.3; } .ds-tb-clock span:first-child { font-family: var(--font-mono, 'Azeret Mono Variable', monospace); font-size: 12.5px; }"
-    },
-    {
-      "name": "Windows Quota Card (reproduction)",
-      "kind": "card",
-      "refersTo": "win-quota-card",
-      "description": "app popup 配額卡的程式重現: win-* 子色盤, Segoe UI, 8px 圓角. 只用於重現.",
-      "html": "<section class=\"ds-wqc\"><header class=\"ds-wqc-head\"><h3>Claude</h3><span class=\"ds-wqc-plan\">Max</span></header><div class=\"ds-wqc-row\"><span>5h</span><span>已用  52%  剩餘  48%</span></div><span class=\"ds-wqc-bar\"><span style=\"width:48%\"></span></span><div class=\"ds-wqc-foot\"><span>符合均速</span><span>2 小時 30 分後重置</span></div></section>",
-      "css": ".ds-wqc { display: flex; flex-direction: column; gap: 12px; width: 340px; padding: 16px; border: 1px solid var(--color-win-line, #3a3a3a); border-radius: 8px; background: var(--color-win-card, #2b2b2b); color: var(--color-win-text, #f5f5f5); font-family: var(--font-win, 'Segoe UI Variable Text', 'Segoe UI', sans-serif); } .ds-wqc-head { display: flex; align-items: center; gap: 8px; } .ds-wqc-head h3 { margin: 0; font-size: 1.125rem; font-weight: 600; color: var(--color-agent-claude, #e0896a); } .ds-wqc-plan { padding: 0 8px; border: 1px solid rgb(255 255 255 / 0.4); border-radius: 9999px; font-size: 0.75rem; line-height: 20px; color: rgb(255 255 255 / 0.85); } .ds-wqc-row { display: flex; justify-content: space-between; font-variant-numeric: tabular-nums; white-space: pre; } .ds-wqc-bar { display: block; height: 8px; overflow: hidden; border-radius: 9999px; background: rgb(255 255 255 / 0.15); } .ds-wqc-bar span { display: block; height: 100%; border-radius: 9999px; background: var(--color-tone-normal, #4cc2ff); transition: width 300ms; } .ds-wqc-foot { display: flex; justify-content: space-between; font-size: 0.875rem; color: rgb(255 255 255 / 0.8); }"
-    },
-    {
-      "name": "Leader Note",
-      "kind": "custom",
-      "refersTo": "leader-note",
-      "description": "直角引線把說明釘在配額卡的部位上; hover 時只有這一條變海圖洋紅.",
-      "html": "<div class=\"ds-ld\"><div class=\"ds-ld-note\" tabindex=\"0\"><p class=\"ds-ld-title\">門檻色</p><p class=\"ds-ld-body\">剩餘 25% 以下警告, 10% 以下危險.</p></div><svg class=\"ds-ld-line\" width=\"80\" height=\"40\" viewBox=\"0 0 80 40\" aria-hidden=\"true\"><path d=\"M0 8H40V32H74\" fill=\"none\" stroke=\"currentColor\"/><circle cx=\"74\" cy=\"32\" r=\"3.5\" fill=\"currentColor\"/></svg></div>",
-      "css": ".ds-ld { display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: var(--color-harbor, #0a1a33); font-family: var(--font-sans, 'Noto Sans TC Variable', sans-serif); } .ds-ld-title { margin: 0; line-height: 1.5rem; font-weight: 500; color: var(--color-ink, #dceaf4); transition: color 200ms; } .ds-ld-body { margin: 2px 0 0; max-width: 28ch; font-size: 0.875rem; line-height: 1.625; color: var(--color-mist, #9db6cc); } .ds-ld-line { color: var(--color-grid, #2a4a70); stroke-width: 1.25; transition: color 200ms; } .ds-ld:hover .ds-ld-line, .ds-ld:focus-within .ds-ld-line { color: var(--color-note, #e0559b); stroke-width: 2; } .ds-ld:hover .ds-ld-title, .ds-ld:focus-within .ds-ld-title { color: #fff; } .ds-ld-note:focus-visible { outline: 2px solid var(--color-ink, #dceaf4); outline-offset: 3px; border-radius: 2px; }"
+      "refersTo": "win-terminal",
+      "description": "史萊姆螢幕裡的示意 terminal: Windows Terminal 預設 Campbell 配色與 Cascadia Mono, 屬於重現的 Windows 介面, 不使用深淵色票.",
+      "html": "<div class=\"ds-term\"><div class=\"ds-term-bar\"><span class=\"ds-term-tab\"><svg viewBox=\"0 0 16 16\" width=\"14\" height=\"14\" aria-hidden=\"true\"><rect width=\"16\" height=\"16\" rx=\"2.5\" fill=\"#2671be\"/><path d=\"m4 5 3 3-3 3M8.5 11.5H12\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>PowerShell</span></div><div class=\"ds-term-body\"><div>PS C:\\work\\api&gt; <span class=\"ds-term-cmd\">claude</span></div><div><span class=\"ds-term-dim\">&gt; </span>把設定頁的表單拆成元件</div><div><span class=\"ds-term-ok\">● </span>Read(src/settings.ts)</div><div class=\"ds-term-dim\">  ⎿  讀取 182 行</div><div><span class=\"ds-term-dim\">&gt; </span><span class=\"ds-term-cursor\"></span></div></div></div>",
+      "css": ".ds-term { width: 360px; overflow: hidden; border: 1px solid #3a3a3a; border-radius: 8px; background: #0c0c0c; font-family: 'Segoe UI Variable Text', 'Segoe UI', sans-serif; box-shadow: 0 16px 40px rgb(0 0 0 / 0.5); } .ds-term-bar { display: flex; align-items: flex-end; height: 36px; padding-left: 8px; background: #202020; font-size: 12px; color: rgb(255 255 255 / 0.9); } .ds-term-tab { display: flex; align-items: center; gap: 8px; height: 30px; padding: 0 12px; border-radius: 6px 6px 0 0; background: #0c0c0c; } .ds-term-body { padding: 10px 12px; font-family: 'Cascadia Mono', Consolas, ui-monospace, monospace; font-size: 12.5px; line-height: 1.6; color: #cccccc; white-space: pre; } .ds-term-cmd { color: #f9f1a5; } .ds-term-ok { color: #16c60c; } .ds-term-dim { color: #8a8a8a; } .ds-term-cursor { display: inline-block; width: 0.6em; height: 1.15em; vertical-align: -0.2em; background: #cccccc; animation: ds-term-blink 1.06s step-end infinite; } @keyframes ds-term-blink { 50% { opacity: 0; } } @media (prefers-reduced-motion: reduce) { .ds-term-cursor { animation: none; } }"
     }
   ],
   "narrative": {
-    "northStar": "配額潮位表 (The Quota Tide Table)",
-    "overview": "外層是一張潮汐預報表. 深港灣藍鋪滿全頁, 海圖白是墨色, 灰藍是次要文字與格線. 結構靠 2px 白色標題底線, 1px 格線與嚴格的數字欄建立, 不靠卡片與陰影.\n\n首屏把這張表放進一張 Windows 桌面. 標題區之下是一個填滿剩餘高度的示範螢幕: 底部是 Windows 工作列與配額 widget, 系統匣上方是預設打開的 popup, 上緣貼著史萊姆. 三者讀同一個示意時間, 時間自動快轉, 讀數一起漲退並換狀態色. 首屏之後, 每個段落示範一個位置 (工作列 widget, 史萊姆, popup), 再接 pace, 用量, 多個 Claude 資料夾, 隱私與安裝.\n\n頁面上有兩個世界. 外層是港灣海圖 (harbor, chart, ink, mist, 明體與黑體). 內層是以程式重現的 Windows 11 深色介面 (win-*, Segoe UI, 較大的圓角, 陰影). 內層照 app 原樣重現, 不套用外層規則; 外層也不借用內層的圓角與陰影. 兩個世界的交界是 \"示範螢幕\": 一個 6px 圓角, 1px grid 外框, 底色與所在段落相反的方框.",
+    "northStar": "深淵系統選單 (The Abyss System Menu)",
+    "overview": "外層是第六代遊戲主機的系統選單. 黑藍虛空鋪滿全頁, 光從下方的鈷藍升起. 霧, 水母觸手光與下沉的海雪在虛空裡漂移. 每個示範是一個自己發光的半透明物件: 1px 光邊, 由內往外的光, 腳下一片鈷藍光池. 結構靠留白與景深, 不靠分隔線, 面板或卡片格.\n\n光環金是選取的顏色. 它只出現在被選取的東西上: 主要動作, 目前段落, 按下的切換, 游標所在的物件. 首屏是一張浮在深淵裡的示範桌面. 桌面是透明的螢幕, 深淵的光透過玻璃可見. 往下每段是一個房間, 房間以比虛空亮一階的深淵交替, 上下淡入, 沒有硬邊.\n\n頁面上有兩個世界. 外層是深淵 (void, abyss, cobalt, core, 細黑體, 寬字距字標). 內層是以程式重現的 Windows 11 深色介面與史萊姆 (win-*, slime-*, Segoe UI). 內層照 app 原樣重現, 不套用外層規則; 外層也不借用內層的色票. 兩個世界的交界是 \"物件\": 內層的介面放在外層發光的物件裡.",
     "keyCharacteristics": [
-      "深港灣藍單色底, 以 harbor 與 harbor-deep 兩階交替分段.",
-      "明體標題, 黑體內文, 等寬讀數.",
-      "2px 白色底線結束每個標題區; 1px 格線分隔每一列.",
-      "首屏是一張可操作的示範桌面, 不是截圖.",
-      "所有示範共用一個自動快轉的示意時間; 游標移入任何示範時暫停.",
+      "黑藍虛空單色底, 光從下方的鈷藍升起; 房間以 abyss 一階交替, 上下 10rem 淡入.",
+      "細黑體標題 (字重 220, 字距 0.04em), 寬字距 Lexend Exa 字標, Azeret Mono 讀數.",
+      "示範是內部發光的半透明物件, 不是平面方框, 也不是截圖.",
+      "光環金只標示被選取的東西.",
+      "所有示範共用一個自動快轉的示意時間; 游標進入任何物件時, 時間停住, 深淵的光繼續漂移.",
       "狀態以文字寫出 (正常, 警告, 危險), 顏色只是第二層.",
-      "外層沒有陰影; 陰影只屬於重現的 Windows 介面."
+      "WebGPU shader 只畫在四個地方: 首屏, 史萊姆螢幕, pace 光塔, 頁尾極光. 沒有 WebGPU 時以 CSS 漸層代替."
     ],
     "rules": [
+      {
+        "name": "The Selected Gold Rule",
+        "body": "光環金只標示 \"被選取\". 下載鈕是預設被選取的動作, 所以一直亮著; 其他元素只在目前, 按下, hover 或 focus 時才變金. 標題, 文案與裝飾不使用金色.",
+        "section": "colors"
+      },
       {
         "name": "The Readout-Only Tone Rule",
         "body": "狀態色只出現在重現的讀數與讀數的狀態文字裡. 標題, 文案, 按鈕, 段落裝飾不使用狀態色.",
@@ -577,14 +821,14 @@
         "section": "colors"
       },
       {
-        "name": "The One Lit Leader Rule",
-        "body": "海圖洋紅一次只點亮一條引線. 除了文字選取, 沒有 hover 時頁面上不出現洋紅.",
+        "name": "The Two Worlds Rule",
+        "body": "win-* 與 slime-* 色票只屬於重現的介面; 深淵系色票不進入重現的介面.",
         "section": "colors"
       },
       {
-        "name": "The Two Worlds Rule",
-        "body": "win-* 與 slime-* 色票只屬於重現的介面; harbor 系色票不進入重現的介面.",
-        "section": "colors"
+        "name": "The Thin Display Rule",
+        "body": "標題一律是細字重 (220 到 300) 加 0.04em 字距. 不用粗體建立層級; 層級靠字級與亮度 (core 對 haze).",
+        "section": "typography"
       },
       {
         "name": "The Machine Text Rule",
@@ -593,17 +837,22 @@
       },
       {
         "name": "The Comma Break Rule",
-        "body": "明體標題只在逗號後換行; 每段以 inline-block 包住, 逗號後用不換行空格.",
+        "body": "標題只在逗號後換行; 每段以 inline-block 包住, 逗號後用不換行空格.",
         "section": "typography"
       },
       {
-        "name": "The Opposite Step Rule",
-        "body": "示範螢幕的底色與所在段落相反: harbor 段落用 harbor-deep, harbor-deep 段落用 harbor. 螢幕因此不需要陰影就能從段落中分出來.",
+        "name": "The Space Not Lines Rule",
+        "body": "分組靠留白與景深. 事實清單, 定義清單, 安裝步驟與標題區都不畫線. 唯一的線是資料表的 seam 列縫, 它只為了掃讀.",
         "section": "layout"
       },
       {
-        "name": "The Flat Chart Rule",
-        "body": "外層沒有任何陰影. 外層元件需要分出層次時, 改用色階或線條.",
+        "name": "The Light Not Shadow Rule",
+        "body": "外層的陰影一律是有顏色的光 (鈷藍光池或金色選取光). 黑色投影只屬於重現的 Windows 介面.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Lift On Select Rule",
+        "body": "物件靜止時停在房間裡. 游標進入或鍵盤焦點落在裡面時, 物件上浮 4px (480ms ease-out-expo), 光邊變金, 內部亮起暖光.",
         "section": "elevation"
       },
       {
@@ -615,25 +864,35 @@
         "name": "The One Clock Rule",
         "body": "頁面上所有重現的讀數讀同一個時間. 新的示範不得自己產生數字.",
         "section": "components"
+      },
+      {
+        "name": "The Drifting Abyss Rule",
+        "body": "游標停在示範上時只停住示意時間, 讓讀數穩定可讀. 深淵的光 (霧, 觸手, 海雪) 持續漂移, 不接 `tide.held`; 整片停住會被讀成畫面卡住. 只有減少動態時, shader 才停在一個靜止畫面.",
+        "section": "components"
       }
     ],
     "dos": [
-      "Do 用 2px ink 底線結束每個標題區, 用 1px grid 線分隔每一列.",
+      "Do 把示範放在內部發光的物件裡: 1px edge 光邊, 12px 圓角, 鈷藍光池.",
+      "Do 讓物件在 hover 與 focus-within 時上浮 4px, 光邊變金, 並暫停共用時間.",
+      "Do 把光環金留給被選取的東西: 主要動作, 目前段落, 按下的切換, 游標所在的物件, focus.",
+      "Do 用留白與景深分組; 資料表才用 seam 列縫.",
+      "Do 讓標題使用細字重 (220 到 300) 加 0.04em 字距, 只在逗號後換行.",
       "Do 把外層的數字放在固定欄位: 右對齊, tabular-nums, 等寬字.",
       "Do 把狀態寫成文字, 放在對應的數字旁, 再加上 tone 色.",
       "Do 在每個重現的讀數旁標示 \"示意\".",
-      "Do 把示範放在 6px 圓角, 1px grid 外框, 底色與段落相反的示範螢幕裡.",
-      "Do 讓游標進入示範時暫停共用時間, 離開時繼續.",
-      "Do 主要動作使用 ink 底 harbor 字的近直角色塊, hover 提亮到白色.",
-      "Do 讓明體標題只在逗號後換行.",
-      "Do 遵守 prefers-reduced-motion: 不自動播放, 所有動畫與轉場縮到 0.01ms."
+      "Do 文字疊在 shader 光上時, 用 void 漸層壓暗文字後方, 或改用較亮的 lumen 文字.",
+      "Do 只在有 WebGPU 時載入 shader, 並在同位置提供 CSS 漸層後備畫面; 保持 `disable-telemetry`.",
+      "Do 遵守 prefers-reduced-motion: 不自動播放, shader 停在靜止畫面, 所有動畫與轉場縮到 0.01ms."
     ],
     "donts": [
+      "Don't 把金色用在標題, 文案, 裝飾或未被選取的元素上.",
       "Don't 在文案, 標題, 按鈕或裝飾上使用 tone 色或 agent 色.",
       "Don't 在淺色底上使用深色主題的 tone 色.",
-      "Don't 在外層元件加陰影或超過 6px 的圓角; 陰影與較大圓角只屬於重現的 Windows 介面.",
-      "Don't 把海圖洋紅用在被點亮的引線與文字選取以外的地方.",
-      "Don't 把功能說明排成一排同尺寸的卡片; 用事實清單, 表格或引線圖.",
+      "Don't 在外層使用黑色投影或硬邊陰影; 外層的陰影是鈷藍或金色的光.",
+      "Don't 在標題區, 清單或段落之間畫分隔線或面板.",
+      "Don't 把功能說明排成一排同尺寸的玻璃卡片; 用事實清單, 表格, 引線圖或單一物件.",
+      "Don't 用截圖代替可操作的示範.",
+      "Don't 在窄螢幕把觸手光畫在文字後方; 觸手只在 md 以上出現.",
       "Don't 把 ease-jelly 用在史萊姆以外的元素.",
       "Don't 在窄螢幕縮小 popup 的文字; 改為單欄, 並裁掉超出的部分."
     ]
