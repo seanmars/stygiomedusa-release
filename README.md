@@ -1,5 +1,15 @@
 # Stygiomedusa
 
+## [0.9.0] - 2026-10-15
+
+### 新增
+
+- 設定頁的 "自動檢查頻率" 新增 "永不". 選擇後不再自動檢查更新, 啟動時也不檢查, 仍可手動檢查. 之後改回其他頻率時, 一分鐘內檢查一次.
+
+### 修正
+
+- 保存的設定中只要有一個欄位無法讀取 (例如降版後讀到新版的值), 整份設定就會回到預設值並被覆蓋. 現在只有該欄位使用預設值, 其他設定保留.
+
 ## [0.8.0] - 2026-10-14
 
 ### 變更
@@ -194,6 +204,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.9.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.9.0
 [0.8.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.8.0
 [0.7.1]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.7.1
 [0.7.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.7.0
