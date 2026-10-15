@@ -1,5 +1,17 @@
 # Stygiomedusa
 
+## [0.11.0] - 2026-10-16
+
+### 變更
+
+- 夥伴的位置改為依史萊姆停的位置決定, 停在上緣靠近右上角時不再突然跳到鏈的另一端:
+  - 停在左邊或右邊時, 夥伴在鏈的上方.
+  - 停在上緣或下緣時, 夥伴往螢幕中間: 鏈在螢幕左半邊 (含正中間) 時在鏈的右方, 在右半邊時在鏈的左方.
+  - 史萊姆停在角落 (橫跨兩條邊) 時, 左上角在上緣鏈的右方, 右上角在上緣鏈的左方, 右下角在右邊鏈的上方, 左下角在左邊鏈的上方.
+- 夥伴包不畫齒輪時, 史萊姆原本的齒輪改從夥伴的另一端長出, 不再與夥伴擠在同一端.
+- 夥伴包的 state machine 必須宣告新的 `along` input (String), app 以它告訴夥伴包沿邊從鏈往夥伴的方向 (`up`, `left`, `right`). 沒有宣告 `along` 的夥伴包會無法載入, 史萊姆分頁顯示原因; 請以新版製作工具包重新產生後匯入.
+  - 製作工具包的預覽改為上下緣各預覽兩個方向, 範本已宣告 `along`.
+
 ## [0.10.0] - 2026-10-15
 
 ### 新增
@@ -7,7 +19,7 @@
 - 史萊姆可以加上夥伴: 在史萊姆分頁的 "外觀" 分組按 "匯入夥伴包", 選擇 `.companion` 檔, 再從 "夥伴" 選單選擇. 夥伴躲在史萊姆鏈端旁的螢幕邊緣外, 游標停留時探出; 點擊夥伴與點擊史萊姆相同.
   - 夥伴包只包含外觀與動作, 不能執行程式碼. 匯入時檢查夥伴包, 不通過時列出原因.
   - 匯入 id 相同的夥伴包時, 詢問是否取代. 已安裝的夥伴包可以移除. 選擇的夥伴包無法載入時, 史萊姆分頁顯示原因.
-  - 夥伴包的製作工具包 (範本, 驗證, 打包與預覽) 在 [stygiomedusa-companions](https://github.com/seanmars/stygiomedusa-companions) 的 `companion-tool/`.
+  - 夥伴包的製作工具包 (範本, 驗證, 打包與預覽) 在 [stygiomedusa-companions](https://github.com/seanmars/stygiomedusa-companions).
 - 設定頁新增 "動態效果", 可選 "一律開啟" (預設) 或 "跟隨 Windows". 選 "跟隨 Windows" 時, Windows 關閉 "動畫效果" 會減少史萊姆, 夥伴與視窗的動態. 切換後立即生效.
 
 ### 變更
@@ -222,6 +234,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.11.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.0
 [0.10.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.10.0
 [0.9.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.9.0
 [0.8.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.8.0
