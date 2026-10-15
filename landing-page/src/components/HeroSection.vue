@@ -32,7 +32,7 @@ const TONE_TEXT = {
             <span class="inline-block">不開視窗,&nbsp;</span><span class="inline-block">也看得到配額.</span>
           </h1>
           <p class="mt-4 max-w-[58ch] text-[1.05rem] text-haze">
-            Stygiomedusa 把 Claude Code 與 Codex 的 5h/7d 配額放在 Windows 11 工作列與螢幕邊緣. 還剩多少, 何時重置, 照目前速度會不會提早用完, 一眼就知道.
+            Stygiomedusa 把 Claude Code 與 Codex 的 5h/7d 配額放在 Windows 工作列與螢幕邊緣. 還剩多少, 何時重置, 照目前速度會不會提早用完, 一眼就知道.
           </p>
         </div>
         <DownloadButton />

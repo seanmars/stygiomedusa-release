@@ -36,12 +36,12 @@
   --color-agent-claude: #e0896a;
   --color-agent-codex: #3dd6b5;
 
-  /* 重現的 Windows 11 深色介面 */
+  /* 重現的 Windows 深色介面 */
   --color-win-bg: #202020;
   --color-win-card: #2b2b2b;
   --color-win-line: #3a3a3a;
   --color-win-text: #f5f5f5;
-  /* Windows 11 深色主題的強調色: 開始鈕與執行中指示線 */
+  /* Windows 深色主題的強調色: 開始鈕與執行中指示線 */
   --color-win-accent: #4cc2ff;
 
   /* 熱力圖: 與 app 深色主題相同的紫色階 */

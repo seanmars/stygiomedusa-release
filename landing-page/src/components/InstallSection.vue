@@ -3,7 +3,7 @@ import DownloadButton from '@/components/DownloadButton.vue'
 import SectionHead from '@/components/SectionHead.vue'
 
 const REQUIREMENTS = [
-  { label: '系統', value: 'Windows 11, x64' },
+  { label: '系統', value: 'Windows, x64' },
   { label: '帳號', value: 'Claude Code 或 Codex 訂閱, 並在這台電腦登入過 CLI' },
   { label: '更新', value: 'App 內建. 有新版時在 popup 上方提示, 按 "安裝" 才下載, 驗證簽章後安裝' },
   { label: '授權', value: 'MIT' },

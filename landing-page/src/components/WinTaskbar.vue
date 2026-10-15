@@ -5,7 +5,7 @@ import TaskbarWidget from '@/components/TaskbarWidget.vue'
 import { formatClock } from '@/data/tide'
 import { useTideStore } from '@/stores/tide'
 
-// 重現 Windows 11 深色工作列: 左側是配額 widget, 中間是開始鈕與 app, 右側系統匣有 Stygiomedusa 圖示.
+// 重現 Windows 深色工作列: 左側是配額 widget, 中間是開始鈕與 app, 右側系統匣有 Stygiomedusa 圖示.
 // 左鍵點系統匣圖示開關 popup, 與 app 相同. widget 為 false 時不顯示配額 widget (例如改用史萊姆時).
 withDefaults(defineProps<{ popupOpen?: boolean; mode?: 'remaining' | 'used'; tray?: boolean; apps?: boolean; widget?: boolean }>(), {
   popupOpen: false,

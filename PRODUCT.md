@@ -12,11 +12,11 @@ Vite + Vue 3 + TypeScript, 部署到 GitHub Pages (由本 repo 的 GitHub Action
 
 ## Users
 
-公開給所有在 Windows 11 上使用 Claude Code 或 Codex 訂閱的開發者. 他們在寫程式時需要隨時知道 5h 與 7d 配額還剩多少, 何時重置, 以及照目前速度會不會提早用完. 本 repo 的對外內容 (README, 介紹/下載頁) 是他們決定是否安裝, 以及取得安裝檔與更新紀錄的地方.
+公開給所有在 Windows 上使用 Claude Code 或 Codex 訂閱的開發者. 他們在寫程式時需要隨時知道 5h 與 7d 配額還剩多少, 何時重置, 以及照目前速度會不會提早用完. 本 repo 的對外內容 (README, 介紹/下載頁) 是他們決定是否安裝, 以及取得安裝檔與更新紀錄的地方.
 
 ## Product Purpose
 
-Stygiomedusa 是 Windows 11 系統匣常駐小工具, 監控 Claude Code 與 Codex 訂閱的 5h/7d quota, 並分析本機用量與活動.
+Stygiomedusa 是 Windows 系統匣常駐小工具, 監控 Claude Code 與 Codex 訂閱的 5h/7d quota, 並分析本機用量與活動.
 
 本 repo (`stygiomedusa-release`) 是 app 的公開發布點: GitHub Releases 放 NSIS 安裝檔與 updater 的 `latest.json`, README 放 changelog. 原始碼在另一個 repo (`stygiomedusa`), 發布由該 repo 推送 `v*` tag 時的 GitHub Actions 自動完成.
 
@@ -31,7 +31,7 @@ Stygiomedusa 是 Windows 11 系統匣常駐小工具, 監控 Claude Code 與 Cod
 
 ## Operating Context
 
-- 使用情境: 開發者在 Windows 11 上同時開著 Claude Code 或 Codex CLI 工作, 配額資訊顯示在工作列, 系統匣 popup 或螢幕邊緣.
+- 使用情境: 開發者在 Windows 上同時開著 Claude Code 或 Codex CLI 工作, 配額資訊顯示在工作列, 系統匣 popup 或螢幕邊緣.
 - 安裝: 從 GitHub Releases 下載 NSIS 安裝檔. 安裝檔沒有 Authenticode 簽章, 首次安裝會出現 SmartScreen 警告.
 - 更新: app 內建 updater, 啟動時與依設定頻率 (15 分鐘到 12 小時, 預設 6 小時) 檢查新版, 使用者按 "安裝" 才下載, 驗證簽章後安裝並重新啟動.
 - 發布節奏: 版本號遵循 Semantic Versioning, changelog 格式參考 Keep a Changelog.
@@ -44,7 +44,7 @@ Stygiomedusa 是 Windows 11 系統匣常駐小工具, 監控 Claude Code 與 Cod
 - 分析視窗: 依 model 堆疊的時間軸 (API 等價金額或 token), 星期 x 小時熱力圖.
 - 讀取 Claude 資料夾的 `.credentials.json` 與 `~/.codex/auth.json`. 定時更新只讀; 只有使用者按下配額卡的更新鈕且 token 過期時, 才會 refresh token 並寫回 token 欄位.
 - 本機 JSONL 由 tokscale (MIT, submodule) 解析.
-- 只支援 Windows 11. 不支援 macOS 或 Linux.
+- 只支援 Windows. 不支援 macOS 或 Linux.
 - 授權: MIT.
 
 ### 用詞
@@ -70,8 +70,8 @@ Stygiomedusa 是 Windows 11 系統匣常駐小工具, 監控 Claude Code 與 Cod
 
 1. **一眼就讀懂**: 配額資訊要在最短時間內被理解; 顏色只用來表達狀態.
 2. **資料留在本機**: 任何對外說法都不可暗示資料會上傳; 對隱私的描述要精確, 包含手動更新鈕會寫回 token 這個例外.
-3. **誠實描述限制**: 明確說明只支援 Windows 11, 安裝檔未簽章會出現 SmartScreen 警告.
-4. **與 Windows 一致**: App 以 Windows 11 原生質感為基準, 並尊重系統的深淺色與 "動畫效果" 設定.
+3. **誠實描述限制**: 明確說明只支援 Windows, 安裝檔未簽章會出現 SmartScreen 警告.
+4. **與 Windows 一致**: App 以 Windows 原生質感為基準, 並尊重系統的深淺色與 "動畫效果" 設定.
 
 ## Accessibility & Inclusion
 

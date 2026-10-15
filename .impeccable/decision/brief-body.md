@@ -4,7 +4,7 @@ Stygiomedusa 介紹與下載頁 (`landing-page/`, Vite + Vue + TypeScript + Tail
 
 ## Audience and action
 
-- 訪客: Windows 11 上使用 Claude Code 或 Codex 訂閱的開發者.
+- 訪客: Windows 上使用 Claude Code 或 Codex 訂閱的開發者.
 - 行動: 前往 GitHub 最新 release 頁面下載安裝檔.
 - 首屏證明: 不開視窗就看到配額.
 - 證據: 以程式重現的工作列 widget, 史萊姆, popup (讀數標示為示意). 使用者之後會提供截圖, 放在次要段落.

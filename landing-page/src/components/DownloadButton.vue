@@ -19,7 +19,7 @@ withDefaults(defineProps<{ size?: 'md' | 'lg' }>(), { size: 'md' })
       下載最新版
     </a>
     <p class="text-sm leading-snug text-haze">
-      Windows 11 x64 · MIT 授權 ·
+      Windows x64 · MIT 授權 ·
       <a :href="releasesUrl" class="link">所有版本</a>
     </p>
   </div>

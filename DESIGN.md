@@ -1,6 +1,6 @@
 ---
 name: Stygiomedusa
-description: 不開視窗, 也看得到配額. Claude Code 與 Codex 配額的 Windows 11 工作列與螢幕邊緣讀數.
+description: 不開視窗, 也看得到配額. Claude Code 與 Codex 配額的 Windows 工作列與螢幕邊緣讀數.
 colors:
   void: "#03051a"
   abyss: "#070a29"
@@ -207,7 +207,7 @@ components:
 
 光環金是選取的顏色. 它只出現在被選取的東西上: 主要動作, 目前段落, 按下的切換, 游標所在的物件. 首屏是一張浮在深淵裡的示範桌面. 桌面是透明的螢幕, 深淵的光透過玻璃可見. 往下每段是一個房間, 房間以比虛空亮一階的深淵交替, 上下淡入, 沒有硬邊.
 
-頁面上有兩個世界. 外層是深淵 (void, abyss, cobalt, core, 細黑體, 寬字距字標). 內層是以程式重現的 Windows 11 深色介面與史萊姆 (win-*, slime-*, Segoe UI). 內層照 app 原樣重現, 不套用外層規則; 外層也不借用內層的色票. 兩個世界的交界是 "物件": 內層的介面放在外層發光的物件裡.
+頁面上有兩個世界. 外層是深淵 (void, abyss, cobalt, core, 細黑體, 寬字距字標). 內層是以程式重現的 Windows 深色介面與史萊姆 (win-*, slime-*, Segoe UI). 內層照 app 原樣重現, 不套用外層規則; 外層也不借用內層的色票. 兩個世界的交界是 "物件": 內層的介面放在外層發光的物件裡.
 
 **Key Characteristics:**
 - 黑藍虛空單色底, 光從下方的鈷藍升起; 房間以 abyss 一階交替, 上下 10rem 淡入.
@@ -248,7 +248,7 @@ components:
 - **列縫 Seam** (seam): 只用在資料表的列分隔線, 比光邊更淡, 只為了掃讀.
 
 ### Windows 重現子色盤
-- **win-bg, win-card, win-line, win-text, win-accent**: 只用在重現的 Windows 11 介面: 工作列, popup, 配額卡, widget tooltip. 內部次要文字與軌道使用 `white` 加透明度, 與 app 相同.
+- **win-bg, win-card, win-line, win-text, win-accent**: 只用在重現的 Windows 介面: 工作列, popup, 配額卡, widget tooltip. 內部次要文字與軌道使用 `white` 加透明度, 與 app 相同.
 - **slime-black, slime-white**: 史萊姆的兩種色調, 也是 callout 底色.
 
 ### Named Rules
@@ -344,7 +344,7 @@ Popup 段落的引線圖在 1100px 以上為 "1fr : 460px : 1fr" 三欄, 以下�
 ### Buttons
 被點亮的金色物件: 暖光從內部透出, 下方有琥珀光.
 - **Shape:** 8px 圓角.
-- **Primary (下載最新版):** 深棕底 (rgb(30 22 20)) 上的金色放射漸層, 1px 金色內框, 奶油色文字 (#fff4d6), 500 字重, 字距 0.06em, 前方 20px 下載圖示 (1.75 stroke SVG). 一般尺寸高 52px, 字級 1.125rem; 大尺寸 (頁尾) 高 64px, 字級 1.25rem. 下方一行 label 註記: "Windows 11 x64 · MIT 授權 · 所有版本". 不顯示版本號.
+- **Primary (下載最新版):** 深棕底 (rgb(30 22 20)) 上的金色放射漸層, 1px 金色內框, 奶油色文字 (#fff4d6), 500 字重, 字距 0.06em, 前方 20px 下載圖示 (1.75 stroke SVG). 一般尺寸高 52px, 字級 1.125rem; 大尺寸 (頁尾) 高 64px, 字級 1.25rem. 下方一行 label 註記: "Windows x64 · MIT 授權 · 所有版本". 不顯示版本號.
 - **Hover / Active:** 底色換成實心金色漸層, 文字變 void, 外光加強 (200 到 300ms); active 時下移 1px.
 - **Focus:** 全域 2px halo outline, offset 3px, 4px 圓角.
 - **唯一性:** 頁面上只有下載鈕常駐金色. 首屏, 安裝步驟與頁尾各一個.
