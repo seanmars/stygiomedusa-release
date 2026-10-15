@@ -1,5 +1,23 @@
 # Stygiomedusa
 
+## [0.10.0] - 2026-10-15
+
+### 新增
+
+- 史萊姆可以加上夥伴: 在史萊姆分頁的 "外觀" 分組按 "匯入夥伴包", 選擇 `.companion` 檔, 再從 "夥伴" 選單選擇. 夥伴躲在史萊姆鏈端旁的螢幕邊緣外, 游標停留時探出; 點擊夥伴與點擊史萊姆相同.
+  - 夥伴包只包含外觀與動作, 不能執行程式碼. 匯入時檢查夥伴包, 不通過時列出原因.
+  - 匯入 id 相同的夥伴包時, 詢問是否取代. 已安裝的夥伴包可以移除. 選擇的夥伴包無法載入時, 史萊姆分頁顯示原因.
+  - 夥伴包的製作工具包 (範本, 驗證, 打包與預覽) 在 [stygiomedusa-companions](https://github.com/seanmars/stygiomedusa-companions) 的 `companion-tool/`.
+- 設定頁新增 "動態效果", 可選 "一律開啟" (預設) 或 "跟隨 Windows". 選 "跟隨 Windows" 時, Windows 關閉 "動畫效果" 會減少史萊姆, 夥伴與視窗的動態. 切換後立即生效.
+
+### 變更
+
+- 史萊姆與視窗預設不再跟隨 Windows 的 "動畫效果", 升級後動態一律開啟. 要減少動態時, 把 "動態效果" 改為 "跟隨 Windows".
+
+### 內部調整
+
+- Release 建置改為還原 main 上預先編譯的 Rust 依賴, 縮短建置時間.
+
 ## [0.9.0] - 2026-10-15
 
 ### 新增
@@ -204,6 +222,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.10.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.10.0
 [0.9.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.9.0
 [0.8.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.8.0
 [0.7.1]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.7.1
