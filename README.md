@@ -1,5 +1,15 @@
 # Stygiomedusa
 
+## [0.11.1] - 2026-10-16
+
+### 新增
+
+- 夥伴包的製作工具包新增 skill `stygio-companion`: 在 [stygiomedusa-companions](https://github.com/seanmars/stygiomedusa-companions) 中開啟 Claude Code 等 AI 工具, 描述想要的夥伴, AI 會依 app 的規則產生, 驗證, 預覽並打包. 製作的細節從工具包的 README 移到 skill 的文件.
+
+### 變更
+
+- 點擊史萊姆本體, callout 與夥伴不再開啟 popup. 要開啟 popup, 請點擊齒輪 (開啟設定分頁), 使用右鍵選單, 或點擊 tray 與工作列 widget.
+
 ## [0.11.0] - 2026-10-16
 
 ### 變更
@@ -234,6 +244,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.11.1]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.1
 [0.11.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.0
 [0.10.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.10.0
 [0.9.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.9.0
