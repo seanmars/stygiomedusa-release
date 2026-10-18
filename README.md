@@ -1,5 +1,21 @@
 # Stygiomedusa
 
+## [0.11.2] - 2026-10-18
+
+### 新增
+
+- 夥伴輪替群組: 在史萊姆分頁的 "夥伴" 卡片按 "新增群組", 勾選已安裝的夥伴包, 再從 "夥伴" 選單選擇 "輪替: " 開頭的群組. 夥伴會在 "輪替間隔" 的範圍內隨機等待 (預設 5 到 30 分鐘, 所有群組共用, 可設 1 到 1440 分鐘), 再換成另一隻.
+  - hover 或拖曳中不換夥伴, 結束後才換. 只在夥伴看得到時計時. 重新啟動後顯示上次的夥伴.
+  - 群組中可用的夥伴有 2 隻以上時, 史萊姆的右鍵選單多一個 "下一個夥伴".
+  - 群組介面顯示每隻夥伴是否可用與原因. 無法載入的夥伴不會被選到; 可用的夥伴少於 2 隻時不輪替.
+- 夥伴包可以有自己的出場與退場: state machine 宣告 Event input `enter` 與 `exit` (宣告 `exit` 時要有 `exited` state) 後, 換夥伴, 從無加入, 改為無與移除時, 由夥伴包在原地播放退場與出場. 既有的夥伴包不需要修改.
+
+### 變更
+
+- 史萊姆分頁新增橫跨兩欄的 "夥伴" 卡片. 夥伴選單, "匯入夥伴包" 與移除從 "外觀" 分組移到這裡. 升級前選擇的夥伴包維持不變.
+- 換夥伴時, 原本的夥伴先消失, 下一隻才出現, 兩隻不會同時出現. 沒有出場與退場的夥伴之間以淡出淡入切換; 從無加入與改為無時仍是探出與縮回. 切換中開始拖曳時, 夥伴立即縮回.
+- 製作工具包不再包含範本夥伴. 範本 "麻糬" 改為 [stygiomedusa-companions](https://github.com/seanmars/stygiomedusa-companions) 中的一般夥伴 `mochi/`, 新夥伴由 skill 依製作文件產生. 驗證會檢查出場與退場的規則.
+
 ## [0.11.1] - 2026-10-16
 
 ### 新增
@@ -244,6 +260,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.11.2]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.2
 [0.11.1]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.1
 [0.11.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.0
 [0.10.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.10.0
