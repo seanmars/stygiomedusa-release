@@ -1,5 +1,19 @@
 # Stygiomedusa
 
+## [0.11.3] - 2026-10-18
+
+### 新增
+
+- 製作工具包新增 `npm run unpack -- <.companion 檔> <資料夾> [--force]`: 從夥伴包還原 `companion.json`, `animation.json` 與 `state-machine.json`, 還原後再打包得到相同的夥伴包. 資料夾已有這些檔或 `companion.lottie` 時不寫入並列出它們; 加 `--force` 才覆寫.
+
+### 變更
+
+- 匯入大型夥伴包時史萊姆不再卡住. 匯入中 "匯入夥伴包" 按鈕停用, 旁邊依序顯示 "解開中", "驗證中", "安裝中".
+  - 夥伴包只在匯入時完整驗證一次. 之後檔案沒有改變就不重新驗證, 換夥伴與輪替更快.
+  - 讀取與驗證夥伴包不在主執行緒進行, 換夥伴與右鍵選單的 "下一個夥伴" 時史萊姆照常移動與回應 hover.
+- 製作工具包的打包輸出固定: 內容沒有改變時, 重新打包的 `.companion` 完全相同, git 不會顯示變更.
+- [stygiomedusa-companions](https://github.com/seanmars/stygiomedusa-companions) 的夥伴資料夾中產生的 `companion/` 不再進版本控制, repo 只保存產生腳本與 `.companion`. clone 後以產生腳本重新產生, 或以 `npm run unpack` 從夥伴包還原; 手動編輯 `companion/` 後要重新打包才會保存.
+
 ## [0.11.2] - 2026-10-18
 
 ### 新增
@@ -260,6 +274,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.11.3]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.3
 [0.11.2]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.2
 [0.11.1]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.1
 [0.11.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.0
