@@ -1,5 +1,15 @@
 # Stygiomedusa
 
+## [0.11.4] - 2026-10-19
+
+### 新增
+
+- Claude 或 Codex 找不到登入憑證 ("未設定") 時, popup 配額卡與工作列 widget tooltip 顯示安裝與登入的引導: Claude 請安裝 Claude Code CLI 並執行 `claude` 登入; Codex 請安裝 Codex CLI 並執行 `codex` 以 ChatGPT 帳號登入. Codex 只以 API key 登入時也會顯示. 史萊姆的 callout 仍只顯示 "未設定".
+
+### 修正
+
+- 設定頁 "設定 Claude 資料夾" 有很長的路徑時, 每列的 "移除" 按鈕被擠出畫面, 無法移除資料夾. 現在 "移除" 按鈕在每列最前面, 路徑完整換行顯示. 史萊姆分頁的夥伴清單也改為相同的版面.
+
 ## [0.11.3] - 2026-10-18
 
 ### 新增
@@ -274,6 +284,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.11.4]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.4
 [0.11.3]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.3
 [0.11.2]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.2
 [0.11.1]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.1
