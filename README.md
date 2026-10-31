@@ -1,5 +1,20 @@
 # Stygiomedusa
 
+## [0.12.0] - 2026-10-31
+
+### 新增
+
+- popup 新增 "價格" 分頁 (#3): 以表格列出每個用過的 model 的累計用量, 以及輸入, 輸出, 快取讀取, 快取寫入的單價 (每 100 萬 token 的美元價格) 與金額未知的筆數; 點欄位標題可切換排序. 上方顯示 LiteLLM, OpenRouter, models.dev 三個價格來源的更新時間. "更新價格" 重新取得價格表 (1 小時內下載過的來源不重新下載), 並補上金額未知的紀錄; 已知的金額不變. 之後新增的紀錄也使用更新後的價格表補上未知金額.
+- 夥伴包可以包含圖片: 製作工具包打包時, 把 `animation.json` 引用的 `images/` 中的圖片放進夥伴包; 沒有引用的圖片不放入.
+
+### 變更
+
+- 夥伴包大小上限從 10 MB 提高到 30 MB, 解開後的上限從 20 MB 提高到 60 MB.
+
+### 修正
+
+- 切換夥伴時, 退場中的夥伴 hover 探出停在退場開始時的位置, 不再隨滑鼠進出移動.
+
 ## [0.11.4] - 2026-10-19
 
 ### 新增
@@ -284,6 +299,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.12.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.12.0
 [0.11.4]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.4
 [0.11.3]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.3
 [0.11.2]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.2
