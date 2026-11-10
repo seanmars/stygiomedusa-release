@@ -1,5 +1,22 @@
 # Stygiomedusa
 
+## [0.15.0] - 2026-11-10
+
+### 變更
+
+- 史萊姆沒有開啟置頂時, 改為停在所有視窗的最後面, 不再壓住其他視窗: hover 離開後, 在設定中關閉置頂時, 以及啟動時. hover 期間仍暫時置頂, callout 顯示在最前面.
+
+## [0.14.0] - 2026-11-10
+
+### 新增
+
+- 顯示 Claude 的 Fable 週限額 "7d Fable": popup 的 Claude 配額卡多一列 (已用與剩餘百分比, 重置時間, pace 與曲線), 工作列 widget 的 tooltip 與史萊姆的 callout 也多一列. 帳號沒有 Fable 限額時不顯示. widget 的 bar 與史萊姆珠子的弧維持只顯示 5h 與 7d.
+- 史萊姆的 Claude 珠子在有 Fable 週限額時改成 Fable 版面: 圖示縮到左上角, 右邊是 5h, 7d, 7d Fable 三條直 bar, 各自從下往上注入果凍液. 液面高度依顯示模式為已用或剩餘, 顏色依門檻; hover 時液面晃動. 史萊姆分頁新增 "珠子顯示 7d Fable" 開關 (預設開啟); 關閉時回到左右兩條弧. 開關只影響珠子, callout 仍列出 Fable.
+
+### 修正
+
+- 史萊姆沒有開啟置頂時, hover 出現的 callout 被其他視窗蓋住; hover 期間史萊姆改為暫時置頂, 離開後回到設定的層級.
+
 ## [0.13.0] - 2026-11-10
 
 ### 新增
@@ -309,6 +326,8 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.15.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.15.0
+[0.14.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.14.0
 [0.13.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.13.0
 [0.12.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.12.0
 [0.11.4]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.4
