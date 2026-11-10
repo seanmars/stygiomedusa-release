@@ -1,5 +1,15 @@
 # Stygiomedusa
 
+## [0.13.0] - 2026-11-10
+
+### 新增
+
+- "價格" 分頁的 "Model 單價" 新增價格目錄: 以 "已使用", "Claude", "OpenAI", "Gemini", "Grok" 切換. 目錄列出各廠商自己 API 的 model 與單價, 沒有用過的 model 也能查看; 搜尋欄依 model id 篩選. 滑鼠移到 model 名稱上, 顯示價格來源與對到的價格表項目.
+
+### 內部調整
+
+- 升級 zip 到 9, tauri-plugin-updater 到 2.14.1, rustls 到 0.23.46, minimatch 到 11, 修正 Dependabot 回報的安全性問題.
+
 ## [0.12.0] - 2026-10-31
 
 ### 新增
@@ -299,6 +309,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.13.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.13.0
 [0.12.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.12.0
 [0.11.4]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.4
 [0.11.3]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.11.3
