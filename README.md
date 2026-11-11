@@ -1,5 +1,28 @@
 # Stygiomedusa
 
+## [0.16.0] - 2026-11-11
+
+### 新增
+
+- popup 配額卡的每個視窗下方顯示 "每 10% ≈ N tokens · $X (±誤差)": 依最近已完成的週期, 估計每 10% quota 對應的本機 token 與 API 等價金額. 至少需要 3 個完整週期. 沒有本機紀錄的週期 (例如在其他裝置或網頁版使用) 不採用. 滑鼠移到這一行上, 顯示採用的週期數與說明.
+- "價格" 分頁的 "快取寫入" 欄下方顯示 1 小時 TTL 的單價.
+
+### 變更
+
+- "更新價格" 改為以新的價格表重算所有紀錄的金額; 查不到價格的紀錄保留原本的金額. 之後的掃描也使用同一份價格表.
+- Claude Code 的 model 別名 (例如 `opus`, `haiku`) 一律視為價格未知, 不再以模糊比對猜價格; 先前猜出的金額會清除.
+
+### 修正
+
+- Claude 的 1 小時快取寫入原本以 5 分鐘的單價計價, API 等價金額少算約 8%; 改依 1 小時的單價計價.
+- Codex 超過 272K context 的 request 改依 long-context 單價計價.
+
+### 內部調整
+
+- 升級 tokscale 到 v4.21.0.
+- 用量資料庫的 session 與 project 改存在獨立的表, 資料庫約縮小四成. 第一次啟動新版時會花約 1 秒整理資料庫.
+- quota 歷史樣本只保留 pace 評估需要的範圍 (至少 56 天).
+
 ## [0.15.0] - 2026-11-10
 
 ### 變更
@@ -326,6 +349,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.16.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.16.0
 [0.15.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.15.0
 [0.14.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.14.0
 [0.13.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.13.0
