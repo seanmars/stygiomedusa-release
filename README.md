@@ -1,5 +1,19 @@
 # Stygiomedusa
 
+## [0.17.0] - 2026-11-21
+
+### 變更
+
+- 用量與活動的 profile 篩選改為依帳號: 不同 Claude 資料夾登入同一個帳號時合併成一項. Claude 紀錄的帳號優先取 transcript 記錄的帳號, 沒有時用該資料夾目前登入的帳號; 帳號 ID 只保存 hash.
+- profile 篩選也套用到 Codex 紀錄 (依 Codex 登入的帳號); 先前 Codex 紀錄不受 profile 篩選影響.
+- 分析視窗保存的篩選條件重設一次.
+
+### 內部調整
+
+- 升級 tokscale 到 v4.23.0. Claude 與 Codex 的 message key 不變, 既有紀錄不會重複計算.
+- 更新 Tauri 到 2.12.7 (plugin: autostart 2.7, single-instance 2.5, dialog 2.8.4), Vue 3.5.45, Vite 8.3.8 與其他相容版本的依賴.
+- 資料庫為日後的多機同步加上 device 身分, 每筆紀錄的來源, 序號, 簽章與帳號 hash. 目前沒有網路同步, 資料仍只存在本機. 第一次啟動新版時會重讀所有 transcript 並整理資料庫.
+
 ## [0.16.0] - 2026-11-11
 
 ### 新增
@@ -349,6 +363,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.17.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.17.0
 [0.16.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.16.0
 [0.15.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.15.0
 [0.14.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.14.0
