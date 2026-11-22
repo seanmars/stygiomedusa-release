@@ -1,5 +1,11 @@
 # Stygiomedusa
 
+## [0.18.1] - 2026-11-22
+
+### 修正
+
+- Codex 的圖示改用 OpenAI logo.
+
 ## [0.18.0] - 2026-11-22
 
 ### 新增
@@ -378,6 +384,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.18.1]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.18.1
 [0.18.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.18.0
 [0.17.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.17.0
 [0.16.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.16.0
