@@ -1,5 +1,20 @@
 # Stygiomedusa
 
+## [0.18.0] - 2026-11-22
+
+### 新增
+
+- 支援 Antigravity 用量統計: Antigravity CLI, IDE Extension 與 IDE 的 token 用量合併為 "Antigravity", 出現在用量頁, 分析視窗與熱力圖. IDE 的用量透過本機 language server 同步, 用量頁顯示上次同步的時間或失敗原因.
+- 支援 Antigravity quota: 以 `agy` CLI 讀取各 model group 的配額, 顯示在 popup, widget 與史萊姆, 並提供 pace 與每 10% quota 的用量估計. 找不到 `agy` 時顯示安裝提示.
+- popup 配額卡可以拖曳調整順序, 順序保存在設定中.
+
+### 變更
+
+- popup 高度固定為工作區高度的 75%, 不再隨內容變動; 內容在 popup 內捲動, 更新提示與分頁列固定在頂部.
+- popup 配額卡在寬度足夠時以瀑布流分兩欄排列, 每張卡保有自己的高度.
+- Antigravity 的所有 model group 在 popup 合成一張卡, 每個 group 一段.
+- 更新 Claude, Codex 與 Antigravity 的圖示.
+
 ## [0.17.0] - 2026-11-21
 
 ### 變更
@@ -363,6 +378,7 @@
 - 修正啟動後第一次開啟 popup 時立刻關閉的問題.
 - Tray 圖示收在溢位區時, 從右鍵選單開啟設定改以游標位置定位 popup.
 
+[0.18.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.18.0
 [0.17.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.17.0
 [0.16.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.16.0
 [0.15.0]: https://github.com/seanmars/stygiomedusa-release/releases/tag/v0.15.0
